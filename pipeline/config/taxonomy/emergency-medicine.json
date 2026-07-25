@@ -1,0 +1,274 @@
+{
+  "slug": "emergency-medicine",
+  "order": 190,
+  "name": "Emergency & acute care",
+  "icon": "🚑",
+  "blurb": "Resuscitation, trauma, acute presentations, toxicology, and the systems that deliver emergency care.",
+  "topics": [
+    {
+      "slug": "em-resuscitation",
+      "name": "Resuscitation & cardiac arrest",
+      "blurb": "Cardiac arrest, cardiopulmonary resuscitation, and post-arrest critical care.",
+      "rules": {
+        "mesh": [
+          "Cardiopulmonary Resuscitation",
+          "Heart Arrest",
+          "Out-of-Hospital Cardiac Arrest",
+          "Defibrillators",
+          "Shock",
+          "Hypothermia, Induced"
+        ],
+        "phrases": [
+          "cardiac arrest",
+          "cardiopulmonary resuscitation",
+          "out-of-hospital cardiac arrest",
+          "in-hospital cardiac arrest",
+          "return of spontaneous circulation",
+          "targeted temperature management",
+          "defibrillation",
+          "automated external defibrillator",
+          "advanced cardiac life support",
+          "post-cardiac arrest care",
+          "bystander CPR",
+          "epinephrine in cardiac arrest",
+          "extracorporeal cardiopulmonary resuscitation"
+        ],
+        "acronyms": [
+          "CPR",
+          "ROSC",
+          "OHCA",
+          "AED",
+          "ACLS",
+          "ECPR"
+        ],
+        "not": [
+          "antiepileptic",
+          "anti-epileptic"
+        ]
+      }
+    },
+    {
+      "slug": "em-trauma",
+      "name": "Trauma care",
+      "blurb": "Injury care, trauma resuscitation, and time-critical haemorrhage control in the ED.",
+      "rules": {
+        "mesh": [
+          "Wounds and Injuries",
+          "Trauma Centers",
+          "Multiple Trauma",
+          "Hemorrhage",
+          "Brain Injuries, Traumatic",
+          "Wounds, Penetrating",
+          "Emergency Treatment",
+          "Resuscitation"
+        ],
+        "phrases": [
+          "trauma resuscitation",
+          "haemorrhagic shock",
+          "hemorrhagic shock",
+          "traumatic brain injury",
+          "tranexamic acid for trauma",
+          "massive transfusion protocol",
+          "prehospital trauma care",
+          "trauma triage",
+          "penetrating trauma",
+          "blunt trauma",
+          "trauma bay",
+          "field trauma triage",
+          "pelvic fracture haemorrhage",
+          "traumatic hemorrhage"
+        ],
+        "acronyms": [
+          "TBI",
+          "TXA"
+        ],
+        "not": [
+          "total body irradiation"
+        ]
+      }
+    },
+    {
+      "slug": "em-chest-stroke",
+      "name": "Acute chest pain & stroke pathways",
+      "blurb": "Acute chest pain, myocardial infarction, and stroke recognition and treatment pathways.",
+      "rules": {
+        "mesh": [
+          "Chest Pain",
+          "Myocardial Infarction",
+          "Acute Coronary Syndrome",
+          "Stroke",
+          "Thrombolytic Therapy",
+          "Brain Ischemia",
+          "ST Elevation Myocardial Infarction",
+          "Troponin"
+        ],
+        "phrases": [
+          "acute chest pain",
+          "acute coronary syndrome",
+          "ST-elevation myocardial infarction",
+          "non-ST-elevation myocardial infarction",
+          "high-sensitivity troponin",
+          "chest pain pathway",
+          "door-to-balloon time",
+          "acute ischaemic stroke",
+          "acute ischemic stroke",
+          "thrombolysis for stroke",
+          "tissue plasminogen activator",
+          "mechanical thrombectomy",
+          "stroke code",
+          "door-to-needle time",
+          "code stroke"
+        ],
+        "acronyms": [
+          "STEMI",
+          "NSTEMI",
+          "ACS"
+        ],
+        "not": [
+          "American Cancer Society",
+          "American College of Surgeons",
+          "acute chest syndrome"
+        ]
+      }
+    },
+    {
+      "slug": "em-department-operations",
+      "name": "Emergency department operations & crowding",
+      "blurb": "Emergency department crowding, throughput, staffing, and health-system operations.",
+      "rules": {
+        "mesh": [
+          "Emergency Service, Hospital",
+          "Crowding",
+          "Triage",
+          "Emergency Medical Services",
+          "Waiting Lists",
+          "Efficiency, Organizational",
+          "Length of Stay",
+          "Patient Acceptance of Health Care"
+        ],
+        "phrases": [
+          "emergency department crowding",
+          "emergency department boarding",
+          "ED throughput",
+          "emergency department wait time",
+          "left without being seen",
+          "emergency department overcrowding",
+          "triage acuity",
+          "emergency department utilisation",
+          "emergency department utilization",
+          "emergency department visits",
+          "surge capacity",
+          "emergency department staffing",
+          "time to physician",
+          "emergency department referral"
+        ],
+        "acronyms": [
+          "ED",
+          "LWBS"
+        ],
+        "not": [
+          "erectile dysfunction",
+          "eating disorder"
+        ]
+      }
+    },
+    {
+      "slug": "em-toxicology",
+      "name": "Toxicology & overdose",
+      "blurb": "Poisoning, drug overdose, and the medical toxicology managed in acute care.",
+      "rules": {
+        "mesh": [
+          "Drug Overdose",
+          "Poisoning",
+          "Opioid-Related Disorders",
+          "Naloxone",
+          "Substance-Related Disorders",
+          "Antidotes",
+          "Toxicology",
+          "Suicide, Attempted"
+        ],
+        "phrases": [
+          "drug overdose",
+          "opioid overdose",
+          "fentanyl overdose",
+          "naloxone",
+          "buprenorphine",
+          "medication for opioid use disorder",
+          "acetaminophen overdose",
+          "paracetamol overdose",
+          "poison control centre",
+          "poison control center",
+          "toxic ingestion",
+          "withdrawal management",
+          "harm reduction",
+          "take-home naloxone",
+          "stimulant overdose",
+          "xylazine",
+          "alcohol-related injury",
+          "alcohol-related injuries",
+          "alcohol attributable fraction"
+        ],
+        "acronyms": [
+          "MOUD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "em-ems",
+      "name": "Prehospital & EMS care",
+      "blurb": "Prehospital emergency medical services, ambulance response, and community paramedicine.",
+      "rules": {
+        "mesh": [
+          "Emergency Medical Services",
+          "Ambulances",
+          "Emergency Medical Technicians",
+          "Allied Health Personnel",
+          "Air Ambulances",
+          "Emergency Responders",
+          "Rural Health Services"
+        ],
+        "phrases": [
+          "prehospital care",
+          "emergency medical services",
+          "ambulance response time",
+          "paramedic-administered",
+          "community paramedicine",
+          "air medical transport",
+          "helicopter emergency medical services",
+          "first responder",
+          "prehospital triage",
+          "911 dispatch",
+          "emergency medical technician",
+          "mobile stroke unit",
+          "prehospital airway management"
+        ],
+        "acronyms": [
+          "EMS",
+          "EMT",
+          "HEMS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "em-other",
+      "name": "General & other emergency medicine",
+      "blurb": "Everything else newly indexed in the emergency medicine journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Emergency Medicine",
+          "Emergencies",
+          "Emergency Treatment"
+        ],
+        "phrases": [
+          "emergency medicine practice",
+          "acute care medicine"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

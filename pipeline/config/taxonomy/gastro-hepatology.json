@@ -1,0 +1,264 @@
+{
+  "slug": "gastro-hepatology",
+  "order": 110,
+  "name": "Gastroenterology & hepatology",
+  "icon": "🍽️",
+  "blurb": "Digestive tract and liver disease, from inflammatory bowel disease to cirrhosis, endoscopy, and viral hepatitis.",
+  "topics": [
+    {
+      "slug": "gi-ibd",
+      "name": "Inflammatory bowel disease",
+      "blurb": "Ulcerative colitis, Crohn disease, and their expanding biologic and small-molecule therapies.",
+      "rules": {
+        "mesh": [
+          "Inflammatory Bowel Diseases",
+          "Colitis, Ulcerative",
+          "Crohn Disease"
+        ],
+        "phrases": [
+          "inflammatory bowel disease",
+          "ulcerative colitis",
+          "Crohn's disease",
+          "Crohn disease",
+          "fecal calprotectin",
+          "faecal calprotectin",
+          "mucosal healing",
+          "biologic therapy for inflammatory bowel disease",
+          "ustekinumab",
+          "risankizumab",
+          "mirikizumab",
+          "upadacitinib",
+          "vedolizumab",
+          "guselkumab",
+          "ozanimod",
+          "etrasimod",
+          "filgotinib"
+        ],
+        "acronyms": [
+          "IBD",
+          "UC",
+          "CD"
+        ],
+        "not": [
+          "urothelial carcinoma",
+          "cluster of differentiation",
+          "celiac disease",
+          "coeliac disease"
+        ]
+      }
+    },
+    {
+      "slug": "gi-liver",
+      "name": "Liver disease & cirrhosis",
+      "blurb": "Cirrhosis, portal hypertension, and steatotic liver disease including MASLD/MASH.",
+      "rules": {
+        "mesh": [
+          "Liver Cirrhosis",
+          "Non-alcoholic Fatty Liver Disease",
+          "Fatty Liver",
+          "Hypertension, Portal",
+          "Liver Failure",
+          "Hepatic Encephalopathy"
+        ],
+        "phrases": [
+          "metabolic dysfunction-associated steatotic liver disease",
+          "metabolic dysfunction-associated steatohepatitis",
+          "nonalcoholic fatty liver disease",
+          "non-alcoholic fatty liver disease",
+          "nonalcoholic steatohepatitis",
+          "non-alcoholic steatohepatitis",
+          "decompensated cirrhosis",
+          "portal hypertension",
+          "hepatic encephalopathy",
+          "hepatorenal syndrome",
+          "liver transplantation",
+          "acute-on-chronic liver failure",
+          "resmetirom",
+          "semaglutide for MASH",
+          "obeticholic acid",
+          "terlipressin",
+          "chronic liver disease",
+          "liver fibrosis"
+        ],
+        "acronyms": [
+          "MASLD",
+          "MASH",
+          "NAFLD",
+          "NASH",
+          "ACLF"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gi-hepatitis",
+      "name": "Viral hepatitis",
+      "blurb": "Hepatitis A through E, antiviral treatment, and progress toward elimination.",
+      "rules": {
+        "mesh": [
+          "Hepatitis C",
+          "Hepatitis B",
+          "Hepatitis D",
+          "Hepatitis A",
+          "Hepatitis, Chronic"
+        ],
+        "phrases": [
+          "chronic hepatitis C",
+          "chronic hepatitis B",
+          "hepatitis C virus",
+          "hepatitis B virus",
+          "hepatitis D virus",
+          "hepatitis delta",
+          "direct-acting antiviral",
+          "sustained virologic response",
+          "pegylated interferon",
+          "hepatitis B functional cure",
+          "hepatitis C elimination",
+          "glecaprevir",
+          "sofosbuvir",
+          "bulevirtide",
+          "tenofovir alafenamide",
+          "entecavir"
+        ],
+        "acronyms": [
+          "HBV",
+          "HCV",
+          "HDV",
+          "SVR"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gi-upper",
+      "name": "Upper GI, reflux & functional GI disorders",
+      "blurb": "GERD, Barrett esophagus, functional dyspepsia, IBS, and eosinophilic esophagitis.",
+      "rules": {
+        "mesh": [
+          "Gastroesophageal Reflux",
+          "Barrett Esophagus",
+          "Peptic Ulcer",
+          "Dyspepsia",
+          "Irritable Bowel Syndrome",
+          "Gastroparesis",
+          "Eosinophilic Esophagitis"
+        ],
+        "phrases": [
+          "gastroesophageal reflux disease",
+          "gastro-oesophageal reflux disease",
+          "Barrett's esophagus",
+          "Barrett's oesophagus",
+          "eosinophilic esophagitis",
+          "eosinophilic oesophagitis",
+          "irritable bowel syndrome",
+          "functional dyspepsia",
+          "gastroparesis",
+          "achalasia",
+          "peptic ulcer disease",
+          "Helicobacter pylori",
+          "proton pump inhibitor",
+          "dupilumab for eosinophilic esophagitis",
+          "motility disorder"
+        ],
+        "acronyms": [
+          "GERD",
+          "IBS",
+          "EoE",
+          "PPI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gi-pancreas",
+      "name": "Pancreas & biliary",
+      "blurb": "Pancreatitis, gallstone disease, and cholestatic and biliary tract disorders.",
+      "rules": {
+        "mesh": [
+          "Pancreatitis",
+          "Pancreatitis, Chronic",
+          "Cholangitis, Sclerosing",
+          "Cholelithiasis",
+          "Cholangitis",
+          "Cholecystitis",
+          "Liver Cirrhosis, Biliary"
+        ],
+        "phrases": [
+          "acute pancreatitis",
+          "chronic pancreatitis",
+          "primary sclerosing cholangitis",
+          "primary biliary cholangitis",
+          "gallstone disease",
+          "choledocholithiasis",
+          "biliary obstruction",
+          "endoscopic retrograde cholangiopancreatography",
+          "pancreatic exocrine insufficiency",
+          "autoimmune pancreatitis",
+          "obeticholic acid for primary biliary cholangitis",
+          "seladelpar",
+          "elafibranor"
+        ],
+        "acronyms": [
+          "PSC",
+          "PBC",
+          "ERCP"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gi-endoscopy",
+      "name": "Endoscopy & GI bleeding",
+      "blurb": "Diagnostic and therapeutic endoscopy, colonoscopy, and gastrointestinal hemorrhage.",
+      "rules": {
+        "mesh": [
+          "Endoscopy, Gastrointestinal",
+          "Gastrointestinal Hemorrhage",
+          "Colonoscopy",
+          "Capsule Endoscopy",
+          "Endosonography"
+        ],
+        "phrases": [
+          "upper gastrointestinal bleeding",
+          "lower gastrointestinal bleeding",
+          "variceal bleeding",
+          "endoscopic submucosal dissection",
+          "endoscopic mucosal resection",
+          "capsule endoscopy",
+          "colonoscopy surveillance",
+          "polypectomy",
+          "endoscopic ultrasound",
+          "artificial intelligence-assisted colonoscopy",
+          "computer-aided polyp detection",
+          "variceal hemorrhage"
+        ],
+        "acronyms": [
+          "GIB",
+          "ESD",
+          "EMR",
+          "EUS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gi-other",
+      "name": "General & other GI",
+      "blurb": "Everything else newly indexed in the gastroenterology and hepatology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Gastrointestinal Diseases",
+          "Digestive System Diseases",
+          "Gastroenterology"
+        ],
+        "phrases": [
+          "gastrointestinal disorder",
+          "digestive disease"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

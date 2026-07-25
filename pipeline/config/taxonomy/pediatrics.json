@@ -1,0 +1,291 @@
+{
+  "slug": "pediatrics",
+  "order": 160,
+  "name": "Pediatrics",
+  "icon": "🧸",
+  "blurb": "Newborn through adolescent health: neonatal care, infection and immunisation, development, and chronic paediatric disease.",
+  "topics": [
+    {
+      "slug": "peds-neonatal",
+      "name": "Neonatal & perinatal care",
+      "blurb": "Preterm birth, neonatal intensive care, and perinatal complications in newborns.",
+      "rules": {
+        "mesh": [
+          "Infant, Newborn",
+          "Infant, Premature",
+          "Infant, Premature, Diseases",
+          "Infant, Extremely Premature",
+          "Intensive Care, Neonatal",
+          "Respiratory Distress Syndrome, Newborn",
+          "Bronchopulmonary Dysplasia",
+          "Neonatal Screening",
+          "Premature Birth",
+          "Infant, Low Birth Weight",
+          "Necrotizing Enterocolitis",
+          "Perinatal Care"
+        ],
+        "phrases": [
+          "preterm birth",
+          "premature infant",
+          "premature infants",
+          "extremely preterm",
+          "neonatal intensive care",
+          "respiratory distress syndrome of the newborn",
+          "bronchopulmonary dysplasia",
+          "necrotizing enterocolitis",
+          "necrotising enterocolitis",
+          "neonatal sepsis",
+          "neonatal jaundice",
+          "hypoxic-ischaemic encephalopathy",
+          "hypoxic-ischemic encephalopathy",
+          "surfactant therapy",
+          "therapeutic hypothermia for neonates",
+          "very low birth weight",
+          "extremely low birth weight",
+          "neonatal resuscitation",
+          "delayed cord clamping",
+          "kangaroo care",
+          "neonatal piglet model",
+          "respiratory support at birth",
+          "limits of viability",
+          "breastfeeding"
+        ],
+        "acronyms": [
+          "NICU",
+          "RDS",
+          "BPD",
+          "NEC",
+          "HIE",
+          "VLBW",
+          "ELBW"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-infection",
+      "name": "Childhood infection & immunisation",
+      "blurb": "Childhood infectious disease, vaccination programmes, and paediatric antimicrobial care.",
+      "rules": {
+        "mesh": [
+          "Vaccination",
+          "Immunization Programs",
+          "Respiratory Syncytial Virus Infections",
+          "Bronchiolitis",
+          "Otitis Media",
+          "Pertussis",
+          "Measles",
+          "Sepsis",
+          "Fever",
+          "Communicable Diseases",
+          "Child, Preschool"
+        ],
+        "phrases": [
+          "respiratory syncytial virus",
+          "bronchiolitis",
+          "otitis media",
+          "childhood vaccination",
+          "immunisation schedule",
+          "immunization schedule",
+          "pertussis",
+          "whooping cough",
+          "measles outbreak",
+          "febrile infant",
+          "paediatric sepsis",
+          "pediatric sepsis",
+          "croup",
+          "hand, foot and mouth disease",
+          "nirsevimab",
+          "palivizumab",
+          "RSV vaccine",
+          "pneumococcal conjugate vaccine",
+          "rotavirus vaccine",
+          "multisystem inflammatory syndrome in children",
+          "BNT162b2"
+        ],
+        "acronyms": [
+          "RSV",
+          "MIS-C",
+          "PCV"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-development",
+      "name": "Child development & behaviour",
+      "blurb": "Growth, neurodevelopment, and behavioural and mental health conditions in children.",
+      "rules": {
+        "mesh": [
+          "Child Development",
+          "Autism Spectrum Disorder",
+          "Attention Deficit Disorder with Hyperactivity",
+          "Developmental Disabilities",
+          "Language Development Disorders",
+          "Intellectual Disability",
+          "Child Behavior Disorders",
+          "Growth Charts"
+        ],
+        "phrases": [
+          "child development",
+          "developmental delay",
+          "autism spectrum disorder",
+          "attention-deficit/hyperactivity disorder",
+          "attention deficit hyperactivity disorder",
+          "developmental milestones",
+          "early intervention services",
+          "speech and language delay",
+          "behavioural problems in children",
+          "behavioral problems in children",
+          "screen time in children",
+          "childhood mental health",
+          "developmental screening",
+          "growth trajectory in children",
+          "autism"
+        ],
+        "acronyms": [
+          "ADHD",
+          "ASD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-chronic",
+      "name": "Paediatric chronic disease",
+      "blurb": "Asthma, obesity, diabetes, and other chronic conditions of childhood and adolescence.",
+      "rules": {
+        "mesh": [
+          "Asthma",
+          "Pediatric Obesity",
+          "Diabetes Mellitus, Type 1",
+          "Diabetes Mellitus, Type 2",
+          "Cystic Fibrosis",
+          "Epilepsy",
+          "Chronic Disease",
+          "Inflammatory Bowel Diseases"
+        ],
+        "phrases": [
+          "childhood asthma",
+          "paediatric asthma",
+          "pediatric obesity",
+          "childhood obesity",
+          "type 1 diabetes in children",
+          "type 2 diabetes in youth",
+          "cystic fibrosis",
+          "juvenile idiopathic arthritis",
+          "paediatric epilepsy",
+          "pediatric epilepsy",
+          "inflammatory bowel disease in children",
+          "continuous glucose monitoring in children",
+          "insulin pump therapy",
+          "CFTR modulator",
+          "growth hormone therapy",
+          "children with medical complexity"
+        ],
+        "acronyms": [
+          "T1D",
+          "JIA",
+          "IBD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-genetic",
+      "name": "Congenital & genetic disease",
+      "blurb": "Congenital anomalies, inherited metabolic disease, and paediatric genetic diagnosis.",
+      "rules": {
+        "mesh": [
+          "Congenital Abnormalities",
+          "Genetic Diseases, Inborn",
+          "Down Syndrome",
+          "Metabolism, Inborn Errors",
+          "Genetic Testing",
+          "Chromosome Aberrations",
+          "Heart Defects, Congenital",
+          "Rare Diseases"
+        ],
+        "phrases": [
+          "congenital anomaly",
+          "congenital heart defect",
+          "inborn error of metabolism",
+          "newborn screening",
+          "Down syndrome",
+          "genetic diagnosis in children",
+          "exome sequencing in children",
+          "rare genetic disease",
+          "inherited metabolic disorder",
+          "chromosomal abnormality",
+          "gene therapy for children",
+          "congenital malformation",
+          "prenatal genetic diagnosis",
+          "developmental disorder gene panel",
+          "biliary atresia"
+        ],
+        "acronyms": [
+          "IEM"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-adolescent",
+      "name": "Adolescent health",
+      "blurb": "Puberty, adolescent mental health, risk behaviour, and transition to adult care.",
+      "rules": {
+        "mesh": [
+          "Adolescent Health",
+          "Puberty",
+          "Adolescent Behavior",
+          "Substance-Related Disorders",
+          "Suicide",
+          "Self-Injurious Behavior",
+          "Sex Education",
+          "Transition to Adult Care",
+          "Eating Disorders"
+        ],
+        "phrases": [
+          "adolescent health",
+          "puberty",
+          "adolescent mental health",
+          "teen depression",
+          "adolescent suicide",
+          "self-harm in adolescents",
+          "substance use among adolescents",
+          "vaping among adolescents",
+          "e-cigarette use in teens",
+          "adolescent risk behaviour",
+          "adolescent risk behavior",
+          "transition to adult care",
+          "eating disorder in adolescents",
+          "gender-affirming care for adolescents",
+          "adolescent obesity",
+          "school-based health"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    },
+    {
+      "slug": "peds-other",
+      "name": "General & other paediatrics",
+      "blurb": "Everything else newly indexed in the paediatrics journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Pediatrics",
+          "Child",
+          "Child Health Services"
+        ],
+        "phrases": [
+          "paediatric care",
+          "pediatric care",
+          "child health services"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

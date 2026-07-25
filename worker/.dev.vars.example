@@ -1,0 +1,11 @@
+# Copy to .dev.vars for `wrangler dev` (that file is gitignored). Secrets only
+# — everything else lives in wrangler.toml [vars] and is not sensitive.
+#
+# Leave both blank and keep EMAIL_PROVIDER=console in wrangler.toml to run
+# the whole flow with zero credentials.
+
+BREVO_API_KEY=
+RESEND_API_KEY=
+
+# Optional. When unset, Turnstile verification is skipped entirely.
+TURNSTILE_SECRET=

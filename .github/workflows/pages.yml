@@ -1,0 +1,79 @@
+name: Pages
+
+# Rebuilds the static API from the EXISTING committed archive and redeploys the
+# site, without harvesting. This is what lets a UI fix or a taxonomy edit ship in
+# about two minutes instead of waiting for tomorrow's cron — harvest.yml already
+# does a full build + deploy after every harvest, so this workflow exists purely
+# for the "I changed the site, not the data" path.
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'pipeline/**'
+      - 'contract/**'
+      - 'shared/**'
+      - '.github/workflows/pages.yml'
+      - '.github/actions/build-site/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Shares a group with harvest.yml: a push-triggered rebuild and the daily harvest
+# both end in "upload + deploy to Pages", and only one deploy should be in flight
+# at a time. cancel-in-progress: false for the same reason as harvest.yml — queue
+# rather than kill a deploy that's already running.
+concurrency:
+  group: evidence-digest-deploy
+  cancel-in-progress: false
+
+env:
+  SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          # See harvest.yml: no `cache: pip` because the pipeline has no third-party
+          # pip dependencies to key a cache on (stdlib only, by design).
+
+      - name: Validate configuration
+        # PYTHONPATH=pipeline: see the same comment in harvest.yml — the
+        # evidence_digest package lives under pipeline/ and is never pip-installed.
+        env:
+          PYTHONPATH: pipeline
+        run: python -m evidence_digest.cli validate
+
+      - name: Build site
+        uses: ./.github/actions/build-site
+        with:
+          site-url: ${{ env.SITE_URL }}
+          # See the same input in harvest.yml. Because Vite inlines env vars at
+          # build time, running THIS workflow is how an operator switches the
+          # signup form on after deploying the Worker — no harvest needed.
+          worker-url: ${{ vars.VITE_WORKER_URL }}
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

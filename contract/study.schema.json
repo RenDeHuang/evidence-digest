@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/muhammadali-k/evidence-digest/contract/study.schema.json",
+  "title": "Study",
+  "description": "One PubMed record as emitted by the Evidence Digest harvest pipeline. This is the single canonical shape consumed by the web app, the email worker, and the RSS builders. Every field is always present; optional information uses null or an empty array, never a missing key.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pmid", "doi", "title", "abstract", "sections", "takeaway", "authors",
+    "authorLine", "journal", "specialties", "topics", "pubTypes", "evidence",
+    "score", "pubdate", "entryDate", "url", "doiUrl", "pmcid", "openAccess",
+    "mesh", "keywords", "trialIds", "hasAbstract"
+  ],
+  "properties": {
+    "pmid": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "PubMed ID. The primary key for a study everywhere in this system."
+    },
+    "doi": {
+      "type": ["string", "null"],
+      "description": "Digital Object Identifier, bare (no https://doi.org/ prefix). Null when PubMed has none."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Article title, with any trailing period retained as PubMed supplies it and HTML/MathML markup stripped to plain text."
+    },
+    "abstract": {
+      "type": "string",
+      "description": "Full abstract with structured section labels joined into one string. Empty string when the record has no abstract."
+    },
+    "sections": {
+      "type": "object",
+      "description": "Structured abstract sections keyed by uppercased NLM label (BACKGROUND, METHODS, RESULTS, CONCLUSIONS, ...). Empty object for unstructured or absent abstracts.",
+      "additionalProperties": { "type": "string" }
+    },
+    "takeaway": {
+      "type": "string",
+      "description": "One-to-two sentence plain-language 'why this matters' line. Extracted deterministically from the abstract (conclusions first, then results, then the lead sentence) with no model in the loop. Empty string when no abstract exists."
+    },
+    "authors": {
+      "type": "array",
+      "description": "Author surnames + initials, e.g. 'Smith JA'. Capped at 12 entries. Collective/group names are included verbatim.",
+      "items": { "type": "string" },
+      "maxItems": 12
+    },
+    "authorLine": {
+      "type": "string",
+      "description": "Display-ready byline: up to three authors then ', et al'. Empty string when no authors are listed."
+    },
+    "journal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "ta", "tier"],
+      "properties": {
+        "name": { "type": "string", "description": "Human-readable journal name from the registry." },
+        "ta": { "type": "string", "description": "MEDLINE title abbreviation used in the PubMed [ta] query." },
+        "tier": {
+          "type": "integer",
+          "enum": [1, 2, 3],
+          "description": "Editorial reach tier from the registry. 1 = practice-defining general/flagship, 2 = leading subspecialty, 3 = solid specialty."
+        }
+      }
+    },
+    "specialties": {
+      "type": "array",
+      "description": "Specialty slugs this study belongs to, derived from its assigned topics. Never empty.",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "minItems": 1
+    },
+    "topics": {
+      "type": "array",
+      "description": "Topic slugs assigned by the rule-based classifier. Never empty: a study that matches no rule receives its journal specialty's catch-all topic.",
+      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+      "minItems": 1
+    },
+    "pubTypes": {
+      "type": "array",
+      "description": "PubMed publication types verbatim, e.g. 'Randomized Controlled Trial'.",
+      "items": { "type": "string" }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "label", "rank"],
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "guideline", "meta-analysis", "rct", "trial", "observational",
+            "review", "basic", "case-report", "other"
+          ],
+          "description": "Study-design bucket inferred from publication types, then MeSH, then title/abstract cues."
+        },
+        "label": {
+          "type": "string",
+          "description": "Display label for the level, e.g. 'Randomized trial'."
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9,
+          "description": "1 = strongest design bucket (guideline), 9 = weakest/none (editorial, comment, correction). Used for sorting and badge ordering."
+        }
+      }
+    },
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Deterministic importance score, 0-100, from pipeline/config/scoring.json. Journal tier + evidence level + recency + signal bonuses - noise penalties. No model involved; fully reproducible."
+    },
+    "pubdate": {
+      "type": "string",
+      "description": "Best available publication date, ISO 'YYYY-MM-DD' when day precision exists, else 'YYYY-MM' or 'YYYY'."
+    },
+    "entryDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "PubMed Entrez date (EDAT) - the day PubMed indexed the record. This is the date the app sorts and buckets by, because it is what makes a study 'new'."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical PubMed record URL."
+    },
+    "doiUrl": {
+      "type": ["string", "null"],
+      "format": "uri",
+      "description": "https://doi.org/<doi>, or null when there is no DOI."
+    },
+    "pmcid": {
+      "type": ["string", "null"],
+      "description": "PubMed Central ID (e.g. 'PMC12345678') when a free full text exists, else null."
+    },
+    "openAccess": {
+      "type": "boolean",
+      "description": "True when a PMCID is present, i.e. a free full text is reachable from PMC."
+    },
+    "mesh": {
+      "type": "array",
+      "description": "MeSH descriptor names, major topics first. Capped at 25.",
+      "items": { "type": "string" },
+      "maxItems": 25
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Author-supplied keywords. Capped at 15.",
+      "items": { "type": "string" },
+      "maxItems": 15
+    },
+    "trialIds": {
+      "type": "array",
+      "description": "Registry identifiers found in the record (NCT########, ISRCTN#, EudraCT, ChiCTR, jRCT...).",
+      "items": { "type": "string" }
+    },
+    "hasAbstract": {
+      "type": "boolean",
+      "description": "Convenience flag mirroring abstract != ''."
+    }
+  }
+}

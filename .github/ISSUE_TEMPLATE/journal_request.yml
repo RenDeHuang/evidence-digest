@@ -1,0 +1,69 @@
+name: Journal request / correction
+description: Propose a journal to add, or flag one whose PubMed abbreviation looks wrong.
+title: '[Journal] '
+labels: ['journal']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Journals are registered in `pipeline/config/journals.json`. Each entry needs the
+        **exact MEDLINE title abbreviation** PubMed uses in its `[ta]` field — this is the
+        only reliable journal identifier, since full titles and ISSNs both drift. You can
+        look up a journal's abbreviation at the
+        [NLM Catalog](https://www.ncbi.nlm.nih.gov/nlmcatalog/journals) or by searching
+        PubMed for the journal and checking the "Abbreviation" field on any of its articles.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Is this a new journal, or a correction to an existing one?
+      options:
+        - New journal to add
+        - Existing journal has the wrong abbreviation
+        - Existing journal is indexed under the wrong specialty
+        - Other correction
+    validations:
+      required: true
+
+  - type: input
+    id: journal-name
+    attributes:
+      label: Journal name
+      description: The reader-facing name as it should appear on study cards and the Sources page.
+      placeholder: e.g. Journal of Clinical Oncology
+    validations:
+      required: true
+
+  - type: input
+    id: abbreviation
+    attributes:
+      label: MEDLINE title abbreviation (the `ta` field)
+      description: Exactly as PubMed's [ta] query expects it — case and punctuation matter.
+      placeholder: e.g. J Clin Oncol
+    validations:
+      required: true
+
+  - type: input
+    id: specialty
+    attributes:
+      label: Specialty
+      description: Which specialty slug in pipeline/config/taxonomy/ this journal belongs to (or should belong to). If you're not sure of the slug, just name the specialty in plain English.
+      placeholder: e.g. oncology
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this journal belong in Evidence Digest?
+      description: What does it publish, how often, and why would a reader in this specialty want to see it? For a correction, explain what's wrong today and how you confirmed the right value.
+    validations:
+      required: true
+
+  - type: input
+    id: pubmed-link
+    attributes:
+      label: A PubMed link showing the correct abbreviation (optional but very helpful)
+      placeholder: https://pubmed.ncbi.nlm.nih.gov/...
+    validations:
+      required: false

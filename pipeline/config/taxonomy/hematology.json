@@ -1,0 +1,461 @@
+{
+  "slug": "hematology",
+  "order": 20,
+  "name": "Hematology",
+  "icon": "🩸",
+  "blurb": "Blood cancers, benign hematology, thrombosis, transfusion, and cellular therapy.",
+  "topics": [
+    {
+      "slug": "heme-leukemia",
+      "name": "Leukemia & MDS",
+      "blurb": "Acute and chronic leukemias, myelodysplastic syndromes, and their targeted therapies.",
+      "rules": {
+        "mesh": [
+          "Leukemia",
+          "Myelodysplastic Syndromes",
+          "Preleukemia",
+          "Blast Crisis"
+        ],
+        "phrases": [
+          "acute myeloid leukemia",
+          "acute myeloid leukaemia",
+          "acute lymphoblastic leukemia",
+          "acute lymphoblastic leukaemia",
+          "chronic lymphocytic leukemia",
+          "chronic lymphocytic leukaemia",
+          "chronic myeloid leukemia",
+          "chronic myeloid leukaemia",
+          "hairy cell leukemia",
+          "myelodysplastic syndrome",
+          "acute promyelocytic leukemia",
+          "measurable residual disease",
+          "minimal residual disease",
+          "venetoclax",
+          "azacitidine",
+          "gilteritinib",
+          "midostaurin",
+          "blinatumomab",
+          "ponatinib",
+          "imatinib",
+          "dasatinib",
+          "asciminib",
+          "luspatercept",
+          "leukemia",
+          "leukaemia",
+          "leukemogenesis",
+          "leukemogenic"
+        ],
+        "acronyms": [
+          "AML",
+          "ALL",
+          "CLL",
+          "CML",
+          "MDS",
+          "APL",
+          "CMML",
+          "MRD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "heme-lymphoma",
+      "name": "Lymphoma",
+      "blurb": "Hodgkin and non-Hodgkin lymphoma, including DLBCL, follicular, mantle cell, and T-cell lymphomas.",
+      "rules": {
+        "mesh": [
+          "Lymphoma",
+          "Hodgkin Disease",
+          "Sezary Syndrome",
+          "Mycosis Fungoides"
+        ],
+        "phrases": [
+          "diffuse large B-cell lymphoma",
+          "follicular lymphoma",
+          "mantle cell lymphoma",
+          "marginal zone lymphoma",
+          "Hodgkin lymphoma",
+          "non-Hodgkin lymphoma",
+          "Burkitt lymphoma",
+          "T-cell lymphoma",
+          "primary CNS lymphoma",
+          "polatuzumab",
+          "glofitamab",
+          "mosunetuzumab",
+          "epcoritamab",
+          "brentuximab",
+          "acalabrutinib",
+          "zanubrutinib",
+          "ibrutinib",
+          "pirtobrutinib",
+          "tafasitamab",
+          "loncastuximab",
+          "large B-cell lymphoma"
+        ],
+        "acronyms": [
+          "DLBCL",
+          "NHL",
+          "MCL",
+          "PTCL",
+          "CTCL",
+          "MZL",
+          "PMBCL",
+          "LBCL"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "heme-myeloma",
+      "name": "Myeloma & plasma cell disorders",
+      "blurb": "Multiple myeloma, smouldering myeloma, MGUS, amyloidosis, and Waldenstrom macroglobulinemia.",
+      "rules": {
+        "mesh": [
+          "Multiple Myeloma",
+          "Paraproteinemias",
+          "Monoclonal Gammopathy of Undetermined Significance",
+          "Amyloidosis",
+          "Waldenstrom Macroglobulinemia",
+          "Plasmacytoma"
+        ],
+        "phrases": [
+          "multiple myeloma",
+          "smouldering myeloma",
+          "smoldering myeloma",
+          "plasma cell",
+          "light chain amyloidosis",
+          "AL amyloidosis",
+          "monoclonal gammopathy",
+          "daratumumab",
+          "isatuximab",
+          "teclistamab",
+          "talquetamab",
+          "elranatamab",
+          "carfilzomib",
+          "bortezomib",
+          "lenalidomide",
+          "pomalidomide",
+          "belantamab",
+          "ciltacabtagene",
+          "idecabtagene",
+          "mezigdomide",
+          "iberdomide"
+        ],
+        "acronyms": [
+          "MGUS",
+          "MM",
+          "NDMM",
+          "RRMM",
+          "BCMA",
+          "WM"
+        ],
+        "not": [
+          "malignant melanoma",
+          "white matter"
+        ]
+      }
+    },
+    {
+      "slug": "heme-mpn",
+      "name": "MPN & marrow failure",
+      "blurb": "Myeloproliferative neoplasms, aplastic anemia, PNH, and clonal hematopoiesis.",
+      "rules": {
+        "mesh": [
+          "Myeloproliferative Disorders",
+          "Primary Myelofibrosis",
+          "Polycythemia Vera",
+          "Thrombocythemia, Essential",
+          "Anemia, Aplastic",
+          "Hemoglobinuria, Paroxysmal",
+          "Bone Marrow Failure Disorders",
+          "Clonal Hematopoiesis",
+          "Mastocytosis",
+          "Hypereosinophilic Syndrome"
+        ],
+        "phrases": [
+          "myeloproliferative neoplasm",
+          "myelofibrosis",
+          "polycythemia vera",
+          "polycythaemia vera",
+          "essential thrombocythemia",
+          "essential thrombocythaemia",
+          "aplastic anemia",
+          "aplastic anaemia",
+          "paroxysmal nocturnal hemoglobinuria",
+          "clonal hematopoiesis",
+          "clonal haematopoiesis",
+          "systemic mastocytosis",
+          "ruxolitinib",
+          "fedratinib",
+          "momelotinib",
+          "pacritinib",
+          "eltrombopag",
+          "avatrombopag",
+          "pegcetacoplan",
+          "iptacopan",
+          "eculizumab",
+          "ravulizumab",
+          "JAK2",
+          "calreticulin"
+        ],
+        "acronyms": [
+          "MPN",
+          "MF",
+          "PV",
+          "ET",
+          "PNH",
+          "CHIP",
+          "AA",
+          "SM"
+        ],
+        "not": [
+          "mycosis fungoides",
+          "portal vein",
+          "embryo transfer",
+          "endotracheal intubation",
+          "African American",
+          "ascending aorta",
+          "smooth muscle",
+          "hemoglobin AA"
+        ]
+      }
+    },
+    {
+      "slug": "heme-cell-therapy",
+      "name": "Transplant & cellular therapy",
+      "blurb": "Stem cell transplantation, CAR T-cell and other engineered cell therapies, bispecifics, and graft-versus-host disease.",
+      "rules": {
+        "mesh": [
+          "Hematopoietic Stem Cell Transplantation",
+          "Bone Marrow Transplantation",
+          "Graft vs Host Disease",
+          "Immunotherapy, Adoptive",
+          "Receptors, Chimeric Antigen",
+          "Transplantation Conditioning",
+          "Cord Blood Stem Cell Transplantation"
+        ],
+        "phrases": [
+          "chimeric antigen receptor",
+          "CAR T-cell",
+          "CAR T cell",
+          "CAR-T",
+          "stem cell transplantation",
+          "stem cell transplant",
+          "allogeneic transplant",
+          "autologous transplant",
+          "graft-versus-host disease",
+          "graft versus host disease",
+          "haploidentical",
+          "conditioning regimen",
+          "cytokine release syndrome",
+          "immune effector cell-associated neurotoxicity",
+          "axicabtagene",
+          "tisagenlecleucel",
+          "lisocabtagene",
+          "brexucabtagene",
+          "obecabtagene",
+          "post-transplant cyclophosphamide",
+          "stem cell graft",
+          "bone marrow transplantation",
+          "autologous transplantation"
+        ],
+        "acronyms": [
+          "HSCT",
+          "HCT",
+          "GVHD",
+          "GvHD",
+          "CRS",
+          "ICANS",
+          "TBI",
+          "MAC",
+          "RIC"
+        ],
+        "not": [
+          "traumatic brain injury",
+          "cytoreductive surgery",
+          "chronic rhinosinusitis"
+        ]
+      }
+    },
+    {
+      "slug": "heme-benign",
+      "name": "Anemia, sickle cell & thalassemia",
+      "blurb": "Red cell disorders including sickle cell disease, thalassemia, iron deficiency, and hemolytic anemias.",
+      "rules": {
+        "mesh": [
+          "Anemia, Sickle Cell",
+          "Thalassemia",
+          "Anemia, Iron-Deficiency",
+          "Anemia, Hemolytic",
+          "Hemoglobinopathies",
+          "Iron Overload",
+          "Anemia, Megaloblastic",
+          "Erythropoiesis",
+          "Spherocytosis, Hereditary",
+          "Glucosephosphate Dehydrogenase Deficiency"
+        ],
+        "phrases": [
+          "sickle cell disease",
+          "sickle cell anemia",
+          "sickle cell anaemia",
+          "beta-thalassemia",
+          "beta-thalassaemia",
+          "thalassemia",
+          "iron deficiency anemia",
+          "iron deficiency anaemia",
+          "hemolytic anemia",
+          "haemolytic anaemia",
+          "hereditary spherocytosis",
+          "vaso-occlusive crisis",
+          "hydroxyurea",
+          "voxelotor",
+          "crizanlizumab",
+          "exagamglogene",
+          "lovotibeglogene",
+          "betibeglogene",
+          "mitapivat",
+          "fetal hemoglobin",
+          "gene editing for sickle"
+        ],
+        "acronyms": [
+          "SCD",
+          "VOC",
+          "G6PD",
+          "AIHA",
+          "IDA",
+          "HbF"
+        ],
+        "not": [
+          "sudden cardiac death"
+        ]
+      }
+    },
+    {
+      "slug": "heme-thrombosis",
+      "name": "Thrombosis & hemostasis",
+      "blurb": "Venous thromboembolism, anticoagulation, hemophilia, platelet disorders, and bleeding management.",
+      "rules": {
+        "mesh": [
+          "Venous Thromboembolism",
+          "Venous Thrombosis",
+          "Pulmonary Embolism",
+          "Anticoagulants",
+          "Hemophilia A",
+          "Hemophilia B",
+          "Purpura, Thrombocytopenic, Idiopathic",
+          "Thrombotic Thrombocytopenic Purpura",
+          "Thrombocytopenia",
+          "von Willebrand Diseases",
+          "Blood Coagulation Disorders",
+          "Disseminated Intravascular Coagulation",
+          "Antiphospholipid Syndrome",
+          "Thrombophilia"
+        ],
+        "phrases": [
+          "venous thromboembolism",
+          "deep vein thrombosis",
+          "pulmonary embolism",
+          "direct oral anticoagulant",
+          "immune thrombocytopenia",
+          "thrombotic thrombocytopenic purpura",
+          "heparin-induced thrombocytopenia",
+          "hemophilia",
+          "haemophilia",
+          "von Willebrand",
+          "antiphospholipid syndrome",
+          "apixaban",
+          "rivaroxaban",
+          "edoxaban",
+          "dabigatran",
+          "andexanet",
+          "emicizumab",
+          "fitusiran",
+          "concizumab",
+          "efanesoctocog",
+          "valoctocogene",
+          "etranacogene",
+          "caplacizumab",
+          "thrombotic microangiopathy"
+        ],
+        "acronyms": [
+          "VTE",
+          "DVT",
+          "PE",
+          "DOAC",
+          "ITP",
+          "TTP",
+          "HIT",
+          "DIC",
+          "APS",
+          "vWD"
+        ],
+        "not": [
+          "pre-eclampsia",
+          "preeclampsia",
+          "pleural effusion",
+          "time to progression"
+        ]
+      }
+    },
+    {
+      "slug": "heme-transfusion",
+      "name": "Transfusion medicine",
+      "blurb": "Blood component therapy, transfusion thresholds, donor practice, and apheresis.",
+      "rules": {
+        "mesh": [
+          "Blood Transfusion",
+          "Erythrocyte Transfusion",
+          "Platelet Transfusion",
+          "Blood Donors",
+          "Blood Banks",
+          "Blood Component Transfusion",
+          "Blood Preservation",
+          "Plasma Exchange",
+          "Blood Component Removal",
+          "Transfusion Reaction"
+        ],
+        "phrases": [
+          "red blood cell transfusion",
+          "platelet transfusion",
+          "transfusion threshold",
+          "restrictive transfusion",
+          "liberal transfusion",
+          "blood donor",
+          "apheresis",
+          "plasma exchange",
+          "patient blood management",
+          "transfusion-associated",
+          "massive transfusion",
+          "convalescent plasma",
+          "cryoprecipitate"
+        ],
+        "acronyms": [
+          "RBC",
+          "TRALI",
+          "TACO",
+          "PBM"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "heme-other",
+      "name": "General & other hematology",
+      "blurb": "Everything else newly indexed in the hematology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Hematologic Diseases",
+          "Hematology",
+          "Hematologic Neoplasms"
+        ],
+        "phrases": [
+          "hematologic malignancy",
+          "haematologic malignancy"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Local D1 state and wrangler dev artifacts (also covered at the repo root,
+# duplicated here so `worker/` is self-contained if ever split out).
+.wrangler/
+node_modules/
+.dev.vars
+
+# Output of the local cron/digest verification run (VERIFY BEFORE REPORTING
+# step 4) — a rendered HTML email fixture, not something to ship.
+test-output/

@@ -1,0 +1,720 @@
+{
+  "slug": "oncology",
+  "order": 30,
+  "name": "Oncology",
+  "icon": "🎗️",
+  "blurb": "Solid tumours by organ site, plus immunotherapy, precision oncology, radiation, screening, and supportive care.",
+  "topics": [
+    {
+      "slug": "onc-breast",
+      "name": "Breast cancer",
+      "blurb": "Early and advanced breast cancer across all receptor subtypes.",
+      "rules": {
+        "mesh": [
+          "Breast Neoplasms",
+          "Carcinoma, Ductal, Breast",
+          "Carcinoma, Lobular",
+          "Triple Negative Breast Neoplasms",
+          "Breast Carcinoma In Situ"
+        ],
+        "phrases": [
+          "breast cancer",
+          "breast carcinoma",
+          "triple-negative breast",
+          "hormone receptor-positive breast",
+          "HER2-positive breast",
+          "HER2-low",
+          "ductal carcinoma in situ",
+          "mastectomy",
+          "trastuzumab deruxtecan",
+          "sacituzumab",
+          "ribociclib",
+          "palbociclib",
+          "abemaciclib",
+          "elacestrant",
+          "camizestrant",
+          "capivasertib",
+          "alpelisib",
+          "olaparib",
+          "pertuzumab",
+          "breast tumor",
+          "breast tumour"
+        ],
+        "acronyms": [
+          "TNBC",
+          "DCIS",
+          "HER2",
+          "CDK4"
+        ],
+        "not": [
+          "breastfeeding",
+          "breast feeding",
+          "breast milk"
+        ]
+      }
+    },
+    {
+      "slug": "onc-thoracic",
+      "name": "Lung & thoracic cancer",
+      "blurb": "Non-small cell and small cell lung cancer, mesothelioma, and thymic tumours.",
+      "rules": {
+        "mesh": [
+          "Lung Neoplasms",
+          "Carcinoma, Non-Small-Cell Lung",
+          "Small Cell Lung Carcinoma",
+          "Mesothelioma",
+          "Thymus Neoplasms",
+          "Pleural Neoplasms"
+        ],
+        "phrases": [
+          "non-small cell lung cancer",
+          "small cell lung cancer",
+          "lung adenocarcinoma",
+          "lung squamous",
+          "mesothelioma",
+          "thymic carcinoma",
+          "EGFR-mutated",
+          "ALK-positive",
+          "osimertinib",
+          "lorlatinib",
+          "alectinib",
+          "sotorasib",
+          "adagrasib",
+          "amivantamab",
+          "tarlatamab",
+          "durvalumab",
+          "tepotinib",
+          "capmatinib",
+          "selpercatinib",
+          "repotrectinib"
+        ],
+        "acronyms": [
+          "NSCLC",
+          "SCLC",
+          "EGFR",
+          "ALK",
+          "ROS1",
+          "KRAS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-gi",
+      "name": "Gastrointestinal cancer",
+      "blurb": "Colorectal, gastro-oesophageal, pancreatic, hepatobiliary, and anal cancers.",
+      "rules": {
+        "mesh": [
+          "Colorectal Neoplasms",
+          "Colonic Neoplasms",
+          "Rectal Neoplasms",
+          "Stomach Neoplasms",
+          "Esophageal Neoplasms",
+          "Pancreatic Neoplasms",
+          "Liver Neoplasms",
+          "Carcinoma, Hepatocellular",
+          "Bile Duct Neoplasms",
+          "Cholangiocarcinoma",
+          "Gallbladder Neoplasms",
+          "Anus Neoplasms",
+          "Gastrointestinal Neoplasms",
+          "Gastrointestinal Stromal Tumors"
+        ],
+        "phrases": [
+          "colorectal cancer",
+          "colon cancer",
+          "rectal cancer",
+          "gastric cancer",
+          "oesophageal cancer",
+          "esophageal cancer",
+          "pancreatic cancer",
+          "pancreatic ductal adenocarcinoma",
+          "hepatocellular carcinoma",
+          "cholangiocarcinoma",
+          "biliary tract cancer",
+          "anal cancer",
+          "gastrointestinal stromal tumour",
+          "gastrointestinal stromal tumor",
+          "total neoadjuvant therapy",
+          "microsatellite instability",
+          "mismatch repair deficient",
+          "trifluridine",
+          "regorafenib",
+          "fruquintinib",
+          "zolbetuximab",
+          "tislelizumab",
+          "atezolizumab plus bevacizumab",
+          "dostarlimab",
+          "colorectal adenocarcinoma"
+        ],
+        "acronyms": [
+          "CRC",
+          "HCC",
+          "PDAC",
+          "GIST",
+          "MSI",
+          "dMMR",
+          "TNT"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-gu",
+      "name": "Genitourinary cancer",
+      "blurb": "Prostate, kidney, bladder/urothelial, and testicular cancers.",
+      "rules": {
+        "mesh": [
+          "Prostatic Neoplasms",
+          "Kidney Neoplasms",
+          "Carcinoma, Renal Cell",
+          "Urinary Bladder Neoplasms",
+          "Urologic Neoplasms",
+          "Testicular Neoplasms",
+          "Penile Neoplasms",
+          "Ureteral Neoplasms"
+        ],
+        "phrases": [
+          "prostate cancer",
+          "renal cell carcinoma",
+          "kidney cancer",
+          "bladder cancer",
+          "urothelial carcinoma",
+          "testicular cancer",
+          "castration-resistant prostate",
+          "hormone-sensitive prostate",
+          "non-muscle invasive bladder",
+          "muscle-invasive bladder",
+          "radical prostatectomy",
+          "androgen deprivation",
+          "enzalutamide",
+          "abiraterone",
+          "darolutamide",
+          "apalutamide",
+          "lutetium-177",
+          "PSMA",
+          "enfortumab",
+          "erdafitinib",
+          "nivolumab plus cabozantinib",
+          "belzutifan",
+          "pembrolizumab plus axitinib",
+          "prostate pathology"
+        ],
+        "acronyms": [
+          "RCC",
+          "mCRPC",
+          "mHSPC",
+          "NMIBC",
+          "MIBC",
+          "PSA",
+          "BCG"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-gyn",
+      "name": "Gynecologic cancer",
+      "blurb": "Ovarian, endometrial, cervical, and vulvar cancers.",
+      "rules": {
+        "mesh": [
+          "Ovarian Neoplasms",
+          "Endometrial Neoplasms",
+          "Uterine Cervical Neoplasms",
+          "Uterine Neoplasms",
+          "Vulvar Neoplasms",
+          "Genital Neoplasms, Female",
+          "Gestational Trophoblastic Disease",
+          "Fallopian Tube Neoplasms"
+        ],
+        "phrases": [
+          "ovarian cancer",
+          "endometrial cancer",
+          "cervical cancer",
+          "uterine cancer",
+          "vulvar cancer",
+          "high-grade serous",
+          "platinum-resistant ovarian",
+          "cytoreductive surgery",
+          "PARP inhibitor maintenance",
+          "niraparib",
+          "rucaparib",
+          "mirvetuximab",
+          "tisotumab",
+          "selinexor",
+          "dostarlimab plus carboplatin"
+        ],
+        "acronyms": [
+          "HGSOC",
+          "PARP",
+          "HPV",
+          "CIN"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-head-neck",
+      "name": "Head & neck cancer",
+      "blurb": "Oral, oropharyngeal, laryngeal, nasopharyngeal, salivary, and thyroid cancers.",
+      "rules": {
+        "mesh": [
+          "Head and Neck Neoplasms",
+          "Mouth Neoplasms",
+          "Oropharyngeal Neoplasms",
+          "Laryngeal Neoplasms",
+          "Nasopharyngeal Neoplasms",
+          "Nasopharyngeal Carcinoma",
+          "Salivary Gland Neoplasms",
+          "Thyroid Neoplasms",
+          "Squamous Cell Carcinoma of Head and Neck",
+          "Tongue Neoplasms"
+        ],
+        "phrases": [
+          "head and neck cancer",
+          "head and neck squamous cell carcinoma",
+          "oropharyngeal cancer",
+          "nasopharyngeal carcinoma",
+          "laryngeal cancer",
+          "oral cavity cancer",
+          "salivary gland carcinoma",
+          "thyroid cancer",
+          "anaplastic thyroid",
+          "medullary thyroid",
+          "HPV-positive oropharyngeal",
+          "chemoradiotherapy for head and neck",
+          "larynx preservation",
+          "selumetinib",
+          "lenvatinib for thyroid"
+        ],
+        "acronyms": [
+          "HNSCC",
+          "NPC",
+          "DTC",
+          "ATC",
+          "MTC"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-cns",
+      "name": "Neuro-oncology",
+      "blurb": "Glioma, glioblastoma, brain metastases, meningioma, and CNS tumour management.",
+      "rules": {
+        "mesh": [
+          "Brain Neoplasms",
+          "Glioblastoma",
+          "Glioma",
+          "Meningioma",
+          "Central Nervous System Neoplasms",
+          "Medulloblastoma",
+          "Astrocytoma",
+          "Oligodendroglioma",
+          "Ependymoma",
+          "Spinal Cord Neoplasms",
+          "Neoplasm Metastasis"
+        ],
+        "phrases": [
+          "glioblastoma",
+          "high-grade glioma",
+          "low-grade glioma",
+          "brain metastases",
+          "brain metastasis",
+          "meningioma",
+          "medulloblastoma",
+          "diffuse midline glioma",
+          "IDH-mutant glioma",
+          "leptomeningeal disease",
+          "stereotactic radiosurgery for brain",
+          "temozolomide",
+          "vorasidenib",
+          "tumour treating fields",
+          "tumor treating fields"
+        ],
+        "acronyms": [
+          "GBM",
+          "IDH",
+          "MGMT",
+          "SRS",
+          "TTFields"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-skin",
+      "name": "Melanoma & skin cancer",
+      "blurb": "Cutaneous melanoma, basal and squamous cell carcinoma, and Merkel cell carcinoma.",
+      "rules": {
+        "mesh": [
+          "Melanoma",
+          "Skin Neoplasms",
+          "Carcinoma, Merkel Cell",
+          "Carcinoma, Basal Cell",
+          "Carcinoma, Squamous Cell"
+        ],
+        "phrases": [
+          "cutaneous melanoma",
+          "metastatic melanoma",
+          "uveal melanoma",
+          "basal cell carcinoma",
+          "cutaneous squamous cell carcinoma",
+          "Merkel cell carcinoma",
+          "sentinel lymph node biopsy for melanoma",
+          "BRAF-mutant melanoma",
+          "adjuvant pembrolizumab for melanoma",
+          "relatlimab",
+          "tebentafusp",
+          "lifileucel",
+          "cemiplimab",
+          "dabrafenib",
+          "trametinib",
+          "encorafenib"
+        ],
+        "acronyms": [
+          "BCC",
+          "cSCC",
+          "MCC",
+          "BRAF",
+          "TIL"
+        ],
+        "not": [
+          "squamous cell carcinoma of the head",
+          "oesophageal squamous",
+          "esophageal squamous",
+          "lung squamous"
+        ]
+      }
+    },
+    {
+      "slug": "onc-sarcoma",
+      "name": "Sarcoma & rare tumours",
+      "blurb": "Soft tissue and bone sarcomas, neuroendocrine tumours, and cancers of unknown primary.",
+      "rules": {
+        "mesh": [
+          "Sarcoma",
+          "Bone Neoplasms",
+          "Osteosarcoma",
+          "Ewing Sarcoma",
+          "Rhabdomyosarcoma",
+          "Leiomyosarcoma",
+          "Liposarcoma",
+          "Neuroendocrine Tumors",
+          "Neoplasms, Unknown Primary",
+          "Desmoid Tumors",
+          "Chordoma",
+          "Adrenocortical Carcinoma"
+        ],
+        "phrases": [
+          "soft tissue sarcoma",
+          "osteosarcoma",
+          "Ewing sarcoma",
+          "leiomyosarcoma",
+          "liposarcoma",
+          "desmoid tumour",
+          "desmoid tumor",
+          "neuroendocrine tumour",
+          "neuroendocrine tumor",
+          "cancer of unknown primary",
+          "adrenocortical carcinoma",
+          "nirogacestat",
+          "afamitresgene",
+          "peptide receptor radionuclide therapy"
+        ],
+        "acronyms": [
+          "STS",
+          "GEP-NET",
+          "NET",
+          "CUP",
+          "PRRT"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-immunotherapy",
+      "name": "Immunotherapy",
+      "blurb": "Checkpoint inhibitors, cancer vaccines, immune-related adverse events, and tumour immunology.",
+      "rules": {
+        "mesh": [
+          "Immune Checkpoint Inhibitors",
+          "Immunotherapy",
+          "Cancer Vaccines",
+          "Programmed Cell Death 1 Receptor",
+          "CTLA-4 Antigen",
+          "B7-H1 Antigen",
+          "Tumor Microenvironment",
+          "Immunoconjugates"
+        ],
+        "phrases": [
+          "immune checkpoint inhibitor",
+          "checkpoint blockade",
+          "immune-related adverse event",
+          "cancer vaccine",
+          "neoantigen",
+          "tumour microenvironment",
+          "tumor microenvironment",
+          "PD-1 blockade",
+          "PD-L1 expression",
+          "antibody-drug conjugate",
+          "bispecific antibody",
+          "pembrolizumab",
+          "nivolumab",
+          "ipilimumab",
+          "atezolizumab",
+          "tumour mutational burden",
+          "tumor mutational burden",
+          "antiangiogenic immunotherapy"
+        ],
+        "acronyms": [
+          "ICI",
+          "irAE",
+          "ADC",
+          "TMB",
+          "TIL",
+          "PD-1",
+          "PD-L1",
+          "CTLA-4"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-precision",
+      "name": "Precision oncology",
+      "blurb": "Tumour genomic profiling, targeted therapy selection, liquid biopsy, and molecular residual disease.",
+      "rules": {
+        "mesh": [
+          "Precision Medicine",
+          "Liquid Biopsy",
+          "Circulating Tumor DNA",
+          "Circulating Tumor Cells",
+          "Biomarkers, Tumor",
+          "Molecular Targeted Therapy",
+          "High-Throughput Nucleotide Sequencing",
+          "Genomics",
+          "Pharmacogenomic Testing"
+        ],
+        "phrases": [
+          "circulating tumour DNA",
+          "circulating tumor DNA",
+          "liquid biopsy",
+          "comprehensive genomic profiling",
+          "next-generation sequencing",
+          "molecular tumour board",
+          "molecular tumor board",
+          "tumour-agnostic",
+          "tumor-agnostic",
+          "molecular residual disease",
+          "germline testing",
+          "actionable alteration",
+          "multi-cancer early detection",
+          "whole genome sequencing",
+          "single-cell RNA sequencing",
+          "tinengotinib"
+        ],
+        "acronyms": [
+          "ctDNA",
+          "CTC",
+          "NGS",
+          "CGP",
+          "MRD",
+          "WGS",
+          "MCED"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-radiation",
+      "name": "Radiation oncology",
+      "blurb": "Radiotherapy technique, dose and fractionation, and radiopharmaceuticals.",
+      "rules": {
+        "mesh": [
+          "Radiotherapy",
+          "Radiotherapy, Intensity-Modulated",
+          "Radiosurgery",
+          "Radiotherapy Dosage",
+          "Dose Fractionation, Radiation",
+          "Proton Therapy",
+          "Brachytherapy",
+          "Chemoradiotherapy",
+          "Radiation Injuries"
+        ],
+        "phrases": [
+          "radiotherapy",
+          "radiation therapy",
+          "stereotactic body radiotherapy",
+          "stereotactic ablative radiotherapy",
+          "hypofractionated",
+          "proton therapy",
+          "brachytherapy",
+          "dose escalation radiotherapy",
+          "chemoradiotherapy",
+          "whole brain radiotherapy",
+          "intensity-modulated radiotherapy",
+          "radiopharmaceutical",
+          "MR-guided radiotherapy",
+          "FLASH radiotherapy"
+        ],
+        "acronyms": [
+          "SBRT",
+          "SABR",
+          "IMRT",
+          "EBRT",
+          "WBRT",
+          "VMAT"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-supportive",
+      "name": "Supportive & palliative care",
+      "blurb": "Symptom control, toxicity management, survivorship, quality of life, and end-of-life care in cancer.",
+      "rules": {
+        "mesh": [
+          "Palliative Care",
+          "Terminal Care",
+          "Hospice Care",
+          "Quality of Life",
+          "Cancer Survivors",
+          "Survivorship",
+          "Cancer Pain",
+          "Antiemetics",
+          "Nausea",
+          "Cachexia",
+          "Fatigue",
+          "Patient Reported Outcome Measures",
+          "Febrile Neutropenia",
+          "Chemotherapy-Induced Febrile Neutropenia"
+        ],
+        "phrases": [
+          "palliative care",
+          "end-of-life care",
+          "hospice",
+          "quality of life in patients with cancer",
+          "cancer survivorship",
+          "patient-reported outcome",
+          "cancer-related fatigue",
+          "chemotherapy-induced nausea",
+          "chemotherapy-induced peripheral neuropathy",
+          "febrile neutropenia",
+          "cancer cachexia",
+          "financial toxicity",
+          "advance care planning",
+          "symptom monitoring"
+        ],
+        "acronyms": [
+          "PRO",
+          "PROM",
+          "QoL",
+          "CINV",
+          "CIPN",
+          "ePRO"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-screening",
+      "name": "Screening & prevention",
+      "blurb": "Cancer screening programmes, early detection, risk models, and chemoprevention.",
+      "rules": {
+        "mesh": [
+          "Early Detection of Cancer",
+          "Mass Screening",
+          "Mammography",
+          "Colonoscopy",
+          "Papanicolaou Test",
+          "Chemoprevention",
+          "Vaginal Smears",
+          "Occult Blood",
+          "Risk Assessment"
+        ],
+        "phrases": [
+          "cancer screening",
+          "screening programme",
+          "screening program",
+          "early detection of cancer",
+          "lung cancer screening",
+          "low-dose CT screening",
+          "mammographic screening",
+          "colorectal cancer screening",
+          "faecal immunochemical test",
+          "fecal immunochemical test",
+          "cervical screening",
+          "HPV vaccination",
+          "chemoprevention",
+          "risk prediction model for cancer",
+          "overdiagnosis"
+        ],
+        "acronyms": [
+          "LDCT",
+          "FIT",
+          "USPSTF",
+          "MCED"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-peds",
+      "name": "Pediatric oncology",
+      "blurb": "Childhood and adolescent cancers and their late effects.",
+      "rules": {
+        "mesh": [
+          "Neuroblastoma",
+          "Wilms Tumor",
+          "Retinoblastoma",
+          "Hepatoblastoma",
+          "Nephroblastoma"
+        ],
+        "phrases": [
+          "childhood cancer",
+          "paediatric oncology",
+          "pediatric oncology",
+          "children with cancer",
+          "neuroblastoma",
+          "Wilms tumour",
+          "Wilms tumor",
+          "retinoblastoma",
+          "hepatoblastoma",
+          "adolescent and young adult cancer",
+          "childhood cancer survivor",
+          "late effects of childhood cancer",
+          "dinutuximab",
+          "naxitamab"
+        ],
+        "acronyms": [
+          "AYA",
+          "CCSS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "onc-other",
+      "name": "General & other oncology",
+      "blurb": "Everything else newly indexed in the oncology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Neoplasms",
+          "Medical Oncology",
+          "Antineoplastic Agents",
+          "Carcinogenesis"
+        ],
+        "phrases": [
+          "cancer care delivery",
+          "oncology workforce",
+          "clinical trial enrolment",
+          "clinical trial enrollment"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

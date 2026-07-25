@@ -1,0 +1,264 @@
+{
+  "slug": "rheum-immunology",
+  "order": 130,
+  "name": "Rheumatology & immunology",
+  "icon": "🦴",
+  "blurb": "Inflammatory arthritis, connective tissue disease, vasculitis, and immune-mediated and allergic conditions.",
+  "topics": [
+    {
+      "slug": "rheum-ra",
+      "name": "Rheumatoid arthritis",
+      "blurb": "Rheumatoid arthritis diagnosis, disease activity, and conventional, biologic, and targeted synthetic DMARDs.",
+      "rules": {
+        "mesh": [
+          "Arthritis, Rheumatoid",
+          "Rheumatoid Nodule",
+          "Rheumatoid Factor",
+          "Synovitis"
+        ],
+        "phrases": [
+          "rheumatoid arthritis",
+          "anti-citrullinated protein antibody",
+          "disease-modifying antirheumatic drug",
+          "methotrexate for rheumatoid arthritis",
+          "biologic DMARD",
+          "targeted synthetic DMARD",
+          "upadacitinib",
+          "baricitinib",
+          "tofacitinib",
+          "abatacept",
+          "sarilumab",
+          "tocilizumab",
+          "rituximab for rheumatoid arthritis",
+          "inflammatory arthritis"
+        ],
+        "acronyms": [
+          "RA",
+          "ACPA",
+          "DMARD",
+          "csDMARD",
+          "bDMARD"
+        ],
+        "not": [
+          "right atrial",
+          "renal artery",
+          "retinoic acid"
+        ]
+      }
+    },
+    {
+      "slug": "rheum-lupus",
+      "name": "Lupus & connective tissue disease",
+      "blurb": "Systemic lupus erythematosus, systemic sclerosis, Sjogren syndrome, and related connective tissue disease.",
+      "rules": {
+        "mesh": [
+          "Lupus Erythematosus, Systemic",
+          "Lupus Nephritis",
+          "Antiphospholipid Syndrome",
+          "Scleroderma, Systemic",
+          "Sjogren's Syndrome",
+          "Dermatomyositis",
+          "Mixed Connective Tissue Disease"
+        ],
+        "phrases": [
+          "systemic lupus erythematosus",
+          "lupus nephritis",
+          "systemic sclerosis",
+          "scleroderma",
+          "Sjogren's syndrome",
+          "Sjogren syndrome",
+          "dermatomyositis",
+          "polymyositis",
+          "mixed connective tissue disease",
+          "belimumab",
+          "anifrolumab",
+          "voclosporin",
+          "obinutuzumab for lupus",
+          "litifilimab",
+          "lupus",
+          "Sjögren's disease",
+          "Sjögren disease"
+        ],
+        "acronyms": [
+          "SLE",
+          "APS",
+          "SSc"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "rheum-spondyloarthritis",
+      "name": "Spondyloarthritis & psoriatic arthritis",
+      "blurb": "Axial spondyloarthritis, ankylosing spondylitis, and psoriatic arthritis.",
+      "rules": {
+        "mesh": [
+          "Spondylarthritis",
+          "Arthritis, Psoriatic",
+          "Spondylitis, Ankylosing",
+          "Enthesopathy"
+        ],
+        "phrases": [
+          "axial spondyloarthritis",
+          "ankylosing spondylitis",
+          "psoriatic arthritis",
+          "non-radiographic axial spondyloarthritis",
+          "enthesitis",
+          "dactylitis",
+          "secukinumab",
+          "ixekizumab",
+          "bimekizumab",
+          "guselkumab for psoriatic arthritis",
+          "risankizumab for psoriatic arthritis",
+          "upadacitinib for psoriatic arthritis"
+        ],
+        "acronyms": [
+          "axSpA",
+          "AS",
+          "PsA",
+          "nr-axSpA"
+        ],
+        "not": [
+          "aortic stenosis"
+        ]
+      }
+    },
+    {
+      "slug": "rheum-vasculitis",
+      "name": "Vasculitis",
+      "blurb": "Giant cell arteritis, ANCA-associated vasculitis, and other systemic vasculitides.",
+      "rules": {
+        "mesh": [
+          "Vasculitis",
+          "Giant Cell Arteritis",
+          "Granulomatosis with Polyangiitis",
+          "Takayasu Arteritis",
+          "Polyarteritis Nodosa",
+          "IgA Vasculitis",
+          "Behcet Syndrome"
+        ],
+        "phrases": [
+          "giant cell arteritis",
+          "ANCA-associated vasculitis",
+          "granulomatosis with polyangiitis",
+          "microscopic polyangiitis",
+          "eosinophilic granulomatosis with polyangiitis",
+          "Takayasu arteritis",
+          "polyarteritis nodosa",
+          "Behcet's disease",
+          "IgA vasculitis",
+          "tocilizumab for giant cell arteritis",
+          "avacopan",
+          "rituximab for vasculitis",
+          "mepolizumab for eosinophilic granulomatosis with polyangiitis"
+        ],
+        "acronyms": [
+          "GCA",
+          "GPA",
+          "MPA",
+          "EGPA",
+          "ANCA",
+          "PAN"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "rheum-oa-gout",
+      "name": "Osteoarthritis & gout",
+      "blurb": "Degenerative joint disease and crystal arthropathies including gout and pseudogout.",
+      "rules": {
+        "mesh": [
+          "Osteoarthritis",
+          "Gout",
+          "Chondrocalcinosis",
+          "Osteoarthritis, Knee",
+          "Osteoarthritis, Hip"
+        ],
+        "phrases": [
+          "osteoarthritis",
+          "knee osteoarthritis",
+          "hip osteoarthritis",
+          "gouty arthritis",
+          "gout flare",
+          "hyperuricemia",
+          "hyperuricaemia",
+          "calcium pyrophosphate deposition",
+          "urate-lowering therapy",
+          "cartilage degeneration",
+          "total knee arthroplasty",
+          "allopurinol",
+          "febuxostat",
+          "pegloticase",
+          "tigulixostat"
+        ],
+        "acronyms": [
+          "OA",
+          "CPPD"
+        ],
+        "not": [
+          "occipital artery",
+          "oleic acid"
+        ]
+      }
+    },
+    {
+      "slug": "rheum-immunodeficiency",
+      "name": "Primary immunodeficiency & allergy",
+      "blurb": "Inborn errors of immunity, urticaria and angioedema, anaphylaxis, and allergic disease.",
+      "rules": {
+        "mesh": [
+          "Immunologic Deficiency Syndromes",
+          "Common Variable Immunodeficiency",
+          "Urticaria",
+          "Angioedema",
+          "Angioedemas, Hereditary",
+          "Anaphylaxis",
+          "Food Hypersensitivity"
+        ],
+        "phrases": [
+          "primary immunodeficiency",
+          "inborn error of immunity",
+          "common variable immunodeficiency",
+          "chronic spontaneous urticaria",
+          "hereditary angioedema",
+          "anaphylaxis",
+          "food allergy",
+          "allergic rhinitis",
+          "immunoglobulin replacement therapy",
+          "omalizumab",
+          "dupilumab for chronic urticaria",
+          "berotralstat",
+          "lanadelumab"
+        ],
+        "acronyms": [
+          "PID",
+          "CVID",
+          "CSU",
+          "HAE"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "rheum-other",
+      "name": "General & other rheumatology",
+      "blurb": "Everything else newly indexed in the rheumatology and immunology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Autoimmune Diseases",
+          "Rheumatic Diseases",
+          "Rheumatology"
+        ],
+        "phrases": [
+          "autoimmune disease",
+          "rheumatic disease",
+          "connective tissue disease"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+# Build outputs
+dist/
+build/
+web/dist/
+.vite/
+*.tsbuildinfo
+
+# The served API tree is a BUILD ARTIFACT, not source. It is regenerated from
+# data/archive/ on every run and uploaded straight to Pages, which is what keeps
+# this repository small: only the immutable daily archive is committed.
+data/api/
+data/feeds/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Cloudflare / Wrangler
+.wrangler/
+.dev.vars
+worker/.wrangler/
+
+# Secrets — never commit any of these
+.env
+.env.*
+!.env.example
+*.pem
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Local scratch
+tmp/
+scratch/

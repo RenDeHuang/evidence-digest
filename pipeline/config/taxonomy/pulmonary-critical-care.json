@@ -1,0 +1,278 @@
+{
+  "slug": "pulmonary-critical-care",
+  "order": 60,
+  "name": "Pulmonary & critical care",
+  "icon": "🫁",
+  "blurb": "Obstructive and interstitial lung disease, pneumonia, sepsis and shock, mechanical ventilation, and sleep and pulmonary vascular disease.",
+  "topics": [
+    {
+      "slug": "pulm-asthma-copd",
+      "name": "Asthma & COPD",
+      "blurb": "Chronic obstructive airway disease, severe asthma, and biologic and inhaled therapy.",
+      "rules": {
+        "mesh": [
+          "Asthma",
+          "Pulmonary Disease, Chronic Obstructive",
+          "Bronchial Hyperreactivity",
+          "Status Asthmaticus",
+          "Bronchodilator Agents",
+          "Bronchiectasis",
+          "Emphysema"
+        ],
+        "phrases": [
+          "asthma",
+          "chronic obstructive pulmonary disease",
+          "COPD exacerbation",
+          "bronchodilator",
+          "inhaled corticosteroid",
+          "biologic therapy for asthma",
+          "eosinophilic asthma",
+          "severe asthma",
+          "bronchiectasis",
+          "emphysema",
+          "pulmonary rehabilitation",
+          "dupilumab",
+          "tezepelumab",
+          "benralizumab",
+          "mepolizumab",
+          "reslizumab",
+          "triple therapy inhaler",
+          "ensifentrine",
+          "roflumilast"
+        ],
+        "acronyms": [
+          "COPD",
+          "ICS",
+          "LABA",
+          "LAMA",
+          "FEV1"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "pulm-ild-fibrosis",
+      "name": "Interstitial lung disease & pulmonary fibrosis",
+      "blurb": "Idiopathic and secondary pulmonary fibrosis, sarcoidosis, and antifibrotic therapy.",
+      "rules": {
+        "mesh": [
+          "Lung Diseases, Interstitial",
+          "Idiopathic Pulmonary Fibrosis",
+          "Pulmonary Fibrosis",
+          "Sarcoidosis",
+          "Hypersensitivity Pneumonitis"
+        ],
+        "phrases": [
+          "interstitial lung disease",
+          "idiopathic pulmonary fibrosis",
+          "pulmonary fibrosis",
+          "progressive fibrosing interstitial lung disease",
+          "progressive pulmonary fibrosis",
+          "hypersensitivity pneumonitis",
+          "sarcoidosis",
+          "connective tissue disease-associated interstitial lung disease",
+          "usual interstitial pneumonia",
+          "familial pulmonary fibrosis",
+          "lung transplantation for pulmonary fibrosis",
+          "nintedanib",
+          "pirfenidone",
+          "antifibrotic therapy"
+        ],
+        "acronyms": [
+          "IPF",
+          "ILD",
+          "PPF",
+          "UIP"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "pulm-pneumonia",
+      "name": "Pneumonia & lower respiratory infection",
+      "blurb": "Community- and hospital-acquired pneumonia and complicated lower respiratory infection.",
+      "rules": {
+        "mesh": [
+          "Pneumonia",
+          "Pneumonia, Ventilator-Associated",
+          "Community-Acquired Infections",
+          "Pneumonia, Bacterial",
+          "Empyema, Pleural",
+          "Lung Abscess"
+        ],
+        "phrases": [
+          "community-acquired pneumonia",
+          "hospital-acquired pneumonia",
+          "ventilator-associated pneumonia",
+          "aspiration pneumonia",
+          "pneumonia severity index",
+          "pleural effusion",
+          "empyema",
+          "lung abscess",
+          "procalcitonin-guided antibiotic therapy",
+          "severe pneumonia",
+          "necrotizing pneumonia",
+          "multilobar pneumonia",
+          "pneumococcal pneumonia",
+          "atypical pneumonia",
+          "bacterial pneumonia"
+        ],
+        "acronyms": [
+          "CAP",
+          "HAP",
+          "VAP",
+          "PSI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "pulm-sepsis-shock",
+      "name": "Sepsis & shock",
+      "blurb": "Sepsis, septic and cardiogenic shock, and hemodynamic resuscitation.",
+      "rules": {
+        "mesh": [
+          "Sepsis",
+          "Shock, Septic",
+          "Shock, Cardiogenic",
+          "Systemic Inflammatory Response Syndrome",
+          "Multiple Organ Failure",
+          "Shock"
+        ],
+        "phrases": [
+          "sepsis",
+          "septic shock",
+          "cardiogenic shock",
+          "vasopressor therapy",
+          "fluid resuscitation",
+          "lactate clearance",
+          "source control",
+          "sepsis bundle",
+          "norepinephrine",
+          "vasopressin for shock",
+          "early goal-directed therapy",
+          "surviving sepsis campaign",
+          "multiorgan dysfunction"
+        ],
+        "acronyms": [
+          "SIRS",
+          "MODS",
+          "SOFA",
+          "qSOFA"
+        ],
+        "not": [
+          "shock wave",
+          "shockwave",
+          "extracorporeal shock wave lithotripsy"
+        ]
+      }
+    },
+    {
+      "slug": "pulm-ards-ventilation",
+      "name": "Mechanical ventilation & ARDS",
+      "blurb": "Acute respiratory distress syndrome, invasive and noninvasive ventilation, and ECMO.",
+      "rules": {
+        "mesh": [
+          "Respiratory Distress Syndrome",
+          "Respiration, Artificial",
+          "Positive-Pressure Respiration",
+          "Extracorporeal Membrane Oxygenation",
+          "Respiratory Insufficiency",
+          "Ventilator Weaning",
+          "Noninvasive Ventilation"
+        ],
+        "phrases": [
+          "acute respiratory distress syndrome",
+          "mechanical ventilation",
+          "invasive mechanical ventilation",
+          "noninvasive ventilation",
+          "high-flow nasal oxygen",
+          "prone positioning",
+          "lung-protective ventilation",
+          "extracorporeal membrane oxygenation",
+          "ventilator weaning",
+          "spontaneous breathing trial",
+          "driving pressure",
+          "positive end-expiratory pressure",
+          "acute hypoxemic respiratory failure",
+          "acute respiratory failure"
+        ],
+        "acronyms": [
+          "ARDS",
+          "ECMO",
+          "PEEP",
+          "HFNC",
+          "NIV",
+          "IMV"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "pulm-sleep-vascular",
+      "name": "Sleep & pulmonary vascular disease",
+      "blurb": "Sleep apnea, pulmonary hypertension, and pulmonary vascular disease.",
+      "rules": {
+        "mesh": [
+          "Sleep Apnea, Obstructive",
+          "Sleep Apnea Syndromes",
+          "Pulmonary Hypertension",
+          "Continuous Positive Airway Pressure",
+          "Hypoventilation"
+        ],
+        "phrases": [
+          "obstructive sleep apnea",
+          "central sleep apnea",
+          "continuous positive airway pressure",
+          "pulmonary arterial hypertension",
+          "pulmonary hypertension",
+          "chronic thromboembolic pulmonary hypertension",
+          "right heart catheterization",
+          "pulmonary vascular resistance",
+          "sotatercept",
+          "macitentan",
+          "riociguat",
+          "selexipag",
+          "ambrisentan",
+          "CPAP adherence",
+          "apnea-hypopnea index",
+          "obstructive sleep apnoea"
+        ],
+        "acronyms": [
+          "OSA",
+          "CSA",
+          "CPAP",
+          "PAH",
+          "CTEPH",
+          "AHI",
+          "PVR"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "pulm-other",
+      "name": "General & other pulmonary & critical care",
+      "blurb": "Everything else newly indexed in the pulmonary and critical care journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Lung Diseases",
+          "Respiratory Tract Diseases",
+          "Critical Care",
+          "Critical Illness"
+        ],
+        "phrases": [
+          "pulmonary disease",
+          "respiratory disease",
+          "critical illness",
+          "intensive care unit"
+        ],
+        "acronyms": [
+          "ICU"
+        ],
+        "not": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "slug": "endocrine-metabolic",
+  "order": 100,
+  "name": "Endocrine & metabolic",
+  "icon": "🍬",
+  "blurb": "Diabetes, obesity, thyroid, bone and mineral, lipid and metabolic, and pituitary, adrenal and reproductive endocrine disease.",
+  "topics": [
+    {
+      "slug": "endo-t2d",
+      "name": "Type 2 diabetes",
+      "blurb": "Type 2 diabetes management, glycemic control, and cardiometabolic pharmacotherapy.",
+      "rules": {
+        "mesh": [
+          "Diabetes Mellitus, Type 2",
+          "Hyperglycemia",
+          "Insulin Resistance",
+          "Diabetic Angiopathies"
+        ],
+        "phrases": [
+          "type 2 diabetes",
+          "type 2 diabetes mellitus",
+          "glycemic control",
+          "insulin resistance",
+          "metformin",
+          "semaglutide",
+          "tirzepatide",
+          "dulaglutide",
+          "liraglutide",
+          "empagliflozin",
+          "dapagliflozin",
+          "canagliflozin",
+          "orforglipron",
+          "retatrutide",
+          "survodutide",
+          "glucagon-like peptide-1 receptor agonist",
+          "SGLT2 inhibitor",
+          "basal insulin",
+          "continuous glucose monitoring in type 2 diabetes"
+        ],
+        "acronyms": [
+          "T2D",
+          "T2DM",
+          "GLP-1",
+          "SGLT2",
+          "HbA1c"
+        ],
+        "not": [
+          "diabetes insipidus",
+          "type 1 diabetes"
+        ]
+      }
+    },
+    {
+      "slug": "endo-t1d-tech",
+      "name": "Type 1 diabetes & technology",
+      "blurb": "Type 1 diabetes, immune-based disease modification, and diabetes technology.",
+      "rules": {
+        "mesh": [
+          "Diabetes Mellitus, Type 1",
+          "Insulin Infusion Systems",
+          "Blood Glucose Self-Monitoring",
+          "Hypoglycemia"
+        ],
+        "phrases": [
+          "type 1 diabetes",
+          "type 1 diabetes mellitus",
+          "insulin pump",
+          "automated insulin delivery",
+          "closed-loop insulin delivery",
+          "continuous glucose monitor",
+          "hybrid closed loop",
+          "islet cell transplantation",
+          "teplizumab",
+          "verapamil for type 1 diabetes",
+          "artificial pancreas",
+          "time in range",
+          "glycemic variability"
+        ],
+        "acronyms": [
+          "T1D",
+          "T1DM",
+          "CGM",
+          "AID",
+          "TIR"
+        ],
+        "not": [
+          "diabetes insipidus",
+          "type 2 diabetes"
+        ]
+      }
+    },
+    {
+      "slug": "endo-obesity",
+      "name": "Obesity & weight management",
+      "blurb": "Obesity pharmacotherapy, bariatric surgery, and weight management.",
+      "rules": {
+        "mesh": [
+          "Obesity",
+          "Obesity, Morbid",
+          "Bariatric Surgery",
+          "Body Mass Index",
+          "Weight Loss",
+          "Overweight"
+        ],
+        "phrases": [
+          "obesity",
+          "weight management",
+          "weight loss",
+          "bariatric surgery",
+          "sleeve gastrectomy",
+          "gastric bypass",
+          "anti-obesity medication",
+          "semaglutide for weight loss",
+          "tirzepatide for weight loss",
+          "retatrutide",
+          "orforglipron",
+          "survodutide",
+          "cagrilintide",
+          "bimagrumab",
+          "obesity pharmacotherapy",
+          "metabolic and bariatric surgery"
+        ],
+        "acronyms": [
+          "BMI",
+          "MBS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "endo-thyroid",
+      "name": "Thyroid",
+      "blurb": "Hypothyroidism, hyperthyroidism, thyroid nodules, and autoimmune thyroid disease.",
+      "rules": {
+        "mesh": [
+          "Thyroid Diseases",
+          "Hypothyroidism",
+          "Hyperthyroidism",
+          "Thyroid Nodule",
+          "Graves Disease",
+          "Hashimoto Disease",
+          "Thyroiditis"
+        ],
+        "phrases": [
+          "hypothyroidism",
+          "hyperthyroidism",
+          "thyroid nodule",
+          "Graves disease",
+          "Hashimoto thyroiditis",
+          "levothyroxine",
+          "thyroid function test",
+          "subclinical hypothyroidism",
+          "thyroid eye disease",
+          "teprotumumab",
+          "methimazole",
+          "radioactive iodine therapy for thyroid disease",
+          "thyroid stimulating hormone"
+        ],
+        "acronyms": [
+          "TSH",
+          "T3",
+          "T4"
+        ],
+        "not": [
+          "thyroid cancer",
+          "thyroid neoplasm",
+          "papillary thyroid carcinoma",
+          "medullary thyroid carcinoma",
+          "T3 tumor",
+          "T3 tumour",
+          "T4 tumor",
+          "T4 tumour"
+        ]
+      }
+    },
+    {
+      "slug": "endo-bone",
+      "name": "Bone & mineral / osteoporosis",
+      "blurb": "Osteoporosis, fracture prevention, and mineral and parathyroid bone disease.",
+      "rules": {
+        "mesh": [
+          "Osteoporosis",
+          "Bone Density",
+          "Fractures, Bone",
+          "Osteoporosis, Postmenopausal",
+          "Vitamin D Deficiency",
+          "Hyperparathyroidism",
+          "Hypoparathyroidism"
+        ],
+        "phrases": [
+          "osteoporosis",
+          "bone mineral density",
+          "fragility fracture",
+          "postmenopausal osteoporosis",
+          "vitamin D deficiency",
+          "hyperparathyroidism",
+          "hypoparathyroidism",
+          "Paget disease of bone",
+          "osteomalacia",
+          "denosumab",
+          "romosozumab",
+          "teriparatide",
+          "abaloparatide",
+          "zoledronic acid",
+          "alendronate",
+          "bisphosphonate therapy",
+          "fracture risk assessment",
+          "parathyroid hormone"
+        ],
+        "acronyms": [
+          "BMD",
+          "FRAX",
+          "PTH"
+        ],
+        "not": [
+          "multiple myeloma",
+          "bone metastases",
+          "skeletal-related events"
+        ]
+      }
+    },
+    {
+      "slug": "endo-lipids-metabolic-syndrome",
+      "name": "Lipids & metabolic syndrome",
+      "blurb": "Metabolic syndrome, dyslipidemia, and metabolic liver disease.",
+      "rules": {
+        "mesh": [
+          "Metabolic Syndrome",
+          "Dyslipidemias",
+          "Hypertriglyceridemia",
+          "Fatty Liver",
+          "Insulin Resistance"
+        ],
+        "phrases": [
+          "metabolic syndrome",
+          "nonalcoholic fatty liver disease",
+          "metabolic dysfunction-associated steatotic liver disease",
+          "hypertriglyceridemia",
+          "insulin resistance",
+          "lipid panel",
+          "statin therapy",
+          "PCSK9 inhibitor",
+          "icosapent ethyl",
+          "pemafibrate",
+          "resmetirom",
+          "fibrate therapy"
+        ],
+        "acronyms": [
+          "NAFLD",
+          "MASLD",
+          "MASH",
+          "NASH",
+          "MetS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "endo-pituitary-adrenal-reproductive",
+      "name": "Pituitary, adrenal & reproductive endocrinology",
+      "blurb": "Pituitary and adrenal disorders and endocrine causes of reproductive disease.",
+      "rules": {
+        "mesh": [
+          "Pituitary Diseases",
+          "Adrenal Gland Diseases",
+          "Cushing Syndrome",
+          "Adrenal Insufficiency",
+          "Polycystic Ovary Syndrome",
+          "Hypogonadism",
+          "Acromegaly",
+          "Pituitary Neoplasms"
+        ],
+        "phrases": [
+          "Cushing syndrome",
+          "adrenal insufficiency",
+          "primary aldosteronism",
+          "pheochromocytoma",
+          "acromegaly",
+          "polycystic ovary syndrome",
+          "hypogonadism",
+          "growth hormone deficiency",
+          "pituitary adenoma",
+          "testosterone replacement therapy",
+          "congenital adrenal hyperplasia",
+          "osilodrostat",
+          "crinecerfont",
+          "menopause hormone therapy",
+          "differences of sex development",
+          "disorders of sex development"
+        ],
+        "acronyms": [
+          "PCOS",
+          "CAH"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "endo-other",
+      "name": "General & other endocrine & metabolic",
+      "blurb": "Everything else newly indexed in the endocrinology and metabolism journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Endocrine System Diseases",
+          "Metabolic Diseases",
+          "Endocrinology"
+        ],
+        "phrases": [
+          "endocrine disorder",
+          "metabolic disease"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

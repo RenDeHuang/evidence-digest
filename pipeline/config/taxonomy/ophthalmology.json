@@ -1,0 +1,183 @@
+{
+  "slug": "ophthalmology",
+  "order": 150,
+  "name": "Ophthalmology",
+  "icon": "👁️",
+  "blurb": "Retinal, glaucomatous, corneal, and lens disease and the therapies that preserve vision.",
+  "topics": [
+    {
+      "slug": "eye-retina",
+      "name": "Retina & macular degeneration",
+      "blurb": "Age-related macular degeneration and other retinal and macular disease, including anti-VEGF therapy.",
+      "rules": {
+        "mesh": [
+          "Macular Degeneration",
+          "Retinal Diseases",
+          "Retinal Detachment",
+          "Choroidal Neovascularization",
+          "Macular Edema",
+          "Retinal Vein Occlusion",
+          "Retinitis Pigmentosa"
+        ],
+        "phrases": [
+          "age-related macular degeneration",
+          "neovascular age-related macular degeneration",
+          "geographic atrophy",
+          "diabetic macular edema",
+          "retinal vein occlusion",
+          "choroidal neovascularization",
+          "intravitreal injection",
+          "anti-VEGF therapy",
+          "retinal detachment repair",
+          "aflibercept",
+          "ranibizumab",
+          "faricimab",
+          "pegcetacoplan",
+          "avacincaptad pegol",
+          "brolucizumab",
+          "voretigene neparvovec",
+          "inherited retinal disease"
+        ],
+        "acronyms": [
+          "AMD",
+          "nAMD",
+          "CNV",
+          "RVO",
+          "VEGF"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "eye-diabetic",
+      "name": "Diabetic eye disease",
+      "blurb": "Diabetic retinopathy and diabetic macular edema.",
+      "rules": {
+        "mesh": [
+          "Diabetic Retinopathy",
+          "Macular Edema",
+          "Diabetic Angiopathies"
+        ],
+        "phrases": [
+          "diabetic retinopathy",
+          "proliferative diabetic retinopathy",
+          "non-proliferative diabetic retinopathy",
+          "diabetic macular edema",
+          "diabetic macular oedema",
+          "panretinal photocoagulation",
+          "diabetic eye screening",
+          "diabetic retinal screening",
+          "anti-VEGF therapy for diabetic retinopathy",
+          "intravitreal injection for diabetic macular edema",
+          "vitrectomy for diabetic retinopathy",
+          "faricimab for diabetic macular edema",
+          "aflibercept for diabetic retinopathy",
+          "aflibercept",
+          "ranibizumab",
+          "faricimab",
+          "brolucizumab",
+          "dexamethasone implant"
+        ],
+        "acronyms": [
+          "DR",
+          "PDR",
+          "DME"
+        ],
+        "not": [
+          "HLA-DR",
+          "dose rate"
+        ]
+      }
+    },
+    {
+      "slug": "eye-glaucoma",
+      "name": "Glaucoma",
+      "blurb": "Open-angle and angle-closure glaucoma, intraocular pressure control, and glaucoma surgery.",
+      "rules": {
+        "mesh": [
+          "Glaucoma",
+          "Glaucoma, Open-Angle",
+          "Ocular Hypertension",
+          "Intraocular Pressure"
+        ],
+        "phrases": [
+          "open-angle glaucoma",
+          "angle-closure glaucoma",
+          "intraocular pressure",
+          "ocular hypertension",
+          "trabeculectomy",
+          "minimally invasive glaucoma surgery",
+          "selective laser trabeculoplasty",
+          "trabecular micro-bypass stent",
+          "netarsudil",
+          "latanoprostene bunod",
+          "glaucoma"
+        ],
+        "acronyms": [
+          "IOP",
+          "POAG",
+          "MIGS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "eye-cornea-cataract",
+      "name": "Cornea, cataract & refractive",
+      "blurb": "Corneal disease, cataract surgery, dry eye, and refractive surgery.",
+      "rules": {
+        "mesh": [
+          "Cataract",
+          "Corneal Diseases",
+          "Keratoconus",
+          "Corneal Transplantation",
+          "Dry Eye Syndromes",
+          "Refractive Errors"
+        ],
+        "phrases": [
+          "cataract surgery",
+          "phacoemulsification",
+          "corneal transplantation",
+          "keratoplasty",
+          "keratoconus",
+          "corneal cross-linking",
+          "dry eye disease",
+          "refractive surgery",
+          "presbyopia-correcting intraocular lens",
+          "cenegermin",
+          "perfluorohexyloctane",
+          "keratopathy",
+          "anisometropia"
+        ],
+        "acronyms": [
+          "DED",
+          "IOL",
+          "PKP",
+          "DMEK"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "eye-other",
+      "name": "General & other ophthalmology",
+      "blurb": "Everything else newly indexed in the ophthalmology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Eye Diseases",
+          "Vision Disorders",
+          "Blindness",
+          "Ophthalmology"
+        ],
+        "phrases": [
+          "ophthalmic disease",
+          "visual impairment",
+          "eye disease"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "slug": "public-health-policy",
+  "order": 200,
+  "name": "Public health & policy",
+  "icon": "🌍",
+  "blurb": "Population health, health systems, global health, and the social and environmental forces that shape it.",
+  "topics": [
+    {
+      "slug": "ph-equity",
+      "name": "Health equity & social determinants",
+      "blurb": "Health disparities, social determinants of health, and structural drivers of inequity.",
+      "rules": {
+        "mesh": [
+          "Health Equity",
+          "Social Determinants of Health",
+          "Healthcare Disparities",
+          "Health Status Disparities",
+          "Racism",
+          "Socioeconomic Factors",
+          "Vulnerable Populations",
+          "Health Services Accessibility"
+        ],
+        "phrases": [
+          "health equity",
+          "health disparities",
+          "social determinants of health",
+          "structural racism",
+          "racial disparities in health",
+          "food insecurity",
+          "housing instability",
+          "health care access disparities",
+          "medically underserved",
+          "social risk factors",
+          "neighbourhood deprivation",
+          "neighborhood deprivation",
+          "implicit bias in healthcare",
+          "health disparities research",
+          "food insufficiency",
+          "redlining",
+          "sex worker",
+          "sex work",
+          "redlined"
+        ],
+        "acronyms": [
+          "SDOH"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ph-policy",
+      "name": "Health policy, insurance & cost",
+      "blurb": "Health insurance, health-care financing, and the policies that shape access and cost.",
+      "rules": {
+        "mesh": [
+          "Health Policy",
+          "Insurance, Health",
+          "Medicaid",
+          "Medicare",
+          "Health Care Costs",
+          "Universal Health Insurance",
+          "Health Care Reform",
+          "Cost-Benefit Analysis",
+          "Health Expenditures"
+        ],
+        "phrases": [
+          "health policy",
+          "health insurance coverage",
+          "Medicaid expansion",
+          "Medicare policy",
+          "universal health coverage",
+          "health care reform",
+          "out-of-pocket cost",
+          "drug pricing policy",
+          "cost-effectiveness analysis",
+          "value-based payment",
+          "health care spending",
+          "single-payer",
+          "prior authorization",
+          "Affordable Care Act",
+          "health care affordability",
+          "reimbursement review",
+          "drug reimbursement"
+        ],
+        "acronyms": [
+          "ACA",
+          "UHC"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ph-global",
+      "name": "Global health",
+      "blurb": "Global and international health, and health system strengthening in low- and middle-income countries.",
+      "rules": {
+        "mesh": [
+          "Global Health",
+          "Developing Countries",
+          "World Health Organization",
+          "International Cooperation",
+          "Neglected Diseases",
+          "Malaria",
+          "Tuberculosis"
+        ],
+        "phrases": [
+          "global health",
+          "low- and middle-income countries",
+          "low-income countries",
+          "health system strengthening",
+          "neglected tropical disease",
+          "malaria control",
+          "tuberculosis control programme",
+          "tuberculosis control program",
+          "global health security",
+          "humanitarian health response",
+          "health workforce shortage in low-income settings",
+          "universal health coverage in low-income settings",
+          "World Health Organization guidance",
+          "health governance",
+          "refugee settlement",
+          "humanitarian setting",
+          "Buruli ulcer"
+        ],
+        "acronyms": [
+          "LMIC",
+          "WHO",
+          "NTD"
+        ],
+        "not": [
+          "neural tube defect",
+          "neural tube defects"
+        ]
+      }
+    },
+    {
+      "slug": "ph-environment",
+      "name": "Environmental & climate health",
+      "blurb": "Climate change, air pollution, and other environmental determinants of health.",
+      "rules": {
+        "mesh": [
+          "Climate Change",
+          "Air Pollution",
+          "Environmental Exposure",
+          "Environmental Health",
+          "Hot Temperature",
+          "Particulate Matter",
+          "Water Pollution",
+          "Environmental Pollutants"
+        ],
+        "phrases": [
+          "climate change and health",
+          "air pollution exposure",
+          "particulate matter exposure",
+          "PM2.5",
+          "heat-related illness",
+          "extreme heat exposure",
+          "wildfire smoke exposure",
+          "environmental exposure",
+          "water contamination",
+          "climate-related health risk",
+          "greenhouse gas emissions and health",
+          "heat wave mortality",
+          "environmental justice"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    },
+    {
+      "slug": "ph-substance-policy",
+      "name": "Tobacco, alcohol & drug policy",
+      "blurb": "Tobacco, alcohol, and drug policy, and the population-level burden of substance use.",
+      "rules": {
+        "mesh": [
+          "Tobacco Use",
+          "Alcohol Drinking",
+          "Smoking Cessation",
+          "Vaping",
+          "Electronic Nicotine Delivery Systems",
+          "Cannabis",
+          "Harm Reduction",
+          "Substance-Related Disorders",
+          "Tobacco Products"
+        ],
+        "phrases": [
+          "tobacco control policy",
+          "smoking cessation",
+          "e-cigarette regulation",
+          "vaping policy",
+          "alcohol policy",
+          "minimum unit pricing for alcohol",
+          "cannabis legalisation",
+          "cannabis legalization",
+          "opioid settlement funds",
+          "harm reduction policy",
+          "menthol cigarette ban",
+          "tobacco taxation",
+          "alcohol-related mortality",
+          "supervised consumption site"
+        ],
+        "acronyms": [
+          "ENDS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ph-surveillance",
+      "name": "Epidemiology & surveillance",
+      "blurb": "Disease surveillance, outbreak epidemiology, and population health monitoring.",
+      "rules": {
+        "mesh": [
+          "Epidemiologic Surveillance",
+          "Disease Outbreaks",
+          "Population Surveillance",
+          "Disease Notification",
+          "Sentinel Surveillance",
+          "Pandemics",
+          "Communicable Disease Control",
+          "Incidence"
+        ],
+        "phrases": [
+          "disease surveillance",
+          "outbreak investigation",
+          "syndromic surveillance",
+          "wastewater surveillance",
+          "notifiable disease reporting",
+          "population-based surveillance",
+          "case fatality rate",
+          "outbreak detection",
+          "pandemic preparedness",
+          "sentinel surveillance network",
+          "genomic surveillance",
+          "surveillance system evaluation"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    },
+    {
+      "slug": "ph-other",
+      "name": "General & other public health",
+      "blurb": "Everything else newly indexed in the public health and policy journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Public Health",
+          "Preventive Medicine",
+          "Population Health"
+        ],
+        "phrases": [
+          "public health practice",
+          "population health management"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

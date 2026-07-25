@@ -1,0 +1,301 @@
+{
+  "slug": "general-medicine",
+  "order": 10,
+  "name": "General & internal medicine",
+  "icon": "🩺",
+  "blurb": "Practice-defining internal medicine: guidelines, research methods, education, quality, ageing, lifestyle, and the everyday care that doesn't fit a single organ system.",
+  "topics": [
+    {
+      "slug": "gim-guidelines",
+      "name": "Clinical practice & guidelines",
+      "blurb": "New and updated clinical practice guidelines and consensus recommendations across internal medicine.",
+      "rules": {
+        "mesh": [
+          "Practice Guidelines as Topic",
+          "Consensus Development Conferences as Topic",
+          "Guideline Adherence",
+          "Evidence-Based Medicine",
+          "Clinical Decision-Making",
+          "Advisory Committees"
+        ],
+        "phrases": [
+          "clinical practice guideline",
+          "practice guideline",
+          "consensus statement",
+          "clinical guideline update",
+          "guideline recommendation",
+          "recommendations for the management of",
+          "evidence-based guideline",
+          "position statement",
+          "clinical practice recommendations",
+          "guideline panel",
+          "living guideline",
+          "rapid recommendation",
+          "clinical decision support",
+          "appropriate use criteria"
+        ],
+        "acronyms": [
+          "USPSTF"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gim-methods",
+      "name": "Evidence synthesis & research methods",
+      "blurb": "Systematic reviews, meta-analyses, and the statistical and reporting methods that underpin clinical research.",
+      "rules": {
+        "mesh": [
+          "Meta-Analysis as Topic",
+          "Systematic Reviews as Topic",
+          "Research Design",
+          "Bias",
+          "Reproducibility of Results",
+          "Data Interpretation, Statistical",
+          "Randomized Controlled Trials as Topic",
+          "Observational Studies as Topic",
+          "Publication Bias"
+        ],
+        "phrases": [
+          "systematic review and meta-analysis",
+          "network meta-analysis",
+          "living systematic review",
+          "umbrella review",
+          "risk of bias tool",
+          "reporting guideline",
+          "target trial emulation",
+          "instrumental variable",
+          "Mendelian randomisation",
+          "Mendelian randomization",
+          "certainty of evidence",
+          "publication bias",
+          "meta-regression",
+          "propensity score matching",
+          "difference-in-differences",
+          "causal inference",
+          "sample size calculation",
+          "statistical analysis plan",
+          "pre-registered protocol",
+          "registered report"
+        ],
+        "acronyms": [
+          "PRISMA",
+          "GRADE",
+          "CONSORT",
+          "STROBE"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gim-education",
+      "name": "Medical education & the workforce",
+      "blurb": "Medical school, residency and fellowship training, physician workforce, and clinician wellbeing.",
+      "rules": {
+        "mesh": [
+          "Education, Medical",
+          "Education, Medical, Undergraduate",
+          "Education, Medical, Graduate",
+          "Internship and Residency",
+          "Physicians, Women",
+          "Burnout, Professional",
+          "Workforce",
+          "Mentors",
+          "Students, Medical",
+          "Faculty, Medical"
+        ],
+        "phrases": [
+          "medical education",
+          "residency training",
+          "residency program",
+          "fellowship training",
+          "medical school curriculum",
+          "graduate medical education",
+          "continuing medical education",
+          "physician burnout",
+          "physician workforce",
+          "physician shortage",
+          "clinician wellbeing",
+          "clinician well-being",
+          "simulation-based training",
+          "competency-based medical education",
+          "medical student",
+          "resident physician",
+          "attending physician",
+          "clinical clerkship",
+          "mentorship in medicine",
+          "diversity in medicine"
+        ],
+        "acronyms": [
+          "GME",
+          "CME",
+          "UME"
+        ],
+        "not": [
+          "cystoid macular edema",
+          "cystoid macular oedema"
+        ]
+      }
+    },
+    {
+      "slug": "gim-quality",
+      "name": "Healthcare delivery & quality improvement",
+      "blurb": "Quality improvement, patient safety, health system performance, and care delivery redesign.",
+      "rules": {
+        "mesh": [
+          "Quality Improvement",
+          "Quality Indicators, Health Care",
+          "Patient Safety",
+          "Medical Errors",
+          "Delivery of Health Care",
+          "Health Services Research",
+          "Patient Readmission",
+          "Length of Stay",
+          "Hospitalists",
+          "Continuity of Patient Care",
+          "Patient Handoff"
+        ],
+        "phrases": [
+          "quality improvement",
+          "patient safety",
+          "medical error",
+          "diagnostic error",
+          "hospital readmission",
+          "care coordination",
+          "care transitions",
+          "value-based care",
+          "care delivery redesign",
+          "hospitalist",
+          "length of stay",
+          "clinical pathway",
+          "checklist implementation",
+          "adverse event reporting",
+          "learning health system",
+          "high-reliability organization",
+          "process improvement",
+          "Lean methodology in healthcare",
+          "patient handoff",
+          "electronic health record implementation"
+        ],
+        "acronyms": [
+          "QI",
+          "EHR",
+          "PDSA"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gim-geriatrics",
+      "name": "Ageing & geriatric medicine",
+      "blurb": "Frailty, falls, polypharmacy, and comprehensive geriatric care of older adults.",
+      "rules": {
+        "mesh": [
+          "Geriatrics",
+          "Aging",
+          "Frailty",
+          "Frail Elderly",
+          "Sarcopenia",
+          "Accidental Falls",
+          "Polypharmacy",
+          "Geriatric Assessment",
+          "Dementia",
+          "Independent Living",
+          "Homes for the Aged"
+        ],
+        "phrases": [
+          "geriatric medicine",
+          "older adults",
+          "frailty index",
+          "frailty syndrome",
+          "sarcopenia",
+          "falls prevention",
+          "polypharmacy",
+          "deprescribing",
+          "comprehensive geriatric assessment",
+          "cognitive decline",
+          "dementia care",
+          "long-term care facility",
+          "nursing home residents",
+          "activities of daily living",
+          "advance care planning for older adults",
+          "delirium in older adults",
+          "multimorbidity",
+          "aging population",
+          "ageing population"
+        ],
+        "acronyms": [
+          "ADL"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gim-lifestyle",
+      "name": "Nutrition, exercise & lifestyle",
+      "blurb": "Diet, physical activity, sleep, and weight management as determinants of health.",
+      "rules": {
+        "mesh": [
+          "Diet",
+          "Exercise",
+          "Nutritional Status",
+          "Obesity",
+          "Weight Loss",
+          "Sleep",
+          "Sedentary Behavior",
+          "Life Style",
+          "Diet, Healthy",
+          "Nutrition Therapy",
+          "Bariatrics"
+        ],
+        "phrases": [
+          "physical activity",
+          "exercise intervention",
+          "dietary intervention",
+          "weight loss intervention",
+          "intermittent fasting",
+          "Mediterranean diet",
+          "plant-based diet",
+          "sleep duration",
+          "sleep quality",
+          "GLP-1 receptor agonist for weight loss",
+          "semaglutide",
+          "tirzepatide",
+          "lifestyle modification",
+          "sedentary behaviour",
+          "sedentary behavior",
+          "cardiorespiratory fitness",
+          "weight management program",
+          "behavioural weight loss",
+          "behavioral weight loss",
+          "step count"
+        ],
+        "acronyms": [
+          "BMI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "gim-other",
+      "name": "General & other medicine",
+      "blurb": "Everything else newly indexed in the flagship general-medicine journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Internal Medicine",
+          "General Practice",
+          "Family Practice"
+        ],
+        "phrases": [
+          "case series",
+          "narrative review",
+          "clinical vignette",
+          "clinicopathological conference"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

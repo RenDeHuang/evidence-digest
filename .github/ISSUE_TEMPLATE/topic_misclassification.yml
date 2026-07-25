@@ -1,0 +1,60 @@
+name: Topic misclassification
+description: A study was filed under the wrong topic (or missed a topic it should have matched).
+title: '[Topic] '
+labels: ['taxonomy']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is exactly the kind of report that makes the taxonomy better — thank you.
+        Classification is rule-based (MeSH terms, title/keyword/abstract phrases, and
+        acronyms — see `pipeline/config/taxonomy/*.json` and
+        [taxonomy.md](https://github.com/muhammadali-k/evidence-digest-docs/blob/main/taxonomy.md)),
+        so a specific PMID and a clear description of what should have matched is usually
+        enough to turn this into a one-line rule fix.
+
+  - type: input
+    id: pmid
+    attributes:
+      label: PMID
+      description: The PubMed ID of the study. It's in the URL of the study's PubMed page and on its Evidence Digest card.
+      placeholder: e.g. 38912345
+    validations:
+      required: true
+
+  - type: input
+    id: given-topic
+    attributes:
+      label: Topic it was given
+      description: The topic (or topics) the study currently appears under.
+      placeholder: e.g. "General & other cardiology"
+    validations:
+      required: true
+
+  - type: input
+    id: expected-topic
+    attributes:
+      label: Topic it should have been given
+      description: If it should have matched an existing topic, name it. If you think a new topic is needed, say so here instead.
+      placeholder: e.g. "Heart failure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why?
+      description: What in the title/abstract/MeSH terms makes this the right topic? Quoting the exact phrase that should have matched is the most useful thing you can include.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: What kind of miss is this?
+      options:
+        - False positive — assigned to a topic it does not belong in
+        - False negative — missing from a topic it should be in
+        - Both — right topic, but also wrongly in another one
+    validations:
+      required: true

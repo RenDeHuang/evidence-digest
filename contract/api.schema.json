@@ -1,0 +1,207 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/muhammadali-k/evidence-digest/contract/api.schema.json",
+  "title": "Evidence Digest static API",
+  "description": "The complete set of files the pipeline writes under data/api/ and data/feeds/. These are plain files served by GitHub Pages - there is no application server in the read path, which is what makes public browsing free and unlimited. Paths are relative to the deployed site root.",
+  "definitions": {
+    "studyCard": {
+      "$comment": "The trimmed study shape used by every list surface (topic files, highlights) and by the email worker. It is `study.schema.json` MINUS `abstract`, `sections`, `mesh`, and `keywords`. Those four fields are omitted because with ~149 topics rebuilt daily, carrying abstracts in every topic file would multiply the served payload roughly tenfold for data only the detail view ever reads - and the detail view gets it from api/days/<date>.json instead. Mirrors `StudyCard` in shared/types.ts.",
+      "allOf": [{ "$ref": "study.schema.json" }],
+      "not": {
+        "anyOf": [
+          { "required": ["abstract"] },
+          { "required": ["sections"] },
+          { "required": ["mesh"] },
+          { "required": ["keywords"] }
+        ]
+      }
+    },
+    "manifest": {
+      "$comment": "api/manifest.json - fetched first by the web app and by the email worker. Everything else is discovered from here.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataVersion", "generatedAt", "windowDays", "days", "totalStudies",
+        "journalCount", "topicCounts", "specialtyCounts", "latestDay"
+      ],
+      "properties": {
+        "dataVersion": {
+          "type": "integer",
+          "description": "Bumped when a breaking change lands in the study shape. Clients refuse to render an unknown major version and show a refresh prompt instead."
+        },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "windowDays": {
+          "type": "integer",
+          "description": "How many days of entryDate history the api/ tree covers. Older studies stay in data/studies/ but are not served."
+        },
+        "days": {
+          "type": "array",
+          "description": "Every entryDate present in the served window, newest first. Each has a matching api/days/<date>.json.",
+          "items": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+        },
+        "latestDay": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "totalStudies": { "type": "integer" },
+        "journalCount": { "type": "integer" },
+        "topicCounts": {
+          "type": "object",
+          "description": "topicSlug -> number of studies in the served window. Drives the counts next to each checkbox in the topic picker.",
+          "additionalProperties": { "type": "integer" }
+        },
+        "specialtyCounts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        }
+      }
+    },
+    "topicFile": {
+      "$comment": "api/topics/<topicSlug>.json - one file per topic. The web app fetches only the topics a reader selected, so a narrow interest downloads very little.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic", "specialty", "generatedAt", "total", "returned", "studies"],
+      "properties": {
+        "topic": { "type": "string" },
+        "specialty": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "total": {
+          "type": "integer",
+          "description": "Total studies for this topic in the served window, before the per-file cap."
+        },
+        "returned": {
+          "type": "integer",
+          "description": "How many are actually in this file (capped by scoring.json.limits.perTopicFile)."
+        },
+        "studies": {
+          "type": "array",
+          "description": "Newest entryDate first; ties broken by score descending, then pmid. Each item is a LEAN CARD, not a full record - see the studyCard definition.",
+          "items": { "$ref": "#/definitions/studyCard" }
+        }
+      }
+    },
+    "dayFile": {
+      "$comment": "api/days/<date>.json - everything indexed on one day, for the archive view and for email digests that need an exact date range.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["date", "generatedAt", "total", "studies"],
+      "properties": {
+        "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "total": { "type": "integer" },
+        "studies": { "type": "array", "items": { "$ref": "study.schema.json" } }
+      }
+    },
+    "highlightsFile": {
+      "$comment": "api/highlights.json - the homepage 'what matters this week' set: top-scoring studies across all specialties over the last 7 days, deduplicated and capped per specialty so one busy field cannot dominate.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generatedAt", "since", "studies"],
+      "properties": {
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "since": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "studies": {
+          "type": "array",
+          "description": "Lean cards, matching shared/types.ts HighlightsFile.studies: StudyCard[].",
+          "items": { "$ref": "#/definitions/studyCard" }
+        }
+      }
+    },
+    "searchIndexFile": {
+      "$comment": "api/search-index.json - compact global index over high-signal studies only, so full-text-ish search works without shipping every abstract. Keys are short to keep the file small over the wire.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generatedAt", "minScore", "windowDays", "entries"],
+      "properties": {
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "minScore": {
+          "type": "integer",
+          "description": "Only studies scoring at or above this are indexed globally. Searching inside selected topics uses the full topic files instead and is unaffected."
+        },
+        "windowDays": { "type": "integer" },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["p", "t", "j", "d", "s", "tp"],
+            "properties": {
+              "p": { "type": "string", "description": "pmid" },
+              "t": { "type": "string", "description": "title" },
+              "j": { "type": "string", "description": "journal name" },
+              "d": { "type": "string", "description": "entryDate" },
+              "s": { "type": "integer", "description": "score" },
+              "tp": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "topic slugs"
+              }
+            }
+          }
+        }
+      }
+    },
+    "publicTaxonomyFile": {
+      "$comment": "api/taxonomy.json - the reader-facing slice of pipeline/config/taxonomy.json. Match rules are deliberately stripped: they are large, they are an implementation detail, and shipping them would invite gaming.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "specialties"],
+      "properties": {
+        "version": { "type": "integer" },
+        "specialties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["slug", "name", "icon", "blurb", "topics"],
+            "properties": {
+              "slug": { "type": "string" },
+              "name": { "type": "string" },
+              "icon": { "type": "string" },
+              "blurb": { "type": "string" },
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["slug", "name", "blurb"],
+                  "properties": {
+                    "slug": { "type": "string" },
+                    "name": { "type": "string" },
+                    "blurb": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "publicJournalsFile": {
+      "$comment": "api/journals.json - powers the Sources page. Readers can see exactly which journals are watched, which is the whole basis for trusting the digest.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generatedAt", "count", "journals"],
+      "properties": {
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "count": { "type": "integer" },
+        "journals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "ta", "specialty", "tier", "scope", "pubmedUrl"],
+            "properties": {
+              "name": { "type": "string" },
+              "ta": { "type": "string" },
+              "specialty": { "type": "string" },
+              "tier": { "type": "integer" },
+              "scope": { "type": "string", "enum": ["all", "topic"] },
+              "pubmedUrl": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      }
+    },
+    "feeds": {
+      "$comment": "feeds/<topicSlug>.xml and feeds/all.xml - Atom 1.0. These exist so the product is fully usable with zero credentials and zero email: point any reader at a topic feed and you have a working alert."
+    }
+  }
+}

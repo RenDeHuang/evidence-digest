@@ -1,0 +1,68 @@
+name = "evidence-digest-api"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# One D1 database backs everything: subscribers, tokens, and the send log.
+# `database_id` below is a placeholder — replace it with the id printed by
+# `wrangler d1 create evidence-digest-db` (see migrations/README.md).
+[[d1_databases]]
+binding = "DB"
+database_name = "evidence-digest-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+# Hourly. A tick claims at most BATCH_SIZE due subscribers — and even fewer
+# in practice, bounded by MAX_TOPIC_FILES_PER_TICK — sends to them, and marks
+# them sent; the next tick picks up the rest. See src/due.ts / src/scheduled.ts.
+[triggers]
+crons = ["0 * * * *"]
+
+[vars]
+# This worker's own public base URL (no trailing slash). Not in the spec's
+# minimal var list, but required: email links (confirm CTA, List-Unsubscribe)
+# must be absolute URLs pointing at THIS API, and a `scheduled` cron event has
+# no incoming `request.url` to derive that from the way an HTTP request does.
+# Defaults to the local wrangler dev port; after your first `wrangler deploy`,
+# set it to the printed workers.dev URL or your custom route.
+API_URL = "http://localhost:8787"
+# Public site that serves the static API this worker reads (manifest, topic
+# files, taxonomy) and that hosts the /manage and /confirm-facing pages.
+SITE_URL = "https://evidence-digest.example.com"
+# Origin allowed to call the body-accepting endpoints via CORS. The dev origin
+# (http://localhost:5173) is always allowed in addition to this, in code.
+ALLOWED_ORIGIN = "https://evidence-digest.example.com"
+# "brevo" | "resend" | "console" | "none". "console" logs instead of sending —
+# this is what a zero-credential `wrangler dev` uses. "none" makes
+# /api/subscribe fail closed with an honest 503 rather than collect an address
+# nothing can ever email.
+EMAIL_PROVIDER = "console"
+EMAIL_FROM = "digest@evidence-digest.example.com"
+EMAIL_FROM_NAME = "Evidence Digest"
+EMAIL_REPLY_TO = "digest@evidence-digest.example.com"
+# Subscribers processed per cron tick, at most. Hourly x 15 = 360/day, which
+# still clears Brevo's free 300/day cap with headroom, so the mail provider
+# remains the real ceiling — while keeping worst-case per-tick CPU work 40%
+# lower than a BATCH_SIZE of 25 would.
+BATCH_SIZE = "15"
+# Hard cap on topics per subscriber, enforced on both /api/subscribe and
+# /api/preferences.
+MAX_TOPICS = "40"
+# Cap on distinct topic files fetched+parsed in a single cron tick. This, not
+# BATCH_SIZE, is what actually bounds a tick's CPU work: JSON.parse-ing topic
+# files dominates the cost, and that cost tracks topic DIVERSITY across the
+# batch, not subscriber count. Batch selection (src/due.ts selectTick) is
+# topic-aware and greedily fills up to this many distinct topic files before
+# stopping, so a diverse audience degrades to smaller ticks rather than
+# blowing the CPU budget. See "CPU budget" in README.md for the full story,
+# including the starvation guard for subscribers whose own topic list alone
+# exceeds this cap.
+MAX_TOPIC_FILES_PER_TICK = "10"
+
+# Secrets (never here — set with `wrangler secret put <NAME>`):
+#   BREVO_API_KEY      required when EMAIL_PROVIDER = "brevo"
+#   RESEND_API_KEY     required when EMAIL_PROVIDER = "resend"
+#   TURNSTILE_SECRET   optional; when present /api/subscribe verifies a
+#                      Turnstile token if the client sends one, and silently
+#                      skips verification when absent so a zero-config
+#                      deployment still works.

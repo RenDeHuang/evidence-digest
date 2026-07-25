@@ -1,0 +1,349 @@
+{
+  "slug": "cardiology",
+  "order": 50,
+  "name": "Cardiology",
+  "icon": "🫀",
+  "blurb": "Heart failure, coronary and structural heart disease, arrhythmia, hypertension and lipids, and cardiovascular prevention and imaging.",
+  "topics": [
+    {
+      "slug": "cardio-heart-failure",
+      "name": "Heart failure",
+      "blurb": "Heart failure with reduced and preserved ejection fraction, cardiomyopathies, and mechanical circulatory support.",
+      "rules": {
+        "mesh": [
+          "Heart Failure",
+          "Cardiomyopathies",
+          "Cardiomyopathy, Dilated",
+          "Cardiomyopathy, Hypertrophic",
+          "Ventricular Dysfunction, Left",
+          "Ventricular Remodeling",
+          "Natriuretic Peptide, Brain",
+          "Stroke Volume",
+          "Cardiac Resynchronization Therapy",
+          "Heart-Assist Devices"
+        ],
+        "phrases": [
+          "heart failure",
+          "reduced ejection fraction",
+          "preserved ejection fraction",
+          "acute decompensated heart failure",
+          "cardiogenic shock",
+          "cardiomyopathy",
+          "hypertrophic cardiomyopathy",
+          "dilated cardiomyopathy",
+          "amyloid cardiomyopathy",
+          "cardiac resynchronization therapy",
+          "left ventricular assist device",
+          "sacubitril",
+          "sacubitril/valsartan",
+          "dapagliflozin",
+          "empagliflozin",
+          "finerenone",
+          "vericiguat",
+          "omecamtiv mecarbil",
+          "tafamidis",
+          "acoramidis",
+          "mavacamten",
+          "aficamten",
+          "spironolactone",
+          "eplerenone"
+        ],
+        "acronyms": [
+          "HF",
+          "HFpEF",
+          "HFrEF",
+          "HFmrEF",
+          "LVAD",
+          "BNP",
+          "NT-proBNP",
+          "ADHF",
+          "CRT"
+        ],
+        "not": [
+          "renal failure",
+          "respiratory failure",
+          "hepatic failure",
+          "liver failure",
+          "hydrofluoric acid"
+        ]
+      }
+    },
+    {
+      "slug": "cardio-cad-acs",
+      "name": "Coronary artery disease & ACS",
+      "blurb": "Stable coronary disease, acute coronary syndromes, and coronary revascularization.",
+      "rules": {
+        "mesh": [
+          "Coronary Artery Disease",
+          "Myocardial Infarction",
+          "Acute Coronary Syndrome",
+          "Percutaneous Coronary Intervention",
+          "Coronary Stenosis",
+          "Angina, Unstable",
+          "Coronary Artery Bypass",
+          "ST Elevation Myocardial Infarction",
+          "Non-ST Elevated Myocardial Infarction"
+        ],
+        "phrases": [
+          "coronary artery disease",
+          "acute coronary syndrome",
+          "myocardial infarction",
+          "unstable angina",
+          "percutaneous coronary intervention",
+          "coronary artery bypass",
+          "drug-eluting stent",
+          "coronary angiography",
+          "fractional flow reserve",
+          "intravascular imaging",
+          "dual antiplatelet therapy",
+          "ticagrelor",
+          "prasugrel",
+          "clopidogrel",
+          "bivalirudin",
+          "thrombolysis",
+          "primary PCI",
+          "culprit lesion",
+          "coronary calcium score"
+        ],
+        "acronyms": [
+          "STEMI",
+          "NSTEMI",
+          "ACS",
+          "PCI",
+          "CABG",
+          "CAD",
+          "DAPT",
+          "FFR",
+          "IVUS",
+          "OCT"
+        ],
+        "not": [
+          "American Cancer Society",
+          "American College of Surgeons",
+          "acute chest syndrome",
+          "prophylactic cranial irradiation"
+        ]
+      }
+    },
+    {
+      "slug": "cardio-arrhythmia",
+      "name": "Arrhythmia & electrophysiology",
+      "blurb": "Atrial fibrillation, ventricular arrhythmias, catheter ablation, and cardiac implantable devices.",
+      "rules": {
+        "mesh": [
+          "Arrhythmias, Cardiac",
+          "Atrial Fibrillation",
+          "Atrial Flutter",
+          "Tachycardia, Ventricular",
+          "Catheter Ablation",
+          "Defibrillators, Implantable",
+          "Death, Sudden, Cardiac",
+          "Long QT Syndrome",
+          "Bradycardia",
+          "Pacemaker, Artificial"
+        ],
+        "phrases": [
+          "atrial fibrillation",
+          "atrial flutter",
+          "ventricular tachycardia",
+          "ventricular fibrillation",
+          "supraventricular tachycardia",
+          "catheter ablation",
+          "pulmonary vein isolation",
+          "implantable cardioverter-defibrillator",
+          "sudden cardiac death",
+          "long QT syndrome",
+          "Brugada syndrome",
+          "cardiac pacemaker",
+          "leadless pacemaker",
+          "pulsed field ablation",
+          "rhythm control",
+          "rate control",
+          "left atrial appendage occlusion",
+          "dofetilide",
+          "amiodarone",
+          "edoxaban for atrial fibrillation"
+        ],
+        "acronyms": [
+          "AF",
+          "AFib",
+          "VT",
+          "VF",
+          "SVT",
+          "ICD",
+          "SCD",
+          "PVI",
+          "LAAO"
+        ],
+        "not": [
+          "amniotic fluid",
+          "tidal volume",
+          "visual field",
+          "sickle cell"
+        ]
+      }
+    },
+    {
+      "slug": "cardio-valvular-structural",
+      "name": "Valvular & structural heart disease",
+      "blurb": "Valve disease and transcatheter structural interventions.",
+      "rules": {
+        "mesh": [
+          "Heart Valve Diseases",
+          "Aortic Valve Stenosis",
+          "Mitral Valve Insufficiency",
+          "Mitral Valve Stenosis",
+          "Heart Valve Prosthesis",
+          "Transcatheter Aortic Valve Replacement",
+          "Aortic Valve Insufficiency",
+          "Tricuspid Valve Insufficiency",
+          "Heart Septal Defects, Atrial",
+          "Endocarditis"
+        ],
+        "phrases": [
+          "aortic stenosis",
+          "mitral regurgitation",
+          "mitral stenosis",
+          "tricuspid regurgitation",
+          "transcatheter aortic valve replacement",
+          "transcatheter aortic valve implantation",
+          "transcatheter edge-to-edge repair",
+          "mitral valve repair",
+          "valve-in-valve",
+          "patent foramen ovale closure",
+          "left atrial appendage",
+          "infective endocarditis",
+          "structural heart disease",
+          "balloon valvuloplasty",
+          "surgical aortic valve replacement",
+          "transcatheter mitral valve repair",
+          "congenital heart disease"
+        ],
+        "acronyms": [
+          "TAVR",
+          "TAVI",
+          "TEER",
+          "SAVR",
+          "PFO"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "cardio-hypertension-lipids",
+      "name": "Hypertension & lipids",
+      "blurb": "Blood pressure management and lipid disorders driving atherosclerotic risk.",
+      "rules": {
+        "mesh": [
+          "Hypertension",
+          "Hypercholesterolemia",
+          "Hyperlipidemias",
+          "Dyslipidemias",
+          "Cholesterol, LDL",
+          "Antihypertensive Agents",
+          "Renin-Angiotensin System"
+        ],
+        "phrases": [
+          "hypertension",
+          "high blood pressure",
+          "blood pressure control",
+          "resistant hypertension",
+          "hyperlipidemia",
+          "hypercholesterolemia",
+          "dyslipidemia",
+          "LDL cholesterol",
+          "statin therapy",
+          "PCSK9 inhibitor",
+          "lipoprotein(a)",
+          "renal denervation",
+          "amlodipine",
+          "losartan",
+          "valsartan",
+          "evolocumab",
+          "alirocumab",
+          "inclisiran",
+          "bempedoic acid",
+          "obicetrapib",
+          "ambulatory blood pressure monitoring"
+        ],
+        "acronyms": [
+          "SBP",
+          "DBP",
+          "LDL",
+          "HDL",
+          "PCSK9"
+        ],
+        "not": [
+          "pulmonary hypertension",
+          "portal hypertension",
+          "intracranial hypertension",
+          "ocular hypertension"
+        ]
+      }
+    },
+    {
+      "slug": "cardio-prevention-imaging",
+      "name": "Prevention & cardiac imaging",
+      "blurb": "Cardiovascular risk assessment, prevention strategies, and non-invasive cardiac imaging.",
+      "rules": {
+        "mesh": [
+          "Echocardiography",
+          "Magnetic Resonance Imaging, Cine",
+          "Coronary Angiography",
+          "Heart Disease Risk Factors",
+          "Primary Prevention",
+          "Cardiac Rehabilitation",
+          "Exercise Test",
+          "Computed Tomography Angiography"
+        ],
+        "phrases": [
+          "cardiovascular risk",
+          "primary prevention of cardiovascular disease",
+          "secondary prevention",
+          "cardiac rehabilitation",
+          "cardiopulmonary exercise testing",
+          "coronary artery calcium score",
+          "cardiac magnetic resonance imaging",
+          "cardiac MRI",
+          "stress echocardiography",
+          "cardiac computed tomography",
+          "polygenic risk score for coronary disease",
+          "aspirin for primary prevention",
+          "colchicine for cardiovascular disease",
+          "lifestyle intervention for cardiovascular risk",
+          "coronary CT angiography",
+          "stress electrocardiogram"
+        ],
+        "acronyms": [
+          "CAC",
+          "CMR",
+          "CVD",
+          "ASCVD",
+          "CPET"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "cardio-other",
+      "name": "General & other cardiology",
+      "blurb": "Everything else newly indexed in the cardiology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Cardiovascular Diseases",
+          "Heart Diseases",
+          "Cardiology",
+          "Heart"
+        ],
+        "phrases": [
+          "cardiovascular disease",
+          "heart disease",
+          "cardiac"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

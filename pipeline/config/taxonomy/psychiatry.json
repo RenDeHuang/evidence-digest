@@ -1,0 +1,239 @@
+{
+  "slug": "psychiatry",
+  "order": 90,
+  "name": "Psychiatry & mental health",
+  "icon": "🧩",
+  "blurb": "Mood, psychotic, anxiety, and substance use disorders, and the services that treat them across the lifespan.",
+  "topics": [
+    {
+      "slug": "psych-depression",
+      "name": "Depression & mood disorders",
+      "blurb": "Major depressive disorder, bipolar disorder, and novel antidepressant and neuromodulation therapy.",
+      "rules": {
+        "mesh": [
+          "Depressive Disorder",
+          "Depressive Disorder, Major",
+          "Depressive Disorder, Treatment-Resistant",
+          "Bipolar Disorder",
+          "Depression, Postpartum",
+          "Seasonal Affective Disorder"
+        ],
+        "phrases": [
+          "major depressive disorder",
+          "treatment-resistant depression",
+          "bipolar disorder",
+          "bipolar depression",
+          "postpartum depression",
+          "perinatal depression",
+          "seasonal affective disorder",
+          "electroconvulsive therapy",
+          "transcranial magnetic stimulation",
+          "selective serotonin reuptake inhibitor",
+          "antidepressant treatment",
+          "esketamine",
+          "ketamine for depression",
+          "psilocybin for depression",
+          "zuranolone",
+          "brexanolone",
+          "depression"
+        ],
+        "acronyms": [
+          "MDD",
+          "TRD",
+          "ECT",
+          "TMS",
+          "SSRI"
+        ],
+        "not": [
+          "respiratory depression",
+          "ST depression",
+          "st-segment depression"
+        ]
+      }
+    },
+    {
+      "slug": "psych-psychosis",
+      "name": "Schizophrenia & psychosis",
+      "blurb": "Schizophrenia, first-episode psychosis, and antipsychotic pharmacotherapy.",
+      "rules": {
+        "mesh": [
+          "Schizophrenia",
+          "Psychotic Disorders",
+          "Antipsychotic Agents"
+        ],
+        "phrases": [
+          "schizophrenia",
+          "psychotic disorder",
+          "first-episode psychosis",
+          "treatment-resistant schizophrenia",
+          "negative symptoms of schizophrenia",
+          "long-acting injectable antipsychotic",
+          "clozapine",
+          "xanomeline-trospium",
+          "cariprazine",
+          "lumateperone",
+          "paliperidone"
+        ],
+        "acronyms": [
+          "FEP"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "psych-anxiety",
+      "name": "Anxiety, PTSD & OCD",
+      "blurb": "Anxiety disorders, post-traumatic stress disorder, and obsessive-compulsive disorder.",
+      "rules": {
+        "mesh": [
+          "Anxiety Disorders",
+          "Stress Disorders, Post-Traumatic",
+          "Obsessive-Compulsive Disorder",
+          "Panic Disorder",
+          "Phobic Disorders"
+        ],
+        "phrases": [
+          "generalized anxiety disorder",
+          "generalised anxiety disorder",
+          "panic disorder",
+          "social anxiety disorder",
+          "post-traumatic stress disorder",
+          "obsessive-compulsive disorder",
+          "exposure therapy",
+          "cognitive behavioral therapy for anxiety",
+          "cognitive behavioural therapy for anxiety",
+          "MDMA-assisted therapy",
+          "deep brain stimulation for OCD",
+          "anxiety"
+        ],
+        "acronyms": [
+          "PTSD",
+          "OCD",
+          "GAD",
+          "CBT"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "psych-substance",
+      "name": "Substance use & addiction",
+      "blurb": "Opioid, alcohol, and other substance use disorders, overdose, and harm reduction.",
+      "rules": {
+        "mesh": [
+          "Substance-Related Disorders",
+          "Opioid-Related Disorders",
+          "Alcoholism",
+          "Tobacco Use Disorder",
+          "Substance Withdrawal Syndrome",
+          "Harm Reduction"
+        ],
+        "phrases": [
+          "substance use disorder",
+          "opioid use disorder",
+          "alcohol use disorder",
+          "cannabis use disorder",
+          "stimulant use disorder",
+          "medication for opioid use disorder",
+          "harm reduction",
+          "fentanyl overdose",
+          "contingency management",
+          "smoking cessation",
+          "naloxone",
+          "buprenorphine",
+          "methadone maintenance",
+          "naltrexone"
+        ],
+        "acronyms": [
+          "OUD",
+          "AUD",
+          "SUD",
+          "MOUD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "psych-child",
+      "name": "Child & adolescent mental health",
+      "blurb": "ADHD, autism spectrum disorder, and other mental health conditions in children and adolescents.",
+      "rules": {
+        "mesh": [
+          "Attention Deficit Disorder with Hyperactivity",
+          "Autism Spectrum Disorder",
+          "Child Behavior Disorders",
+          "Conduct Disorder",
+          "Child Psychiatry"
+        ],
+        "phrases": [
+          "attention-deficit/hyperactivity disorder",
+          "attention deficit hyperactivity disorder",
+          "autism spectrum disorder",
+          "child and adolescent psychiatry",
+          "pediatric anxiety",
+          "paediatric anxiety",
+          "youth mental health",
+          "school-based mental health",
+          "oppositional defiant disorder",
+          "stimulant medication for ADHD",
+          "viloxazine"
+        ],
+        "acronyms": [
+          "ADHD",
+          "ASD",
+          "ODD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "psych-suicide",
+      "name": "Suicide prevention & services research",
+      "blurb": "Suicide and self-harm prevention, crisis services, and mental health care delivery.",
+      "rules": {
+        "mesh": [
+          "Suicide",
+          "Suicidal Ideation",
+          "Suicide, Attempted",
+          "Self-Injurious Behavior",
+          "Crisis Intervention",
+          "Mental Health Services"
+        ],
+        "phrases": [
+          "suicidal ideation",
+          "suicide attempt",
+          "suicide prevention",
+          "self-harm",
+          "means restriction",
+          "crisis line",
+          "safety planning intervention",
+          "collaborative care model",
+          "988 suicide and crisis lifeline",
+          "zero suicide"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    },
+    {
+      "slug": "psych-other",
+      "name": "General & other psychiatry",
+      "blurb": "Everything else newly indexed in the psychiatry journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Mental Disorders",
+          "Psychiatry",
+          "Mental Health"
+        ],
+        "phrases": [
+          "mental illness",
+          "psychiatric disorder",
+          "mental health care"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

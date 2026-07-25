@@ -1,0 +1,346 @@
+{
+  "slug": "neurology",
+  "order": 80,
+  "name": "Neurology",
+  "icon": "🧠",
+  "blurb": "Stroke, dementia, epilepsy, movement disorders, and disease of the brain, spinal cord, and peripheral nerves.",
+  "topics": [
+    {
+      "slug": "neuro-stroke",
+      "name": "Stroke & cerebrovascular disease",
+      "blurb": "Ischemic and hemorrhagic stroke, thrombectomy, thrombolysis, and cerebrovascular risk reduction.",
+      "rules": {
+        "mesh": [
+          "Stroke",
+          "Brain Ischemia",
+          "Intracranial Hemorrhages",
+          "Cerebral Hemorrhage",
+          "Subarachnoid Hemorrhage",
+          "Carotid Stenosis",
+          "Thrombectomy"
+        ],
+        "phrases": [
+          "ischemic stroke",
+          "ischaemic stroke",
+          "acute ischemic stroke",
+          "hemorrhagic stroke",
+          "haemorrhagic stroke",
+          "intracerebral hemorrhage",
+          "intracerebral haemorrhage",
+          "subarachnoid hemorrhage",
+          "subarachnoid haemorrhage",
+          "transient ischemic attack",
+          "transient ischaemic attack",
+          "mechanical thrombectomy",
+          "endovascular thrombectomy",
+          "carotid endarterectomy",
+          "large vessel occlusion",
+          "cerebral aneurysm",
+          "cervical artery dissection",
+          "stroke rehabilitation",
+          "tenecteplase",
+          "alteplase",
+          "thrombolysis for stroke",
+          "stroke",
+          "cerebral ischemia",
+          "carotid stenosis"
+        ],
+        "acronyms": [
+          "TIA",
+          "LVO",
+          "tPA",
+          "rtPA",
+          "ICH",
+          "SAH"
+        ],
+        "not": [
+          "heat stroke",
+          "heatstroke",
+          "sunstroke"
+        ]
+      }
+    },
+    {
+      "slug": "neuro-dementia",
+      "name": "Dementia & cognitive disorders",
+      "blurb": "Alzheimer disease, other dementias, and mild cognitive impairment, including anti-amyloid therapy.",
+      "rules": {
+        "mesh": [
+          "Alzheimer Disease",
+          "Dementia",
+          "Cognitive Dysfunction",
+          "Frontotemporal Dementia",
+          "Lewy Body Disease"
+        ],
+        "phrases": [
+          "Alzheimer's disease",
+          "Alzheimer disease",
+          "mild cognitive impairment",
+          "frontotemporal dementia",
+          "dementia with Lewy bodies",
+          "vascular dementia",
+          "cognitive decline",
+          "amyloid plaque",
+          "tau pathology",
+          "amyloid PET imaging",
+          "cerebrospinal fluid biomarkers",
+          "cholinesterase inhibitor",
+          "lecanemab",
+          "donanemab",
+          "aducanumab",
+          "gantenerumab",
+          "memantine",
+          "donepezil"
+        ],
+        "acronyms": [
+          "AD",
+          "MCI",
+          "FTD",
+          "DLB"
+        ],
+        "not": [
+          "atopic dermatitis"
+        ]
+      }
+    },
+    {
+      "slug": "neuro-ms",
+      "name": "Multiple sclerosis & neuroimmunology",
+      "blurb": "Multiple sclerosis, neuromyelitis optica spectrum disorder, and other autoimmune demyelinating disease.",
+      "rules": {
+        "mesh": [
+          "Multiple Sclerosis",
+          "Neuromyelitis Optica",
+          "Demyelinating Diseases",
+          "Encephalomyelitis, Autoimmune, Experimental"
+        ],
+        "phrases": [
+          "multiple sclerosis",
+          "relapsing-remitting multiple sclerosis",
+          "secondary progressive multiple sclerosis",
+          "primary progressive multiple sclerosis",
+          "neuromyelitis optica",
+          "MOG antibody disease",
+          "clinically isolated syndrome",
+          "demyelinating disease",
+          "oligoclonal bands",
+          "ocrelizumab",
+          "ofatumumab",
+          "cladribine",
+          "tolebrutinib",
+          "natalizumab",
+          "fingolimod",
+          "ozanimod",
+          "ponesimod",
+          "evobrutinib",
+          "rituximab for multiple sclerosis"
+        ],
+        "acronyms": [
+          "MS",
+          "RRMS",
+          "SPMS",
+          "PPMS",
+          "NMOSD",
+          "CIS"
+        ],
+        "not": [
+          "mass spectrometry",
+          "tandem mass spectrometry",
+          "mitral stenosis",
+          "morphine sulfate"
+        ]
+      }
+    },
+    {
+      "slug": "neuro-epilepsy",
+      "name": "Epilepsy",
+      "blurb": "Seizure disorders, status epilepticus, and antiseizure and device therapy.",
+      "rules": {
+        "mesh": [
+          "Epilepsy",
+          "Seizures",
+          "Status Epilepticus",
+          "Epilepsy, Temporal Lobe",
+          "Drug Resistant Epilepsy"
+        ],
+        "phrases": [
+          "epilepsy",
+          "epileptic seizure",
+          "status epilepticus",
+          "drug-resistant epilepsy",
+          "refractory epilepsy",
+          "temporal lobe epilepsy",
+          "focal seizure",
+          "generalized seizure",
+          "generalised seizure",
+          "antiseizure medication",
+          "vagus nerve stimulation",
+          "epilepsy surgery",
+          "responsive neurostimulation",
+          "ketogenic diet for epilepsy",
+          "cenobamate",
+          "fenfluramine",
+          "cannabidiol for seizures",
+          "brivaracetam"
+        ],
+        "acronyms": [
+          "SUDEP",
+          "EEG",
+          "TLE"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "neuro-parkinson",
+      "name": "Parkinson disease & movement disorders",
+      "blurb": "Parkinson disease, atypical parkinsonism, tremor, and dystonia.",
+      "rules": {
+        "mesh": [
+          "Parkinson Disease",
+          "Parkinsonian Disorders",
+          "Dystonia",
+          "Essential Tremor",
+          "Multiple System Atrophy"
+        ],
+        "phrases": [
+          "Parkinson's disease",
+          "Parkinson disease",
+          "parkinsonism",
+          "essential tremor",
+          "dystonia",
+          "multiple system atrophy",
+          "progressive supranuclear palsy",
+          "deep brain stimulation",
+          "alpha-synuclein",
+          "levodopa",
+          "carbidopa",
+          "levodopa-carbidopa",
+          "foslevodopa",
+          "opicapone",
+          "istradefylline",
+          "amantadine"
+        ],
+        "acronyms": [
+          "PD",
+          "DBS",
+          "MSA",
+          "PSP"
+        ],
+        "not": [
+          "peritoneal dialysis",
+          "pharmacodynamic",
+          "pharmacodynamics",
+          "PD-1",
+          "PD-L1"
+        ]
+      }
+    },
+    {
+      "slug": "neuro-headache",
+      "name": "Headache & pain",
+      "blurb": "Migraine and other primary headache disorders, including CGRP-targeted therapy.",
+      "rules": {
+        "mesh": [
+          "Headache Disorders",
+          "Migraine Disorders",
+          "Cluster Headache",
+          "Headache Disorders, Secondary"
+        ],
+        "phrases": [
+          "migraine",
+          "chronic migraine",
+          "episodic migraine",
+          "cluster headache",
+          "tension-type headache",
+          "medication overuse headache",
+          "calcitonin gene-related peptide",
+          "erenumab",
+          "fremanezumab",
+          "galcanezumab",
+          "eptinezumab",
+          "rimegepant",
+          "atogepant",
+          "ubrogepant",
+          "zavegepant",
+          "onabotulinumtoxinA for migraine"
+        ],
+        "acronyms": [
+          "CGRP"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "neuro-neuromuscular",
+      "name": "Neuromuscular disease",
+      "blurb": "ALS, myasthenia gravis, muscular dystrophy, and peripheral neuropathy.",
+      "rules": {
+        "mesh": [
+          "Amyotrophic Lateral Sclerosis",
+          "Myasthenia Gravis",
+          "Muscular Dystrophies",
+          "Guillain-Barre Syndrome",
+          "Muscular Atrophy, Spinal",
+          "Charcot-Marie-Tooth Disease"
+        ],
+        "phrases": [
+          "amyotrophic lateral sclerosis",
+          "myasthenic crisis",
+          "myasthenia gravis",
+          "muscular dystrophy",
+          "Duchenne muscular dystrophy",
+          "spinal muscular atrophy",
+          "Guillain-Barre syndrome",
+          "chronic inflammatory demyelinating polyneuropathy",
+          "peripheral neuropathy",
+          "Charcot-Marie-Tooth disease",
+          "tofersen",
+          "nusinersen",
+          "risdiplam",
+          "onasemnogene abeparvovec",
+          "efgartigimod",
+          "rozanolixizumab",
+          "PIEZO2",
+          "arthrogryposis"
+        ],
+        "acronyms": [
+          "ALS",
+          "MG",
+          "SMA",
+          "CIDP",
+          "GBS",
+          "DMD"
+        ],
+        "not": [
+          "magnesium sulfate"
+        ]
+      }
+    },
+    {
+      "slug": "neuro-other",
+      "name": "General & other neurology",
+      "blurb": "Everything else newly indexed in the neurology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Nervous System Diseases",
+          "Neurology",
+          "Brain Diseases"
+        ],
+        "phrases": [
+          "neurological disorder",
+          "neurodegenerative disease",
+          "traumatic brain injury",
+          "neurocritical care"
+        ],
+        "acronyms": [
+          "TBI"
+        ],
+        "not": [
+          "total body irradiation"
+        ]
+      }
+    }
+  ]
+}

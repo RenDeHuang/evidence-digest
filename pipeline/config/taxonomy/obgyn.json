@@ -1,0 +1,281 @@
+{
+  "slug": "obgyn",
+  "order": 170,
+  "name": "Obstetrics & gynecology",
+  "icon": "🤰",
+  "blurb": "Pregnancy, childbirth, fertility, contraception, and gynaecological health across the reproductive lifespan.",
+  "topics": [
+    {
+      "slug": "obgyn-preeclampsia",
+      "name": "Pregnancy complications & preeclampsia",
+      "blurb": "Hypertensive disorders of pregnancy, preeclampsia, gestational diabetes, and other pregnancy complications.",
+      "rules": {
+        "mesh": [
+          "Pre-Eclampsia",
+          "Pregnancy Complications",
+          "Hypertension, Pregnancy-Induced",
+          "Diabetes, Gestational",
+          "Eclampsia",
+          "HELLP Syndrome",
+          "Fetal Growth Retardation",
+          "Placenta Diseases",
+          "Placental Insufficiency",
+          "Pregnancy Complications, Cardiovascular"
+        ],
+        "phrases": [
+          "preeclampsia",
+          "pre-eclampsia",
+          "gestational hypertension",
+          "hypertensive disorders of pregnancy",
+          "gestational diabetes",
+          "HELLP syndrome",
+          "eclampsia",
+          "fetal growth restriction",
+          "intrauterine growth restriction",
+          "placental insufficiency",
+          "preterm preeclampsia",
+          "aspirin for preeclampsia prevention",
+          "nifedipine",
+          "labetalol",
+          "magnesium sulfate for preeclampsia",
+          "placenta accreta"
+        ],
+        "acronyms": [
+          "HDP",
+          "IUGR",
+          "FGR"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "obgyn-labor",
+      "name": "Labour, delivery & maternal outcomes",
+      "blurb": "Labour management, delivery mode, postpartum haemorrhage, and maternal delivery outcomes.",
+      "rules": {
+        "mesh": [
+          "Labor, Obstetric",
+          "Delivery, Obstetric",
+          "Cesarean Section",
+          "Postpartum Hemorrhage",
+          "Labor, Induced",
+          "Vaginal Birth after Cesarean",
+          "Episiotomy",
+          "Obstetric Labor Complications",
+          "Uterine Rupture"
+        ],
+        "phrases": [
+          "induction of labour",
+          "induction of labor",
+          "cesarean delivery",
+          "caesarean delivery",
+          "vaginal birth after cesarean",
+          "postpartum haemorrhage",
+          "postpartum hemorrhage",
+          "oxytocin",
+          "tranexamic acid",
+          "misoprostol",
+          "perineal tear",
+          "operative vaginal delivery",
+          "shoulder dystocia",
+          "active management of the third stage",
+          "labour dystocia",
+          "labor dystocia",
+          "uterine rupture",
+          "levator hiatus"
+        ],
+        "acronyms": [
+          "VBAC",
+          "PPH"
+        ],
+        "not": [
+          "primary pulmonary hypertension"
+        ]
+      }
+    },
+    {
+      "slug": "obgyn-contraception",
+      "name": "Contraception & abortion care",
+      "blurb": "Contraceptive methods, medication and procedural abortion care, and reproductive autonomy.",
+      "rules": {
+        "mesh": [
+          "Contraception",
+          "Contraceptive Agents",
+          "Intrauterine Devices",
+          "Abortion, Induced",
+          "Abortion, Legal",
+          "Long-Acting Reversible Contraception",
+          "Contraception Behavior",
+          "Contraception, Postcoital"
+        ],
+        "phrases": [
+          "contraception",
+          "contraceptive method",
+          "intrauterine device",
+          "long-acting reversible contraception",
+          "medication abortion",
+          "mifepristone",
+          "misoprostol for abortion",
+          "abortion access",
+          "abortion care",
+          "emergency contraception",
+          "unintended pregnancy",
+          "reproductive autonomy",
+          "abortion restriction",
+          "self-managed abortion"
+        ],
+        "acronyms": [
+          "IUD",
+          "LARC"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "obgyn-fertility",
+      "name": "Fertility & assisted reproduction",
+      "blurb": "Infertility evaluation, ovulation induction, and assisted reproductive technology.",
+      "rules": {
+        "mesh": [
+          "Infertility",
+          "Reproductive Techniques, Assisted",
+          "Fertilization in Vitro",
+          "Ovulation Induction",
+          "Oocyte Retrieval",
+          "Semen Analysis",
+          "Cryopreservation",
+          "Infertility, Female",
+          "Infertility, Male",
+          "Polycystic Ovary Syndrome"
+        ],
+        "phrases": [
+          "in vitro fertilisation",
+          "in vitro fertilization",
+          "assisted reproductive technology",
+          "infertility treatment",
+          "ovulation induction",
+          "embryo transfer",
+          "oocyte cryopreservation",
+          "egg freezing",
+          "intracytoplasmic sperm injection",
+          "polycystic ovary syndrome",
+          "ovarian reserve",
+          "fertility preservation",
+          "donor oocyte",
+          "recurrent pregnancy loss",
+          "intrauterine adhesions"
+        ],
+        "acronyms": [
+          "IVF",
+          "ICSI",
+          "PCOS",
+          "ART"
+        ],
+        "not": [
+          "antiretroviral therapy"
+        ]
+      }
+    },
+    {
+      "slug": "obgyn-menopause",
+      "name": "Menopause & benign gynaecology",
+      "blurb": "Menopause management, hormone therapy, and benign gynaecological conditions.",
+      "rules": {
+        "mesh": [
+          "Menopause",
+          "Hormone Replacement Therapy",
+          "Hot Flashes",
+          "Endometriosis",
+          "Leiomyoma",
+          "Pelvic Organ Prolapse",
+          "Urinary Incontinence",
+          "Menstruation Disturbances",
+          "Dysmenorrhea",
+          "Uterine Hemorrhage"
+        ],
+        "phrases": [
+          "menopause",
+          "menopausal hormone therapy",
+          "hormone replacement therapy",
+          "vasomotor symptoms",
+          "hot flashes",
+          "hot flushes",
+          "endometriosis",
+          "uterine fibroid",
+          "leiomyoma",
+          "pelvic organ prolapse",
+          "urinary incontinence in women",
+          "abnormal uterine bleeding",
+          "dysmenorrhoea",
+          "dysmenorrhea",
+          "premenstrual syndrome",
+          "vaginal atrophy",
+          "lichen sclerosus",
+          "vaginal estrogen",
+          "menopausal symptoms",
+          "chronic pelvic pain"
+        ],
+        "acronyms": [
+          "MHT",
+          "HRT"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "obgyn-equity",
+      "name": "Maternal mortality & health equity",
+      "blurb": "Maternal mortality, severe maternal morbidity, and disparities in reproductive and maternal health.",
+      "rules": {
+        "mesh": [
+          "Maternal Mortality",
+          "Maternal Health Services",
+          "Healthcare Disparities",
+          "Health Equity",
+          "Pregnancy Outcome",
+          "Prenatal Care",
+          "Health Status Disparities",
+          "Perinatal Death"
+        ],
+        "phrases": [
+          "maternal mortality",
+          "maternal death",
+          "severe maternal morbidity",
+          "maternal health disparities",
+          "racial disparities in maternal",
+          "maternal mortality review committee",
+          "pregnancy-related death",
+          "prenatal care access",
+          "obstetric racism",
+          "black maternal health",
+          "rural maternal health",
+          "postpartum care access"
+        ],
+        "acronyms": [
+          "SMM"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "obgyn-other",
+      "name": "General & other obstetrics and gynaecology",
+      "blurb": "Everything else newly indexed in the obstetrics and gynaecology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Obstetrics",
+          "Gynecology",
+          "Women's Health"
+        ],
+        "phrases": [
+          "obstetric care",
+          "gynaecological care",
+          "gynecological care"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

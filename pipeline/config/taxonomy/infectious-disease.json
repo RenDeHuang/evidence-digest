@@ -1,0 +1,297 @@
+{
+  "slug": "infectious-disease",
+  "order": 70,
+  "name": "Infectious disease",
+  "icon": "🦠",
+  "blurb": "HIV, tuberculosis, antimicrobial resistance, vaccines, respiratory viruses, and hepatitis and tropical infections.",
+  "topics": [
+    {
+      "slug": "id-hiv",
+      "name": "HIV",
+      "blurb": "HIV prevention, treatment, and cure research.",
+      "rules": {
+        "mesh": [
+          "HIV Infections",
+          "HIV",
+          "Anti-Retroviral Agents",
+          "Acquired Immunodeficiency Syndrome",
+          "Pre-Exposure Prophylaxis",
+          "CD4 Lymphocyte Count"
+        ],
+        "phrases": [
+          "HIV infection",
+          "human immunodeficiency virus",
+          "antiretroviral therapy",
+          "pre-exposure prophylaxis",
+          "post-exposure prophylaxis",
+          "HIV viral suppression",
+          "HIV cure research",
+          "long-acting antiretroviral",
+          "lenacapavir",
+          "cabotegravir",
+          "bictegravir",
+          "dolutegravir",
+          "islatravir",
+          "broadly neutralizing antibody",
+          "HIV self-testing",
+          "undetectable equals untransmittable"
+        ],
+        "acronyms": [
+          "HIV",
+          "AIDS",
+          "ART",
+          "PrEP",
+          "PEP",
+          "CD4"
+        ],
+        "not": [
+          "assisted reproductive",
+          "embryo transfer",
+          "in vitro fertilization",
+          "in vitro fertilisation",
+          "infertility treatment"
+        ]
+      }
+    },
+    {
+      "slug": "id-tb-mycobacteria",
+      "name": "Tuberculosis & mycobacteria",
+      "blurb": "Tuberculosis, drug-resistant TB, and nontuberculous mycobacterial disease.",
+      "rules": {
+        "mesh": [
+          "Tuberculosis",
+          "Mycobacterium tuberculosis",
+          "Tuberculosis, Multidrug-Resistant",
+          "Latent Tuberculosis",
+          "Mycobacterium Infections, Nontuberculous",
+          "Antitubercular Agents"
+        ],
+        "phrases": [
+          "tuberculosis",
+          "multidrug-resistant tuberculosis",
+          "latent tuberculosis infection",
+          "drug-resistant tuberculosis",
+          "nontuberculous mycobacteria",
+          "Mycobacterium avium complex",
+          "directly observed therapy",
+          "bedaquiline",
+          "pretomanid",
+          "delamanid",
+          "rifapentine",
+          "isoniazid preventive therapy",
+          "interferon-gamma release assay",
+          "GeneXpert"
+        ],
+        "acronyms": [
+          "TB",
+          "MDR-TB",
+          "XDR-TB",
+          "LTBI",
+          "NTM",
+          "DOT",
+          "IGRA"
+        ],
+        "not": [
+          "total bilirubin",
+          "terabyte"
+        ]
+      }
+    },
+    {
+      "slug": "id-amr-stewardship",
+      "name": "Antimicrobial resistance & stewardship",
+      "blurb": "Drug-resistant organisms, novel antibiotics, and antimicrobial stewardship.",
+      "rules": {
+        "mesh": [
+          "Drug Resistance, Bacterial",
+          "Drug Resistance, Multiple, Bacterial",
+          "Anti-Bacterial Agents",
+          "beta-Lactamases",
+          "Carbapenem-Resistant Enterobacteriaceae"
+        ],
+        "phrases": [
+          "antimicrobial resistance",
+          "multidrug-resistant organism",
+          "antibiotic stewardship",
+          "carbapenem-resistant",
+          "extended-spectrum beta-lactamase",
+          "methicillin-resistant Staphylococcus aureus",
+          "vancomycin-resistant enterococcus",
+          "colistin resistance",
+          "novel antibiotic",
+          "ceftazidime-avibactam",
+          "cefiderocol",
+          "meropenem-vaborbactam",
+          "imipenem-relebactam",
+          "eravacycline",
+          "fosfomycin",
+          "sulbactam-durlobactam",
+          "zoliflodacin",
+          "fluoroquinolone-resistant"
+        ],
+        "acronyms": [
+          "AMR",
+          "MDRO",
+          "ESBL",
+          "CRE",
+          "MRSA",
+          "VRE",
+          "MDR",
+          "XDR"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "id-vaccines",
+      "name": "Vaccines & immunisation",
+      "blurb": "Vaccine efficacy, immunisation programmes, and vaccine safety and hesitancy.",
+      "rules": {
+        "mesh": [
+          "Vaccines",
+          "Vaccination",
+          "Immunization Programs",
+          "Vaccine-Preventable Diseases",
+          "Immunization Schedule",
+          "Adjuvants, Vaccine"
+        ],
+        "phrases": [
+          "vaccine efficacy",
+          "vaccine effectiveness",
+          "immunization schedule",
+          "childhood vaccination",
+          "vaccine hesitancy",
+          "mRNA vaccine",
+          "adjuvanted vaccine",
+          "booster dose",
+          "herd immunity",
+          "post-licensure surveillance",
+          "vaccine safety",
+          "RSV vaccine",
+          "pneumococcal conjugate vaccine",
+          "meningococcal vaccine",
+          "maternal immunization",
+          "RSVpreF"
+        ],
+        "acronyms": [
+          "PCV",
+          "MMR"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "id-respiratory-viruses",
+      "name": "Respiratory viruses & pandemic preparedness",
+      "blurb": "Influenza, COVID-19, RSV, and preparedness for emerging respiratory pathogens.",
+      "rules": {
+        "mesh": [
+          "Influenza, Human",
+          "COVID-19",
+          "SARS-CoV-2",
+          "Respiratory Syncytial Virus Infections",
+          "Coronavirus Infections",
+          "Pandemics",
+          "Respiratory Tract Infections"
+        ],
+        "phrases": [
+          "COVID-19",
+          "SARS-CoV-2",
+          "influenza",
+          "respiratory syncytial virus",
+          "avian influenza",
+          "H5N1",
+          "pandemic preparedness",
+          "post-acute sequelae of COVID-19",
+          "long COVID",
+          "antiviral for influenza",
+          "nirmatrelvir",
+          "molnupiravir",
+          "baloxavir",
+          "oseltamivir",
+          "nirsevimab",
+          "paxlovid",
+          "hantavirus"
+        ],
+        "acronyms": [
+          "RSV",
+          "URI",
+          "LRTI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "id-hepatitis-tropical",
+      "name": "Hepatitis & tropical/parasitic disease",
+      "blurb": "Viral hepatitis, malaria, and neglected tropical and parasitic diseases.",
+      "rules": {
+        "mesh": [
+          "Hepatitis A",
+          "Hepatitis B",
+          "Hepatitis C",
+          "Hepatitis, Viral, Human",
+          "Malaria",
+          "Dengue",
+          "Neglected Diseases",
+          "Schistosomiasis",
+          "Leishmaniasis",
+          "Chagas Disease"
+        ],
+        "phrases": [
+          "hepatitis A",
+          "hepatitis B",
+          "hepatitis C",
+          "chronic hepatitis",
+          "hepatitis B virus",
+          "hepatitis C virus",
+          "direct-acting antiviral",
+          "malaria",
+          "dengue fever",
+          "neglected tropical disease",
+          "schistosomiasis",
+          "leishmaniasis",
+          "Chagas disease",
+          "soil-transmitted helminth",
+          "antimalarial therapy",
+          "artemisinin-based combination therapy",
+          "tenofovir",
+          "sofosbuvir",
+          "bulevirtide",
+          "Trichuris"
+        ],
+        "acronyms": [
+          "HBV",
+          "HCV",
+          "DAA",
+          "NTD"
+        ],
+        "not": [
+          "neural tube defect",
+          "neural tube defects"
+        ]
+      }
+    },
+    {
+      "slug": "id-other",
+      "name": "General & other infectious disease",
+      "blurb": "Everything else newly indexed in the infectious disease journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Communicable Diseases",
+          "Bacterial Infections",
+          "Virus Diseases",
+          "Mycoses"
+        ],
+        "phrases": [
+          "infectious disease",
+          "emerging infection",
+          "outbreak investigation"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

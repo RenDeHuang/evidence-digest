@@ -1,0 +1,141 @@
+name: 'Build Evidence Digest site'
+description: >-
+  Regenerates data/api + data/feeds from the committed archive, builds the web app
+  against that data, and assembles a single directory (web/dist) ready to upload as
+  a Pages artifact. Shared by harvest.yml (harvest, then build) and pages.yml
+  (build only) so the build logic exists in exactly one place.
+
+inputs:
+  site-url:
+    description: >-
+      Public URL the site will be served from, e.g. https://muhammadali-k.github.io/evidence-digest/.
+      Passed straight through to `cli build --site-url`, which stamps it into feed
+      <link> elements and any other absolute URL the static API needs to emit.
+    required: true
+  vite-base:
+    description: >-
+      Value for Vite's `base` config — the URL sub-path the site is served from.
+      Defaults to the same path portion as site-url so a fork deployed to a
+      different GitHub Pages project page still builds correctly without editing
+      vite.config.ts. Set explicitly for a custom domain (usually "/").
+    required: false
+    default: ''
+  worker-url:
+    description: >-
+      Public base URL of the Cloudflare Worker that handles email subscriptions,
+      e.g. https://evidence-digest-api.<subdomain>.workers.dev. Baked into the web
+      build as VITE_WORKER_URL.
+
+      Leave empty to ship the site in browse-only mode: the /subscribe page then
+      renders an honest "email digests are not switched on for this deployment"
+      panel plus the per-topic Atom feed URLs, instead of a form that cannot work.
+
+      This is a BUILD-TIME value because Vite inlines import.meta.env at build
+      time — there is no runtime configuration to change afterwards. So after
+      running scripts/setup-cloudflare.sh, the site must be REBUILT (re-run the
+      Pages workflow) before the signup form appears. Forgetting to thread this
+      input through is a silent failure: email works perfectly on the Worker side
+      while the site insists it is unavailable.
+    required: false
+    default: ''
+  node-version:
+    description: 'Node.js version used to build the web app.'
+    required: false
+    default: '20'
+  python-version:
+    description: 'Python version used to run the pipeline CLI. Assumes it is already set up by the caller.'
+    required: false
+    default: '3.12'
+
+runs:
+  using: 'composite'
+  steps:
+    # The pipeline build step assumes Python is already on PATH (actions/setup-python
+    # run by the calling workflow) — a composite action cannot itself add a new
+    # `uses: actions/setup-python` step ahead of steps the caller already ran without
+    # doing it twice, so both callers set up Python before invoking this action.
+
+    - name: Derive VITE_BASE from site-url when not given
+      id: vite-base
+      shell: bash
+      run: |
+        if [ -n "${{ inputs.vite-base }}" ]; then
+          echo "value=${{ inputs.vite-base }}" >> "$GITHUB_OUTPUT"
+        else
+          # Strip scheme + host, keep only the path, e.g.
+          # https://muhammadali-k.github.io/evidence-digest/ -> /evidence-digest/
+          PATH_ONLY="$(echo "${{ inputs.site-url }}" | sed -E 's#^[a-zA-Z]+://[^/]+##')"
+          if [ -z "$PATH_ONLY" ]; then PATH_ONLY="/"; fi
+          echo "value=$PATH_ONLY" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Build static API from the archive
+      shell: bash
+      # PYTHONPATH=pipeline: the evidence_digest package lives under pipeline/
+      # and is never pip-installed (stdlib only) — it has to be put on the
+      # import path explicitly for `python -m evidence_digest.cli` to resolve
+      # it from the repo root, which is this action's working directory.
+      env:
+        PYTHONPATH: pipeline
+      run: python -m evidence_digest.cli build --site-url "${{ inputs.site-url }}"
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        # No built-in `cache: npm` here: that input fails the step outright when
+        # web/package-lock.json doesn't exist yet, which is true on a fresh clone
+        # before the first `npm install`. The conditional step below caches npm's
+        # download cache once a lockfile exists to key on, and is a harmless no-op
+        # until then.
+
+    - name: Cache npm downloads
+      if: hashFiles('web/package-lock.json') != ''
+      uses: actions/cache@v4
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-npm-web-${{ hashFiles('web/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-web-
+
+    - name: Install web dependencies
+      shell: bash
+      working-directory: web
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        else
+          echo "::warning::web/package-lock.json not found; falling back to 'npm install'. Commit a lockfile for reproducible builds."
+          npm install
+        fi
+
+    - name: Build web app
+      shell: bash
+      working-directory: web
+      env:
+        VITE_BASE: ${{ steps.vite-base.outputs.value }}
+        VITE_WORKER_URL: ${{ inputs.worker-url }}
+      run: |
+        if [ -n "${VITE_WORKER_URL}" ]; then
+          echo "Email backend configured: building with VITE_WORKER_URL=${VITE_WORKER_URL}"
+        else
+          echo "::notice::VITE_WORKER_URL is empty — building in browse-only mode (Atom feeds, no email signup). Set the VITE_WORKER_URL repository variable and re-run to enable email digests."
+        fi
+        npm run build
+
+    - name: Copy generated API + feeds into the web build
+      shell: bash
+      run: |
+        # web/ owns the app shell; data/api and data/feeds are pipeline build
+        # output (gitignored — see .gitignore). They ship inside the SAME Pages
+        # artifact as the app so the deployed site and its data are always in
+        # sync with each other, with no separate deploy step that could race.
+        mkdir -p web/dist/api web/dist/feeds
+        cp -R data/api/. web/dist/api/
+        cp -R data/feeds/. web/dist/feeds/
+        # Belt-and-suspenders marker at the artifact root: `actions/deploy-pages`
+        # doesn't run Jekyll at all (only the legacy branch-based Pages source
+        # does), so this isn't strictly required, but it's a zero-cost guard
+        # against any underscore-prefixed path ever being swallowed.
+        touch web/dist/.nojekyll
+        echo "Copied $(find data/api -type f | wc -l | tr -d ' ') API file(s) and $(find data/feeds -type f | wc -l | tr -d ' ') feed file(s) into web/dist/."

@@ -1,0 +1,53 @@
+version: 2
+
+updates:
+  # web/ — Vite + React + TypeScript SPA.
+  - package-ecosystem: 'npm'
+    directory: '/web'
+    schedule:
+      interval: 'weekly'
+    groups:
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+    commit-message:
+      prefix: 'chore(web)'
+    labels: ['dependencies', 'web']
+
+  # worker/ — Cloudflare Worker (email digests via D1 + Brevo).
+  - package-ecosystem: 'npm'
+    directory: '/worker'
+    schedule:
+      interval: 'weekly'
+    groups:
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+    commit-message:
+      prefix: 'chore(worker)'
+    labels: ['dependencies', 'worker']
+
+  # Workflow files in .github/workflows/ pin third-party Actions by tag (e.g.
+  # actions/checkout@v4) — keep those current too.
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    groups:
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+    commit-message:
+      prefix: 'chore(ci)'
+    labels: ['dependencies', 'ci']
+
+  # The composite action itself (.github/actions/build-site/action.yml) also pins
+  # Actions by tag and is not covered by the top-level entry above — Dependabot
+  # treats a directory containing an action.yml as its own scan root.
+  - package-ecosystem: 'github-actions'
+    directory: '/.github/actions/build-site'
+    schedule:
+      interval: 'weekly'
+    groups:
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+    commit-message:
+      prefix: 'chore(ci)'
+    labels: ['dependencies', 'ci']

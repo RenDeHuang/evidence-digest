@@ -1,0 +1,223 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/muhammadali-k/evidence-digest/contract/config.schema.json",
+  "title": "Evidence Digest editorial configuration",
+  "description": "Schemas for the three human-editable config files that define the product's editorial behaviour: which journals are watched (journals.json), what topics readers can choose (taxonomy.json), and how studies are ranked (scoring.json). Adding a specialty is a change to these files only - no code change.",
+  "definitions": {
+    "journals": {
+      "$comment": "pipeline/config/journals.json",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "journals", "topicFilter"],
+      "properties": {
+        "version": { "type": "integer" },
+        "_comment": { "type": "string" },
+        "topicFilter": {
+          "type": "string",
+          "description": "PubMed query fragment applied to journals with scope 'topic'. Used for broad multidisciplinary journals (Nature, Science, PNAS) where only clinically relevant papers should enter the digest."
+        },
+        "journals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "ta", "specialty", "tier", "scope"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Reader-facing journal name. Shown on the Sources page and on every study card."
+              },
+              "ta": {
+                "type": "string",
+                "description": "MEDLINE title abbreviation, exactly as PubMed's [ta] field expects it. This is the only reliable journal identifier; ISSNs and full titles both drift. Validate with `python -m evidence_digest.cli check`."
+              },
+              "specialty": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "description": "Slug of the specialty this journal primarily belongs to, matching a specialty slug in taxonomy.json. Drives the catch-all topic when no rule fires."
+              },
+              "tier": {
+                "type": "integer",
+                "enum": [1, 2, 3],
+                "description": "1 = practice-defining general or flagship journal. 2 = leading subspecialty journal. 3 = solid specialty journal. Feeds the score, and nothing else."
+              },
+              "scope": {
+                "type": "string",
+                "enum": ["all", "topic"],
+                "description": "'all' takes every newly indexed paper from the journal. 'topic' additionally requires topicFilter to match, for broad journals that publish far outside medicine."
+              },
+              "note": {
+                "type": "string",
+                "description": "Optional maintainer note, e.g. why an unusual abbreviation is correct."
+              }
+            }
+          }
+        }
+      }
+    },
+    "taxonomySpecialty": {
+      "$comment": "pipeline/config/taxonomy/<specialty-slug>.json - ONE FILE PER SPECIALTY. The loader globs the directory and orders specialties by their 'order' field, so contributors adding a specialty never touch a shared index file and never collide.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slug", "order", "name", "icon", "blurb", "topics"],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Must equal the filename stem, and must match the 'specialty' value used by journals in journals.json."
+        },
+        "order": {
+          "type": "integer",
+          "description": "Display order in the topic picker and in email digests. Spaced by tens so a new specialty can be inserted without renumbering."
+        },
+        "name": { "type": "string" },
+        "icon": {
+          "type": "string",
+          "description": "A single emoji used as the specialty's visual anchor in the picker and in email section headers."
+        },
+        "blurb": {
+          "type": "string",
+          "description": "One sentence, reader-facing, describing the specialty's coverage."
+        },
+        "topics": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["slug", "name", "blurb", "rules"],
+            "properties": {
+              "slug": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9-]+$",
+                      "description": "Globally unique across all specialties. Becomes a URL path, a feed filename, and a stored subscriber preference, so it must never be renamed once shipped - add a new topic instead."
+                    },
+              "name": { "type": "string" },
+              "blurb": { "type": "string" },
+              "catchAll": {
+                "type": "boolean",
+                "description": "Exactly one topic per specialty sets this true. It receives studies from that specialty's journals when no other topic in the taxonomy matched, guaranteeing nothing is silently dropped."
+              },
+              "rules": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Deterministic matcher. A study accumulates points across the rule groups below and joins the topic when it reaches scoring.json.classifier.assignThreshold.",
+                "properties": {
+                  "mesh": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Case-insensitive substring match against each MeSH descriptor. MeSH's inverted form makes substrings work well: 'Leukemia' matches 'Leukemia, Myeloid, Acute'. Scored highest because MeSH is human-curated - but note that freshly indexed records often carry NO MeSH yet, which is exactly why a title phrase alone must also be sufficient to classify."
+                  },
+                  "phrases": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Case-insensitive whole-phrase match with word boundaries, checked against title, author keywords, and abstract (title and keywords score higher than abstract)."
+                  },
+                  "acronyms": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Case-SENSITIVE whole-word match, for initialisms where lowercase would produce nonsense hits ('AML', 'CAR', 'HF', 'MS'). Kept separate from phrases precisely so casing can be enforced."
+                  },
+                  "not": {
+                    "type": "array",
+                    "items": { "type": "string" },
+                    "description": "Case-insensitive veto phrases. Any hit in title or MeSH disqualifies the study from this topic regardless of accumulated points."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "scoring": {
+      "$comment": "pipeline/config/scoring.json",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "classifier", "journalTier", "evidenceLevels", "bonuses", "penalties", "recency", "limits"],
+      "properties": {
+        "version": { "type": "integer" },
+        "_comment": { "type": "string" },
+        "classifier": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["assignThreshold", "weights"],
+          "properties": {
+            "assignThreshold": { "type": "integer" },
+            "weights": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["mesh", "title", "keywords", "abstract"],
+              "properties": {
+                "mesh": { "type": "integer" },
+                "title": { "type": "integer" },
+                "keywords": { "type": "integer" },
+                "abstract": { "type": "integer" }
+              }
+            }
+          }
+        },
+        "journalTier": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["1", "2", "3"],
+          "properties": {
+            "1": { "type": "integer" },
+            "2": { "type": "integer" },
+            "3": { "type": "integer" }
+          }
+        },
+        "evidenceLevels": {
+          "type": "object",
+          "description": "level slug -> { rank, label, points }. Ranks must be unique and cover 1..9.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["rank", "label", "points"],
+            "properties": {
+              "rank": { "type": "integer" },
+              "label": { "type": "string" },
+              "points": { "type": "integer" }
+            }
+          }
+        },
+        "bonuses": {
+          "type": "object",
+          "description": "Named additive signals, e.g. phase3, multicentre, largeCohort, hasTrialId, openAccess, practiceChanging.",
+          "additionalProperties": { "type": "integer" }
+        },
+        "penalties": {
+          "type": "object",
+          "description": "Named subtractive signals, e.g. noAbstract, correction, comment, preclinicalOnly.",
+          "additionalProperties": { "type": "integer" }
+        },
+        "recency": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["maxPoints", "halfLifeDays"],
+          "properties": {
+            "maxPoints": { "type": "integer" },
+            "halfLifeDays": { "type": "integer" }
+          }
+        },
+        "limits": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["servedWindowDays", "perTopicFile", "highlights", "highlightsPerSpecialty", "searchIndexMinScore", "searchIndexWindowDays", "feedItems", "emailStudiesPerTopic", "emailMaxStudies"],
+          "properties": {
+            "servedWindowDays": { "type": "integer" },
+            "perTopicFile": { "type": "integer" },
+            "highlights": { "type": "integer" },
+            "highlightsPerSpecialty": { "type": "integer" },
+            "searchIndexMinScore": { "type": "integer" },
+            "searchIndexWindowDays": { "type": "integer" },
+            "feedItems": { "type": "integer" },
+            "emailStudiesPerTopic": { "type": "integer" },
+            "emailMaxStudies": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}

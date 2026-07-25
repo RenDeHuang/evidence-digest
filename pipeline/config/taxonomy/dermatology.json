@@ -1,0 +1,172 @@
+{
+  "slug": "dermatology",
+  "order": 140,
+  "name": "Dermatology",
+  "icon": "🧴",
+  "blurb": "Inflammatory, autoimmune, and infectious skin disease and the biologics reshaping their treatment.",
+  "topics": [
+    {
+      "slug": "derm-psoriasis",
+      "name": "Psoriasis",
+      "blurb": "Plaque and other psoriasis subtypes and their topical, phototherapy, and biologic treatment.",
+      "rules": {
+        "mesh": [
+          "Psoriasis",
+          "Skin Diseases, Papulosquamous"
+        ],
+        "phrases": [
+          "plaque psoriasis",
+          "psoriasis vulgaris",
+          "guttate psoriasis",
+          "pustular psoriasis",
+          "scalp psoriasis",
+          "psoriasis area and severity index",
+          "biologic therapy for psoriasis",
+          "topical corticosteroid for psoriasis",
+          "phototherapy for psoriasis",
+          "bimekizumab",
+          "deucravacitinib",
+          "secukinumab",
+          "ixekizumab",
+          "risankizumab for psoriasis",
+          "guselkumab for psoriasis",
+          "brodalumab",
+          "IL-17"
+        ],
+        "acronyms": [
+          "PASI"
+        ],
+        "not": [
+          "psoriatic arthritis"
+        ]
+      }
+    },
+    {
+      "slug": "derm-atopic",
+      "name": "Atopic dermatitis & eczema",
+      "blurb": "Atopic dermatitis and eczema, including topical and systemic targeted therapy.",
+      "rules": {
+        "mesh": [
+          "Dermatitis, Atopic",
+          "Eczema"
+        ],
+        "phrases": [
+          "atopic dermatitis",
+          "atopic eczema",
+          "eczema area and severity index",
+          "pruritus in atopic dermatitis",
+          "skin barrier dysfunction",
+          "topical Janus kinase inhibitor",
+          "dupilumab",
+          "lebrikizumab",
+          "tralokinumab",
+          "abrocitinib",
+          "upadacitinib for atopic dermatitis",
+          "ruxolitinib cream",
+          "nemolizumab"
+        ],
+        "acronyms": [
+          "AD",
+          "EASI"
+        ],
+        "not": [
+          "alzheimer disease",
+          "alzheimer's disease"
+        ]
+      }
+    },
+    {
+      "slug": "derm-acne",
+      "name": "Acne, rosacea & hidradenitis",
+      "blurb": "Acne vulgaris, rosacea, and hidradenitis suppurativa.",
+      "rules": {
+        "mesh": [
+          "Acne Vulgaris",
+          "Rosacea",
+          "Hidradenitis Suppurativa"
+        ],
+        "phrases": [
+          "acne vulgaris",
+          "rosacea",
+          "hidradenitis suppurativa",
+          "topical retinoid",
+          "benzoyl peroxide",
+          "isotretinoin",
+          "clascoterone",
+          "sarecycline",
+          "adapalene",
+          "secukinumab for hidradenitis suppurativa",
+          "bimekizumab for hidradenitis suppurativa",
+          "spironolactone for acne"
+        ],
+        "acronyms": [
+          "HS"
+        ],
+        "not": [
+          "health system",
+          "health services",
+          "heart sounds"
+        ]
+      }
+    },
+    {
+      "slug": "derm-autoimmune-blistering",
+      "name": "Autoimmune & blistering skin disease",
+      "blurb": "Pemphigus, pemphigoid, vitiligo, alopecia areata, and cutaneous autoimmune disease.",
+      "rules": {
+        "mesh": [
+          "Pemphigus",
+          "Pemphigoid, Bullous",
+          "Lupus Erythematosus, Cutaneous",
+          "Vitiligo",
+          "Alopecia Areata",
+          "Scleroderma, Localized",
+          "Dermatomyositis"
+        ],
+        "phrases": [
+          "bullous pemphigoid",
+          "pemphigus vulgaris",
+          "cutaneous lupus erythematosus",
+          "vitiligo",
+          "alopecia areata",
+          "morphea",
+          "rituximab for pemphigus",
+          "ritlecitinib",
+          "baricitinib for alopecia areata",
+          "ruxolitinib for vitiligo",
+          "efgartigimod for pemphigoid"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    },
+    {
+      "slug": "derm-other",
+      "name": "Skin infection & general dermatology",
+      "blurb": "Skin and soft tissue infections, and everything else newly indexed in the dermatology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Skin Diseases",
+          "Skin Diseases, Infectious",
+          "Dermatomycoses",
+          "Cellulitis",
+          "Dermatology"
+        ],
+        "phrases": [
+          "skin infection",
+          "cellulitis",
+          "impetigo",
+          "cutaneous fungal infection",
+          "molluscum contagiosum",
+          "tinea",
+          "onychomycosis",
+          "herpes zoster",
+          "scabies"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

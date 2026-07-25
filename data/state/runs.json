@@ -1,0 +1,771 @@
+[
+  {
+    "command": "harvest",
+    "errors": [],
+    "newCount": 865,
+    "perJournal": {
+      "Acad Emerg Med": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Am J Emerg Med": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Am J Gastroenterol": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Am J Hematol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Am J Kidney Dis": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Am J Obstet Gynecol": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Am J Ophthalmol": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Am J Psychiatry": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Am J Public Health": {
+        "error": null,
+        "found": 11,
+        "new": 11
+      },
+      "Am J Respir Crit Care Med": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Anaesthesia": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Anesthesiology": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Ann Emerg Med": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Ann Intern Med": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Ann Neurol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Ann Oncol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Ann Rheum Dis": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Ann Surg": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Arch Dis Child": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Arthritis Rheumatol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Artif Intell Med": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "BJOG": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "BMJ": {
+        "error": null,
+        "found": 48,
+        "new": 48
+      },
+      "BMJ Glob Health": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Biol Psychiatry": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Blood": {
+        "error": null,
+        "found": 25,
+        "new": 25
+      },
+      "Blood Adv": {
+        "error": null,
+        "found": 21,
+        "new": 21
+      },
+      "Blood Cancer J": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Blood Rev": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Bone Marrow Transplant": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "Br J Dermatol": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Br J Haematol": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Br J Ophthalmol": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Br J Surg": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Brain": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "CA Cancer J Clin": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Cancer Cell": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Cancer Discov": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Cancer Res": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Cell Rep Med": {
+        "error": null,
+        "found": 12,
+        "new": 12
+      },
+      "Chest": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Circulation": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Clin Cancer Res": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Clin Gastroenterol Hepatol": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Clin Infect Dis": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Clin J Am Soc Nephrol": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Clin Microbiol Infect": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Crit Care": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Crit Care Med": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Diabetes Care": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Diabetes Obes Metab": {
+        "error": null,
+        "found": 12,
+        "new": 12
+      },
+      "Diabetologia": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Emerg Infect Dis": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Emerg Med J": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "Epilepsia": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Eur Heart J": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Eur J Cancer": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Eur J Endocrinol": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Eur J Heart Fail": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Eur Respir J": {
+        "error": null,
+        "found": 11,
+        "new": 11
+      },
+      "Fertil Steril": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Gastroenterology": {
+        "error": null,
+        "found": 11,
+        "new": 11
+      },
+      "Gut": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "Haematologica": {
+        "error": null,
+        "found": 23,
+        "new": 23
+      },
+      "Health Aff (Millwood)": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Heart": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Heart Rhythm": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Hemasphere": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Hepatology": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Hum Reprod": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "IEEE Trans Med Imaging": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Intensive Care Med": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Invest Ophthalmol Vis Sci": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "J Am Acad Dermatol": {
+        "error": null,
+        "found": 14,
+        "new": 14
+      },
+      "J Am Coll Cardiol": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "J Am Coll Surg": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "J Am Med Inform Assoc": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "J Am Soc Nephrol": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "J Biomed Inform": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "J Clin Endocrinol Metab": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "J Clin Oncol": {
+        "error": null,
+        "found": 17,
+        "new": 17
+      },
+      "J Eur Acad Dermatol Venereol": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "J Hematol Oncol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "J Hepatol": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "J Infect": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "J Infect Dis": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "J Invest Dermatol": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "J Med Internet Res": {
+        "error": null,
+        "found": 28,
+        "new": 28
+      },
+      "J Natl Cancer Inst": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "J Pediatr": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "J Rheumatol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "JACC Heart Fail": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "JAMA": {
+        "error": null,
+        "found": 26,
+        "new": 26
+      },
+      "JAMA Cardiol": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "JAMA Dermatol": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "JAMA Health Forum": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "JAMA Intern Med": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "JAMA Neurol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "JAMA Oncol": {
+        "error": null,
+        "found": 8,
+        "new": 8
+      },
+      "JAMA Ophthalmol": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "JAMA Pediatr": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "JAMA Psychiatry": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "JAMA Surg": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Kidney Int": {
+        "error": null,
+        "found": 18,
+        "new": 18
+      },
+      "Kidney Int Rep": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Lancet": {
+        "error": null,
+        "found": 17,
+        "new": 17
+      },
+      "Lancet Child Adolesc Health": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Lancet Diabetes Endocrinol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Lancet Digit Health": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "Lancet Gastroenterol Hepatol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Lancet Glob Health": {
+        "error": null,
+        "found": 4,
+        "new": 4
+      },
+      "Lancet HIV": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Lancet Haematol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Lancet Infect Dis": {
+        "error": null,
+        "found": 22,
+        "new": 22
+      },
+      "Lancet Neurol": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Lancet Oncol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Lancet Psychiatry": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Lancet Public Health": {
+        "error": null,
+        "found": 12,
+        "new": 12
+      },
+      "Lancet Respir Med": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Lancet Rheumatol": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Leukemia": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Mayo Clin Proc": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Med Image Anal": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "Mol Psychiatry": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Mov Disord": {
+        "error": null,
+        "found": 5,
+        "new": 5
+      },
+      "N Engl J Med": {
+        "error": null,
+        "found": 19,
+        "new": 19
+      },
+      "NEJM AI": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "NPJ Digit Med": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "NPJ Precis Oncol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Nat Cancer": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Nat Mach Intell": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Nat Med": {
+        "error": null,
+        "found": 11,
+        "new": 11
+      },
+      "Nat Rev Cancer": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Nat Rev Clin Oncol": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Nature": {
+        "error": null,
+        "found": 18,
+        "new": 18
+      },
+      "Nephrol Dial Transplant": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Neurology": {
+        "error": null,
+        "found": 13,
+        "new": 13
+      },
+      "Obesity (Silver Spring)": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Obstet Gynecol": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Ophthalmology": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Patterns (N Y)": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      },
+      "Pediatr Res": {
+        "error": null,
+        "found": 16,
+        "new": 16
+      },
+      "Pediatrics": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Radiol Artif Intell": {
+        "error": null,
+        "found": 2,
+        "new": 2
+      },
+      "Resuscitation": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Rheumatology (Oxford)": {
+        "error": null,
+        "found": 6,
+        "new": 6
+      },
+      "Science (New York, N.Y.)": {
+        "error": null,
+        "found": 10,
+        "new": 10
+      },
+      "Semin Arthritis Rheum": {
+        "error": null,
+        "found": 1,
+        "new": 1
+      },
+      "Stroke": {
+        "error": null,
+        "found": 9,
+        "new": 9
+      },
+      "Thorax": {
+        "error": null,
+        "found": 7,
+        "new": 7
+      },
+      "Ultrasound Obstet Gynecol": {
+        "error": null,
+        "found": 3,
+        "new": 3
+      },
+      "World Psychiatry": {
+        "error": null,
+        "found": 0,
+        "new": 0
+      }
+    },
+    "timestamp": "2026-07-25T07:10:15Z",
+    "windowDays": 3
+  }
+]

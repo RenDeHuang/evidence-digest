@@ -1,0 +1,268 @@
+{
+  "slug": "nephrology",
+  "order": 120,
+  "name": "Nephrology",
+  "icon": "💧",
+  "blurb": "Chronic and acute kidney disease, dialysis, kidney transplantation, glomerular disease, and fluid and electrolyte disorders.",
+  "topics": [
+    {
+      "slug": "nephro-ckd",
+      "name": "Chronic kidney disease",
+      "blurb": "CKD progression, diabetic kidney disease, and kidney-protective therapy.",
+      "rules": {
+        "mesh": [
+          "Renal Insufficiency, Chronic",
+          "Kidney Failure, Chronic",
+          "Diabetic Nephropathies",
+          "Renal Insufficiency",
+          "Albuminuria",
+          "Kidney Function Tests"
+        ],
+        "phrases": [
+          "chronic kidney disease",
+          "end-stage kidney disease",
+          "end-stage renal disease",
+          "diabetic kidney disease",
+          "diabetic nephropathy",
+          "estimated glomerular filtration rate",
+          "albuminuria",
+          "proteinuria",
+          "CKD progression",
+          "finerenone",
+          "dapagliflozin for kidney disease",
+          "empagliflozin for kidney disease",
+          "sparsentan",
+          "atrasentan",
+          "bardoxolone",
+          "glomerular filtration rate"
+        ],
+        "acronyms": [
+          "CKD",
+          "ESKD",
+          "ESRD",
+          "eGFR",
+          "UACR"
+        ],
+        "not": [
+          "acute kidney injury",
+          "acute kidney failure"
+        ]
+      }
+    },
+    {
+      "slug": "nephro-aki",
+      "name": "Acute kidney injury",
+      "blurb": "Acute kidney injury in hospitalized and critically ill patients.",
+      "rules": {
+        "mesh": [
+          "Acute Kidney Injury",
+          "Renal Replacement Therapy",
+          "Kidney Tubular Necrosis, Acute",
+          "Biomarkers"
+        ],
+        "phrases": [
+          "acute kidney injury",
+          "acute kidney failure",
+          "acute tubular necrosis",
+          "contrast-induced nephropathy",
+          "cardiorenal syndrome",
+          "hepatorenal syndrome",
+          "sepsis-associated acute kidney injury",
+          "AKI biomarker",
+          "renal angina",
+          "furosemide stress test",
+          "continuous renal replacement therapy",
+          "nephrotoxic acute kidney injury",
+          "postoperative acute kidney injury"
+        ],
+        "acronyms": [
+          "AKI",
+          "ATN",
+          "CRRT",
+          "KDIGO"
+        ],
+        "not": [
+          "acute liver injury",
+          "acute lung injury"
+        ]
+      }
+    },
+    {
+      "slug": "nephro-dialysis",
+      "name": "Dialysis",
+      "blurb": "Hemodialysis, peritoneal dialysis, and dialysis vascular access.",
+      "rules": {
+        "mesh": [
+          "Renal Dialysis",
+          "Peritoneal Dialysis",
+          "Hemodialysis, Home",
+          "Arteriovenous Fistula"
+        ],
+        "phrases": [
+          "hemodialysis",
+          "peritoneal dialysis",
+          "home dialysis",
+          "dialysis vascular access",
+          "arteriovenous fistula",
+          "arteriovenous graft",
+          "dialysis adequacy",
+          "conventional hemodialysis",
+          "incremental hemodialysis",
+          "dialysate",
+          "ultrafiltration",
+          "continuous ambulatory peritoneal dialysis",
+          "dialysis catheter"
+        ],
+        "acronyms": [
+          "AVF",
+          "AVG",
+          "CAPD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "nephro-transplant",
+      "name": "Kidney transplantation",
+      "blurb": "Kidney transplant donation, rejection, and immunosuppression.",
+      "rules": {
+        "mesh": [
+          "Kidney Transplantation",
+          "Graft Rejection",
+          "Graft Survival",
+          "Living Donors",
+          "Immunosuppression Therapy"
+        ],
+        "phrases": [
+          "kidney transplantation",
+          "kidney transplant recipient",
+          "living donor kidney",
+          "deceased donor kidney",
+          "renal allograft",
+          "allograft rejection",
+          "donor-specific antibody",
+          "belatacept",
+          "tacrolimus",
+          "calcineurin inhibitor",
+          "kidney paired donation",
+          "delayed graft function",
+          "xenotransplantation",
+          "machine perfusion of kidney",
+          "antibody-mediated rejection",
+          "antibody mediated rejection"
+        ],
+        "acronyms": [
+          "DSA",
+          "DGF",
+          "CNI"
+        ],
+        "not": [
+          "liver transplantation",
+          "heart transplantation",
+          "lung transplantation",
+          "pancreas transplantation"
+        ]
+      }
+    },
+    {
+      "slug": "nephro-glomerular",
+      "name": "Glomerular disease",
+      "blurb": "Glomerulonephritis, nephrotic syndrome, and vasculitis affecting the kidney.",
+      "rules": {
+        "mesh": [
+          "Glomerulonephritis",
+          "Nephrotic Syndrome",
+          "Glomerulosclerosis, Focal Segmental",
+          "IgA Vasculitis",
+          "Lupus Nephritis"
+        ],
+        "phrases": [
+          "glomerulonephritis",
+          "nephrotic syndrome",
+          "focal segmental glomerulosclerosis",
+          "IgA nephropathy",
+          "membranous nephropathy",
+          "lupus nephritis",
+          "ANCA-associated vasculitis",
+          "minimal change disease",
+          "C3 glomerulopathy",
+          "anti-GBM disease",
+          "rituximab for glomerulonephritis",
+          "sparsentan for IgA nephropathy",
+          "avacopan",
+          "budesonide for IgA nephropathy",
+          "podocyte",
+          "Mendelian kidney disease",
+          "COL4A1",
+          "Alport syndrome",
+          "light-chain amyloidosis",
+          "renal amyloidosis",
+          "renal thrombotic microangiopathy"
+        ],
+        "acronyms": [
+          "FSGS",
+          "IgAN",
+          "MCD",
+          "ANCA",
+          "ADTKD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "nephro-electrolytes",
+      "name": "Electrolytes & acid-base",
+      "blurb": "Sodium, potassium, and acid-base disorders and their management.",
+      "rules": {
+        "mesh": [
+          "Water-Electrolyte Imbalance",
+          "Hyponatremia",
+          "Hyperkalemia",
+          "Acid-Base Imbalance",
+          "Acidosis",
+          "Alkalosis"
+        ],
+        "phrases": [
+          "hyponatremia",
+          "hypernatremia",
+          "hyperkalemia",
+          "hypokalemia",
+          "metabolic acidosis",
+          "metabolic alkalosis",
+          "acid-base disorder",
+          "electrolyte abnormality",
+          "syndrome of inappropriate antidiuretic hormone secretion",
+          "potassium binder",
+          "patiromer",
+          "sodium zirconium cyclosilicate",
+          "tolvaptan",
+          "fluid and electrolyte management"
+        ],
+        "acronyms": [
+          "SIADH"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "nephro-other",
+      "name": "General & other nephrology",
+      "blurb": "Everything else newly indexed in the nephrology journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Kidney Diseases",
+          "Nephrology",
+          "Kidney"
+        ],
+        "phrases": [
+          "kidney disease",
+          "renal disease",
+          "nephrology"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

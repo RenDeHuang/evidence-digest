@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "_comment": "Ranking and classification weights for Evidence Digest. Every number a reader's feed depends on lives here, so ranking can be tuned and reviewed without touching code. The scoring function is deterministic: the same record always yields the same score, and no language model is involved. See contract/config.schema.json for the shape.",
+
+  "classifier": {
+    "_comment": "A study joins a topic when its accumulated match points reach assignThreshold. MeSH alone is enough (curated, high precision). A title phrase alone is enough. An abstract-only mention is not - that is what keeps 'we did not study lymphoma' out of the lymphoma feed.",
+    "assignThreshold": 3,
+    "weights": {
+      "mesh": 3,
+      "title": 3,
+      "keywords": 2,
+      "abstract": 1
+    }
+  },
+
+  "journalTier": {
+    "_comment": "Reach of the venue. Deliberately smaller than the evidence-design contribution: a randomized trial in a tier-3 specialty journal should outrank an editorial in a tier-1.",
+    "1": 26,
+    "2": 16,
+    "3": 9
+  },
+
+  "evidenceLevels": {
+    "guideline":     { "rank": 1, "label": "Guideline",          "points": 34 },
+    "meta-analysis": { "rank": 2, "label": "Meta-analysis",      "points": 30 },
+    "rct":           { "rank": 3, "label": "Randomized trial",   "points": 32 },
+    "trial":         { "rank": 4, "label": "Clinical trial",     "points": 24 },
+    "observational": { "rank": 5, "label": "Observational",      "points": 16 },
+    "review":        { "rank": 6, "label": "Review",             "points": 10 },
+    "basic":         { "rank": 7, "label": "Lab & methods",      "points": 6 },
+    "case-report":   { "rank": 8, "label": "Case report",        "points": 3 },
+    "other":         { "rank": 9, "label": "Other",              "points": 0 }
+  },
+
+  "bonuses": {
+    "_comment": "Additive signals detected from publication types, MeSH, registry IDs, and conservative regexes over the title and abstract.",
+    "phase3": 10,
+    "phase2": 4,
+    "multicentre": 4,
+    "largeCohort": 5,
+    "hasTrialId": 4,
+    "openAccess": 3,
+    "practiceChanging": 6,
+    "structuredAbstract": 2
+  },
+
+  "penalties": {
+    "_comment": "Subtractive signals. Corrections and retraction notices are kept rather than dropped - a retraction is genuinely important news - but they are pushed far down the default ranking and carry their own badge in the UI.",
+
+    "_noAbstract_comment": "This is the most load-bearing penalty in the file, and the reason is empirical: across a 7-day sample of newly indexed records from NEJM, Lancet, JAMA, Annals, Blood, JCO and Circulation, only 19% carried an abstract. The other 81% were letters, replies, editorials, errata and - critically - news items that PubMed types as a plain 'Journal Article' with no distinguishing publication type at all ('US Death Rates Reach All-Time Low in 2025'). No publication-type rule can separate those from real research; the absent abstract is the only reliable signal. So a missing abstract is treated as strong evidence that a record is not a substantive study, and the reader-facing surfaces additionally default to hasAbstract=true with an explicit opt-in toggle for correspondence and news.",
+    "noAbstract": 26,
+    "correction": 30,
+    "comment": 14,
+    "editorial": 10,
+    "letter": 8,
+    "news": 12,
+    "preclinicalOnly": 6,
+    "protocolOnly": 6
+  },
+
+  "recency": {
+    "_comment": "Exponential decay on PubMed entry date, so a two-week-old paper still ranks but today's leads. halfLifeDays of 10 means a 10-day-old study keeps half its recency points.",
+    "maxPoints": 18,
+    "halfLifeDays": 10
+  },
+
+  "limits": {
+    "_comment": "Volume guards. All-of-medicine coverage across ~120 journals produces roughly 500-1500 newly indexed records a day, so the served window and per-file caps are what keep the static API small enough to load instantly on a phone.",
+    "servedWindowDays": 120,
+    "perTopicFile": 400,
+    "highlights": 40,
+    "highlightsPerSpecialty": 4,
+    "_searchIndexMinScore_comment": "Tuned against a real 865-record harvest rather than guessed. The noAbstract penalty separates the corpus cleanly: substantive studies span 16-100 (median 44) while correspondence and news peak at 37 (median 6). A threshold of 35 therefore indexes 73% of substantive studies while admitting essentially no noise - at 55 it covered only 28%, which made the global search box feel broken. Raise it only if the index file becomes a payload problem.",
+    "searchIndexMinScore": 35,
+    "searchIndexWindowDays": 90,
+    "feedItems": 50,
+    "emailStudiesPerTopic": 6,
+    "emailMaxStudies": 30
+  }
+}

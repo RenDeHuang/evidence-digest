@@ -1,0 +1,283 @@
+{
+  "slug": "medical-ai",
+  "order": 40,
+  "name": "Medical AI & informatics",
+  "icon": "🤖",
+  "blurb": "Language models, imaging AI, prediction models, digital health, and the evidence and governance around them.",
+  "topics": [
+    {
+      "slug": "ai-llm",
+      "name": "Large language models",
+      "blurb": "LLMs and generative AI applied to clinical care, documentation, and medical reasoning.",
+      "rules": {
+        "mesh": [
+          "Large Language Models",
+          "Natural Language Processing",
+          "Generative Artificial Intelligence"
+        ],
+        "phrases": [
+          "large language model",
+          "generative artificial intelligence",
+          "generative AI",
+          "foundation model",
+          "ChatGPT",
+          "GPT-4",
+          "GPT-4o",
+          "Claude",
+          "Gemini",
+          "Llama",
+          "chatbot",
+          "conversational agent",
+          "retrieval-augmented generation",
+          "prompt engineering",
+          "ambient documentation",
+          "clinical note generation",
+          "medical question answering",
+          "hallucination",
+          "transformer model",
+          "instruction tuning"
+        ],
+        "acronyms": [
+          "LLM",
+          "LLMs",
+          "NLP",
+          "RAG",
+          "GenAI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-imaging",
+      "name": "Imaging & diagnostic AI",
+      "blurb": "Deep learning for radiology, ophthalmology, endoscopy, and other image-based diagnosis.",
+      "rules": {
+        "mesh": [
+          "Radiographic Image Interpretation, Computer-Assisted",
+          "Image Processing, Computer-Assisted",
+          "Diagnostic Imaging",
+          "Deep Learning",
+          "Neural Networks, Computer",
+          "Radiomics",
+          "Image Interpretation, Computer-Assisted"
+        ],
+        "phrases": [
+          "deep learning model for",
+          "convolutional neural network",
+          "computer-aided detection",
+          "computer-aided diagnosis",
+          "AI-assisted mammography",
+          "AI for chest radiograph",
+          "automated detection on CT",
+          "radiomics",
+          "diabetic retinopathy screening with",
+          "computer-aided colonoscopy",
+          "AI-based ECG",
+          "image segmentation",
+          "AI triage of imaging",
+          "reader study",
+          "standalone AI performance",
+          "image reconstruction",
+          "brain extraction"
+        ],
+        "acronyms": [
+          "CNN",
+          "CAD",
+          "CADe",
+          "CADx",
+          "AI-ECG"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-prediction",
+      "name": "Prediction models & decision support",
+      "blurb": "Clinical prediction models, early warning systems, and decision support deployed in practice.",
+      "rules": {
+        "mesh": [
+          "Decision Support Systems, Clinical",
+          "Machine Learning",
+          "Supervised Machine Learning",
+          "Prognosis",
+          "Risk Assessment",
+          "Clinical Decision Rules",
+          "Algorithms",
+          "Electronic Health Records",
+          "Medical Informatics"
+        ],
+        "phrases": [
+          "clinical prediction model",
+          "risk prediction model",
+          "machine learning model",
+          "clinical decision support",
+          "early warning score",
+          "sepsis prediction",
+          "deterioration prediction",
+          "model calibration",
+          "external validation of a model",
+          "silent trial",
+          "prospective deployment",
+          "electronic health record data",
+          "predictive algorithm",
+          "TRIPOD",
+          "PROBAST",
+          "selective classification",
+          "decision support system"
+        ],
+        "acronyms": [
+          "CDS",
+          "CDSS",
+          "EHR",
+          "ML",
+          "AUROC",
+          "AUC"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-pathology-omics",
+      "name": "Digital pathology & omics AI",
+      "blurb": "Computational pathology, whole slide image analysis, and machine learning on molecular data.",
+      "rules": {
+        "mesh": [
+          "Pathology, Molecular",
+          "Computational Biology",
+          "Multiomics",
+          "Single-Cell Analysis",
+          "Proteomics",
+          "Gene Expression Profiling"
+        ],
+        "phrases": [
+          "computational pathology",
+          "digital pathology",
+          "whole slide image",
+          "whole-slide imaging",
+          "pathology foundation model",
+          "multi-omics integration",
+          "single-cell atlas",
+          "protein structure prediction",
+          "AlphaFold",
+          "deep learning on genomic",
+          "spatial transcriptomics",
+          "biomarker discovery using machine learning",
+          "protein evolution"
+        ],
+        "acronyms": [
+          "WSI",
+          "scRNA-seq"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-digital-health",
+      "name": "Digital health & remote care",
+      "blurb": "Telemedicine, wearables, remote monitoring, apps, and digital therapeutics.",
+      "rules": {
+        "mesh": [
+          "Telemedicine",
+          "Wearable Electronic Devices",
+          "Mobile Applications",
+          "Remote Sensing Technology",
+          "Digital Health",
+          "Fitness Trackers",
+          "Telerehabilitation",
+          "Smartphone",
+          "Patient Portals"
+        ],
+        "phrases": [
+          "telemedicine",
+          "telehealth",
+          "remote patient monitoring",
+          "wearable device",
+          "smartwatch",
+          "mobile health app",
+          "digital therapeutic",
+          "digital biomarker",
+          "virtual care",
+          "hospital at home",
+          "patient portal",
+          "continuous glucose monitoring data",
+          "digital divide",
+          "digital peer support"
+        ],
+        "acronyms": [
+          "mHealth",
+          "RPM",
+          "DTx"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-governance",
+      "name": "AI evaluation, ethics & regulation",
+      "blurb": "How medical AI is validated, regulated, monitored for bias, and governed.",
+      "rules": {
+        "mesh": [
+          "Artificial Intelligence",
+          "Algorithmic Bias",
+          "Ethics, Medical",
+          "Device Approval",
+          "Health Equity",
+          "Healthcare Disparities",
+          "Data Anonymization",
+          "Reproducibility of Results"
+        ],
+        "phrases": [
+          "algorithmic bias",
+          "algorithmic fairness",
+          "AI regulation",
+          "FDA clearance of AI",
+          "regulation of artificial intelligence",
+          "AI governance",
+          "model drift",
+          "post-deployment monitoring",
+          "transparency of artificial intelligence",
+          "explainability",
+          "reporting guideline for artificial intelligence",
+          "CONSORT-AI",
+          "SPIRIT-AI",
+          "DECIDE-AI",
+          "informed consent for AI",
+          "privacy-preserving machine learning",
+          "federated learning"
+        ],
+        "acronyms": [
+          "SaMD",
+          "XAI"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "ai-other",
+      "name": "General & other medical AI",
+      "blurb": "Everything else newly indexed in the medical AI and informatics journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "Artificial Intelligence",
+          "Medical Informatics",
+          "Health Information Systems",
+          "Data Science"
+        ],
+        "phrases": [
+          "artificial intelligence in medicine",
+          "machine learning in healthcare",
+          "informatics"
+        ],
+        "acronyms": [
+          "AI"
+        ],
+        "not": [
+          "aortic insufficiency",
+          "artificial insemination",
+          "aromatase inhibitor"
+        ]
+      }
+    }
+  ]
+}

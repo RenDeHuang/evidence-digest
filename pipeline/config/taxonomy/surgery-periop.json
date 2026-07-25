@@ -1,0 +1,260 @@
+{
+  "slug": "surgery-periop",
+  "order": 180,
+  "name": "Surgery & perioperative care",
+  "icon": "🩹",
+  "blurb": "Surgical technique and outcomes, anaesthesia, transplantation, trauma, and the perioperative journey.",
+  "topics": [
+    {
+      "slug": "surg-outcomes",
+      "name": "Surgical outcomes & technique",
+      "blurb": "Surgical complications, mortality, technique comparison, and postoperative recovery.",
+      "rules": {
+        "mesh": [
+          "Postoperative Complications",
+          "Surgical Wound Infection",
+          "Reoperation",
+          "Treatment Outcome",
+          "Length of Stay",
+          "Postoperative Care",
+          "Surgical Procedures, Operative",
+          "Wound Healing",
+          "Anastomotic Leak"
+        ],
+        "phrases": [
+          "postoperative complications",
+          "surgical site infection",
+          "anastomotic leak",
+          "30-day mortality",
+          "reoperation rate",
+          "surgical technique comparison",
+          "enhanced recovery after surgery",
+          "postoperative recovery",
+          "surgical outcome",
+          "operative time",
+          "readmission after surgery",
+          "wound dehiscence",
+          "surgical quality improvement",
+          "textbook outcome"
+        ],
+        "acronyms": [
+          "ERAS",
+          "SSI",
+          "WHODAS"
+        ],
+        "not": [
+          "residency application"
+        ]
+      }
+    },
+    {
+      "slug": "surg-mis",
+      "name": "Minimally invasive & robotic surgery",
+      "blurb": "Laparoscopic, endoscopic, and robotic-assisted surgical approaches.",
+      "rules": {
+        "mesh": [
+          "Laparoscopy",
+          "Robotic Surgical Procedures",
+          "Minimally Invasive Surgical Procedures",
+          "Natural Orifice Endoscopic Surgery",
+          "Endoscopy",
+          "Thoracoscopy",
+          "Surgery, Computer-Assisted"
+        ],
+        "phrases": [
+          "laparoscopic surgery",
+          "robotic-assisted surgery",
+          "robotic surgery",
+          "minimally invasive surgery",
+          "single-incision laparoscopic",
+          "thoracoscopic surgery",
+          "endoscopic surgery",
+          "da Vinci surgical system",
+          "robotic prostatectomy",
+          "laparoscopic cholecystectomy",
+          "natural orifice surgery",
+          "video-assisted thoracoscopic surgery",
+          "transoral robotic surgery"
+        ],
+        "acronyms": [
+          "MIS",
+          "VATS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "surg-anesthesia",
+      "name": "Anaesthesia & perioperative medicine",
+      "blurb": "Anaesthetic technique, perioperative medicine, and postoperative pain management.",
+      "rules": {
+        "mesh": [
+          "Anesthesia",
+          "Anesthesia, General",
+          "Anesthesia, Conduction",
+          "Perioperative Care",
+          "Postoperative Nausea and Vomiting",
+          "Pain, Postoperative",
+          "Anesthesia Recovery Period",
+          "Preoperative Care",
+          "Analgesia"
+        ],
+        "phrases": [
+          "general anaesthesia",
+          "general anesthesia",
+          "regional anaesthesia",
+          "regional anesthesia",
+          "perioperative medicine",
+          "postoperative pain management",
+          "postoperative nausea and vomiting",
+          "enhanced recovery pathway",
+          "sugammadex",
+          "dexmedetomidine",
+          "liraglutide before surgery",
+          "GLP-1 and anaesthesia",
+          "GLP-1 receptor agonist and surgery",
+          "preoperative optimisation",
+          "preoperative optimization",
+          "neuraxial anaesthesia",
+          "neuraxial anesthesia",
+          "opioid-sparing analgesia",
+          "epidural analgesia"
+        ],
+        "acronyms": [
+          "PONV"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "surg-transplant",
+      "name": "Transplantation surgery",
+      "blurb": "Solid organ transplantation, donor selection, and transplant immunology.",
+      "rules": {
+        "mesh": [
+          "Organ Transplantation",
+          "Kidney Transplantation",
+          "Liver Transplantation",
+          "Heart Transplantation",
+          "Lung Transplantation",
+          "Tissue Donors",
+          "Graft Rejection",
+          "Graft Survival",
+          "Living Donors",
+          "Organ Preservation"
+        ],
+        "phrases": [
+          "kidney transplantation",
+          "liver transplantation",
+          "heart transplantation",
+          "lung transplantation",
+          "living donor transplant",
+          "deceased donor transplant",
+          "organ preservation",
+          "graft rejection",
+          "graft survival",
+          "transplant waitlist",
+          "organ allocation",
+          "donation after circulatory death",
+          "ex vivo organ perfusion",
+          "xenotransplantation"
+        ],
+        "acronyms": [
+          "DCD"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "surg-trauma",
+      "name": "Trauma & acute surgery",
+      "blurb": "Injury management, damage-control surgery, and acute general surgical emergencies.",
+      "rules": {
+        "mesh": [
+          "Wounds and Injuries",
+          "Trauma Centers",
+          "Wounds, Penetrating",
+          "Wounds, Gunshot",
+          "Abdominal Injuries",
+          "Multiple Trauma",
+          "Injury Severity Score"
+        ],
+        "phrases": [
+          "trauma surgery",
+          "damage control surgery",
+          "penetrating trauma",
+          "blunt trauma",
+          "polytrauma",
+          "multiple trauma",
+          "trauma centre",
+          "trauma center",
+          "acute care surgery",
+          "emergency general surgery",
+          "gunshot wound",
+          "stab wound",
+          "massive transfusion protocol",
+          "trauma laparotomy",
+          "injury severity score",
+          "motorcycle helmet"
+        ],
+        "acronyms": [
+          "ISS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "surg-bariatric",
+      "name": "Bariatric & metabolic surgery",
+      "blurb": "Bariatric and metabolic surgery for obesity and related metabolic disease.",
+      "rules": {
+        "mesh": [
+          "Bariatric Surgery",
+          "Gastric Bypass",
+          "Obesity, Morbid",
+          "Gastroplasty",
+          "Biliopancreatic Diversion"
+        ],
+        "phrases": [
+          "bariatric surgery",
+          "metabolic surgery",
+          "sleeve gastrectomy",
+          "Roux-en-Y gastric bypass",
+          "gastric bypass surgery",
+          "gastric banding",
+          "biliopancreatic diversion",
+          "weight loss surgery",
+          "obesity surgery",
+          "duodenal switch",
+          "post-bariatric surgery",
+          "preoperative GLP-1 for bariatric surgery",
+          "metabolic and bariatric surgery outcomes"
+        ],
+        "acronyms": [
+          "MBS"
+        ],
+        "not": []
+      }
+    },
+    {
+      "slug": "surg-other",
+      "name": "General & other surgery",
+      "blurb": "Everything else newly indexed in the surgery journals we watch.",
+      "catchAll": true,
+      "rules": {
+        "mesh": [
+          "General Surgery",
+          "Surgical Procedures, Operative",
+          "Postoperative Period"
+        ],
+        "phrases": [
+          "surgical case series",
+          "surgical training",
+          "operative technique"
+        ],
+        "acronyms": [],
+        "not": []
+      }
+    }
+  ]
+}

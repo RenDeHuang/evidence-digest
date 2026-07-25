@@ -1,0 +1,11 @@
+{
+  "dataVersion": 1,
+  "generatedAt": "2026-07-25T06:00:00.000Z",
+  "windowDays": 120,
+  "days": ["2026-07-25", "2026-07-24", "2026-07-23"],
+  "latestDay": "2026-07-25",
+  "totalStudies": 10,
+  "journalCount": 5,
+  "topicCounts": { "heme-lymphoma": 5, "heme-leukemia": 0, "onc-breast": 4 },
+  "specialtyCounts": { "hematology": 5, "oncology": 4 }
+}

@@ -1,0 +1,151 @@
+name: CI
+
+# Runs on every pull request and every push to main. Four independent jobs —
+# python, web, worker, contract — so a failure says exactly which part of the
+# stack broke instead of one opaque red X. None of these jobs deploy anything;
+# harvest.yml and pages.yml own deployment.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: python (pipeline)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          # No `cache: pip`: the pipeline is stdlib-only by design (see
+          # pipeline/README.md) — there is no requirements.txt to key a cache on,
+          # and the cache input fails the step outright when it can't find one.
+
+      - name: Validate configuration
+        # PYTHONPATH=pipeline: evidence_digest is a package under pipeline/,
+        # never pip-installed (stdlib only), so it must be on the import path
+        # explicitly. Applies to this and the next step, not to compileall,
+        # which compiles by file path and never imports the package.
+        env:
+          PYTHONPATH: pipeline
+        run: |
+          echo '::group::python -m evidence_digest.cli validate'
+          python -m evidence_digest.cli validate
+          echo '::endgroup::'
+
+      - name: Run pipeline test suite
+        env:
+          PYTHONPATH: pipeline
+        run: |
+          echo '::group::python -m unittest discover -s pipeline/tests'
+          python -m unittest discover -s pipeline/tests -v
+          echo '::endgroup::'
+
+      - name: Byte-compile the pipeline package
+        run: |
+          echo '::group::python -m compileall pipeline'
+          python -m compileall -q pipeline
+          echo '::endgroup::'
+
+  web:
+    name: web (Vite + React + TypeScript)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # See the comment in .github/actions/build-site/action.yml: the
+          # built-in `cache: npm` input fails outright when web/package-lock.json
+          # doesn't exist yet, which is true on a fresh checkout of this repo
+          # today. The conditional step below is the safe equivalent.
+
+      - name: Cache npm downloads
+        if: hashFiles('web/package-lock.json') != ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-web-${{ hashFiles('web/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-web-
+
+      - name: Install dependencies
+        working-directory: web
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo '::warning::web/package-lock.json not found; falling back to "npm install". Commit a lockfile once dependencies stabilize, for reproducible installs.'
+            npm install
+          fi
+
+      - name: Type-check
+        working-directory: web
+        run: npx tsc --noEmit
+
+      - name: Build
+        working-directory: web
+        run: npm run build
+
+  worker:
+    name: worker (Cloudflare Worker)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cache npm downloads
+        if: hashFiles('worker/package-lock.json') != ''
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-worker-${{ hashFiles('worker/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-worker-
+
+      - name: Install dependencies
+        working-directory: worker
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo '::warning::worker/package-lock.json not found; falling back to "npm install". Commit a lockfile once dependencies stabilize, for reproducible installs.'
+            npm install
+          fi
+
+      - name: Type-check
+        working-directory: worker
+        run: npx tsc --noEmit
+
+  contract:
+    name: contract (schema <-> types parity)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check contract parity
+        run: |
+          echo 'Asserting contract/study.schema.json and shared/types.ts describe the same Study shape...'
+          node scripts/check-contract.mjs
