@@ -1,14 +1,34 @@
 version: 2
 
+# Grouping notes, because the obvious configuration is wrong for this project.
+#
+# The first version of this file grouped only `minor` and `patch` updates, which
+# left every MAJOR bump to open its own pull request. On the very first Dependabot
+# run that produced 12 pull requests within minutes of the initial commit — react-dom,
+# react-router-dom, vitest, typescript, and four separate Actions bumps, each on its
+# own branch. For a solo-maintained project that is pure noise: it buries real work
+# in review, and each merge triggers a Pages rebuild.
+#
+# So each ecosystem now collapses into a SINGLE grouped pull request covering all
+# update types, on a monthly cadence. Worst case is four pull requests a month and
+# typically one or two. A grouped major bump still has to be read before merging,
+# but CI (typecheck + build + the full pipeline and worker test suites) runs on the
+# group, so a breaking upgrade fails loudly in one place rather than in five.
+#
+# If a security advisory lands, Dependabot opens that separately and immediately
+# regardless of this schedule — grouping does not delay security updates.
+
 updates:
   # web/ — Vite + React + TypeScript SPA.
   - package-ecosystem: 'npm'
     directory: '/web'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
+    open-pull-requests-limit: 3
     groups:
-      minor-and-patch:
-        update-types: ['minor', 'patch']
+      web-dependencies:
+        patterns: ['*']
+        update-types: ['major', 'minor', 'patch']
     commit-message:
       prefix: 'chore(web)'
     labels: ['dependencies', 'web']
@@ -17,23 +37,29 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/worker'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
+    open-pull-requests-limit: 3
     groups:
-      minor-and-patch:
-        update-types: ['minor', 'patch']
+      worker-dependencies:
+        patterns: ['*']
+        update-types: ['major', 'minor', 'patch']
     commit-message:
       prefix: 'chore(worker)'
     labels: ['dependencies', 'worker']
 
   # Workflow files in .github/workflows/ pin third-party Actions by tag (e.g.
-  # actions/checkout@v4) — keep those current too.
+  # actions/checkout@v4) — keep those current too. Worth staying on top of: GitHub
+  # periodically retires the Node runtime older Actions target, and a stale pin
+  # starts emitting deprecation warnings on every harvest run.
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
+    open-pull-requests-limit: 3
     groups:
-      minor-and-patch:
-        update-types: ['minor', 'patch']
+      github-actions:
+        patterns: ['*']
+        update-types: ['major', 'minor', 'patch']
     commit-message:
       prefix: 'chore(ci)'
     labels: ['dependencies', 'ci']
@@ -44,10 +70,12 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/.github/actions/build-site'
     schedule:
-      interval: 'weekly'
+      interval: 'monthly'
+    open-pull-requests-limit: 3
     groups:
-      minor-and-patch:
-        update-types: ['minor', 'patch']
+      github-actions:
+        patterns: ['*']
+        update-types: ['major', 'minor', 'patch']
     commit-message:
       prefix: 'chore(ci)'
     labels: ['dependencies', 'ci']
