@@ -13,9 +13,9 @@
     "migrate:remote": "wrangler d1 migrations apply evidence-digest-db --remote"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260722.1",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5",
-    "wrangler": "^4.0.0"
+    "@cloudflare/workers-types": "^5.20260729.1",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.115.0"
   }
 }
