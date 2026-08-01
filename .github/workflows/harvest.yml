@@ -53,12 +53,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           # No `cache: pip` here on purpose: the pipeline is stdlib-only by design
@@ -182,14 +182,14 @@ jobs:
 
       - name: Upload Pages artifact
         if: ${{ !inputs.skip_deploy }}
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: web/dist
 
       - name: Deploy to GitHub Pages
         if: ${{ !inputs.skip_deploy }}
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       - name: Write run summary
         if: ${{ !cancelled() }}
