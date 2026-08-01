@@ -80,7 +80,7 @@ runs:
       run: python -m evidence_digest.cli build --site-url "${{ inputs.site-url }}"
 
     - name: Set up Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node-version }}
         # No built-in `cache: npm` here: that input fails the step outright when
@@ -91,7 +91,7 @@ runs:
 
     - name: Cache npm downloads
       if: hashFiles('web/package-lock.json') != ''
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: ~/.npm
         key: ${{ runner.os }}-npm-web-${{ hashFiles('web/package-lock.json') }}
